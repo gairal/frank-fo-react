@@ -1,13 +1,15 @@
 const conf = require('../config.json'),
 gulp = require('gulp'),
 runSequence = require('run-sequence'),
-browserSync = require('browser-sync').create();
+browserSync = require('browser-sync').create(),
+historyApiFallback = require('connect-history-api-fallback');
 
 gulp.task('browser-sync:build', function() {
   'use strict';
   browserSync.init({
     server: {
-      baseDir: conf.base.build
+      baseDir: conf.base.build,
+      middleware: [ historyApiFallback() ]
     },
     reloadDebounce: 2000,
     notify: false

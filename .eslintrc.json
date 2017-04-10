@@ -4,11 +4,17 @@
         "sourceType": "module"
     },
     "env": {
-        "browser": true,
-        "jquery": true
+        "browser": true
     },
+    "plugins": [
+      "babel",
+      "react",
+      "promise"
+    ],
+    "parser": "babel-eslint",
     "extends": "airbnb",
     "rules": {
+        "react/jsx-filename-extension": 0,
         "curly": 2,
         "indent": [2, 2, { "SwitchCase": 1 }],
         "eqeqeq": 2,
