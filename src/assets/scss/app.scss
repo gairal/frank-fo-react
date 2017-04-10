@@ -1,0 +1,29 @@
+@import 'common/variables';
+@import 'common/mixins';
+@import 'common/bootstrap';
+
+/**************************************************
+ ******* Put you code here or in subfolders *******
+ *************************************************/
+
+/******* GLOBAL *******/
+body {
+  padding-top: 70px;
+}
+
+input {
+  &[type='text'] {
+    height: 50px;
+    font-size: 25px;
+  }
+}
+
+//* @define calc; weak
+.calc {
+  button {
+    display: block;
+    width: 100%;
+  }
+}
+
+/******* SECTION XXX *******/

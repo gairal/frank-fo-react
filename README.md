@@ -1,64 +1,154 @@
-# React Slingshot!
+# Front-End Gulp starter
 
-[![Build status: Linux](https://img.shields.io/travis/coryhouse/react-slingshot.svg?style=flat-square)](https://travis-ci.org/coryhouse/react-slingshot)
-[![Build status: Windows](https://ci.appveyor.com/api/projects/status/ky0npqkot20ieiak?svg=true)](https://ci.appveyor.com/project/coryhouse/react-slingshot/branch/master)
-[![Dependency Status](https://david-dm.org/coryhouse/react-slingshot.svg?style=flat-square)](https://david-dm.org/coryhouse/react-slingshot)
-[![Coverage Status](https://coveralls.io/repos/github/coryhouse/react-slingshot/badge.svg?branch=master)](https://coveralls.io/github/coryhouse/react-slingshot?branch=master)
+---
 
-React Slingshot is a comprehensive starter kit for rapid application development using React. 
+### TODO
+- [ ] Unit Testing with Jasmine
 
-Why Slingshot?
+---
 
-1. **One command to get started** - Type `npm start` to start development in your default browser.
-2. **Rapid feedback** - Each time you hit save, changes hot reload and linting and automated tests run.
-3. **One command line to check** - All feedback is displayed on a single command line.
-4. **No more JavaScript fatigue** - Slingshot uses the most popular and powerful libraries for working with React.
-5. **Working example app** - The included example app shows how this all works together.
+> A starter Kit for front-end developer including [Gulp](http://gulpjs.com), [JQuery](https://github.com/jquery/jquery), [Bootstrap 4](https://v4-alpha.getbootstrap.com), [font-awesome](http://fontawesome.io), [Sass](http://sass-lang.com), [Jade](http://jade-lang.com), [Babel](https://babeljs.io), [ES2015](https://babeljs.io/docs/learn-es2015/), [webpack](http://webpack.github.io), [Karma](https://karma-runner.github.io/)
 
-## Get Started
-1. **Initial Machine Setup**. First time running the starter kit? Then complete the [Initial Machine Setup](https://github.com/coryhouse/react-slingshot#initial-machine-setup).
-2. **Clone the project**. `git clone https://github.com/coryhouse/react-slingshot.git`.  
-3. **Install Node packages**. `npm install`
-4. **Run the example app**. `npm start -s`
-This will run the automated build process, start up a webserver, and open the application in your default browser. When doing development with this kit, this command will continue watching all your files. Every time you hit save the code is rebuilt, linting runs, and tests run automatically. Note: The -s flag is optional. It enables silent mode which suppresses unnecessary messages during the build.
-5. **Review the example app.** This starter kit includes a working example app that calculates fuel savings. Note how all source code is placed under /src. Tests are placed alongside the file under test. The final built app is placed under /dist. These are the files you run in production.
-6. **Delete the example app files.** Once you're comfortable with how the example app works, you can [delete those files and begin creating your own app](https://github.com/coryhouse/react-slingshot/blob/master/docs/FAQ.md#i-just-want-an-empty-starter-kit).
+This seed repo is a starter kit for front-end developer that needs an environment allowing them to speed up development while ensuring good practice and overall quality.
 
-##Initial Machine Setup
-1. **Install [Node 4.0.0 or greater](https://nodejs.org)** - (5.0 or greater is recommended for optimal build performance). Need to run multiple versions of Node? Use [nvm](https://github.com/creationix/nvm).
-2. **Install [Git](https://git-scm.com/downloads)**. 
-3. **Install [React developer tools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en) and [Redux Dev Tools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)** in Chrome. (Optional, but helpful. The latter offers time-travel debugging.)
-4. On a Mac? You're all set. If you're on Linux or Windows, complete the steps for your OS below.  
- 
-**On Linux:**  
+* Best practice for HTML5, CSS and JavaScript organization
+* Code validation (HTML, JS, CSS)
+* HTML Templating
+* CSS Preprocessing
 
- * Run this to [increase the limit](http://stackoverflow.com/questions/16748737/grunt-watch-error-waiting-fatal-error-watch-enospc) on the number of files Linux will watch. [Here's why](https://github.com/coryhouse/react-slingshot/issues/6).    
-`echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p` 
+## Quick start
+### Pre-requirements
+* Node version >= 4
+* NPM or Yarn
+* Sass `gem install sass`
 
-**On Windows:** 
- 
-* **Install [Python 2.7](https://www.python.org/downloads/)**. Some node modules may rely on node-gyp, which requires Python on Windows.
-* **Install C++ Compiler**. Browser-sync requires a C++ compiler on Windows. [Visual Studio Express](https://www.visualstudio.com/en-US/products/visual-studio-express-vs) comes bundled with a free C++ compiler. Or, if you already have Visual Studio installed: Open Visual Studio and go to File -> New -> Project -> Visual C++ -> Install Visual C++ Tools for Windows Desktop. The C++ compiler is used to compile browser-sync (and perhaps other Node modules).
+```bash
+# clone the repo
+git clone https://github.com/gairal/gulp-webpack-es2015-stack.git
 
-##Technologies
-Slingshot offers a rich development experience using the following technologies:
+# change directory to the repo
+cd gulp-webpack-es2015-stack
 
-| **Tech** | **Description** |**Learn More**|
-|----------|-------|---|
-|  [React](https://facebook.github.io/react/)  |   Fast, composable client-side components.    | [Pluralsight Course](https://www.pluralsight.com/courses/react-flux-building-applications)  |
-|  [Redux](http://redux.js.org) |  Enforces unidirectional data flows and immutable, hot reloadable store. Supports time-travel debugging. Lean alternative to [Facebook's Flux](https://facebook.github.io/flux/docs/overview.html).| [Pluralsight Course](http://www.pluralsight.com/courses/react-redux-react-router-es6)    |
-|  [React Router](https://github.com/reactjs/react-router) | A complete routing library for React | [Pluralsight Course](https://www.pluralsight.com/courses/react-flux-building-applications) |
-|  [Babel](http://babeljs.io) |  Compiles ES6 to ES5. Enjoy the new version of JavaScript today.     | [ES6 REPL](https://babeljs.io/repl/), [ES6 vs ES5](http://es6-features.org), [ES6 Katas](http://es6katas.org), [Pluralsight course](https://www.pluralsight.com/courses/javascript-fundamentals-es6)    |
-| [Webpack](http://webpack.github.io) | Bundles npm packages and our JS into a single file. Includes hot reloading via [react-transform-hmr](https://www.npmjs.com/package/react-transform-hmr). | [Quick Webpack How-to](https://github.com/petehunt/webpack-howto) [Pluralsight Course](https://www.pluralsight.com/courses/webpack-fundamentals)|
-| [Browsersync](https://www.browsersync.io/) | Lightweight development HTTP server that supports synchronized testing and debugging on multiple devices. | [Intro vid](https://www.youtube.com/watch?time_continue=1&v=heNWfzc7ufQ)|
-| [Mocha](http://mochajs.org) | Automated tests with [Chai](http://chaijs.com/) for assertions and [Enzyme](https://github.com/airbnb/enzyme) for DOM testing without a browser using Node. | [Pluralsight Course](https://www.pluralsight.com/courses/testing-javascript) |
-| [Isparta](https://github.com/douglasduteil/isparta) | Code coverage tool for ES6 code transpiled by Babel. | 
-| [TrackJS](https://trackjs.com/) | JavaScript error tracking. | [Free trial](https://my.trackjs.com/signup)|  
-| [ESLint](http://eslint.org/)| Lint JS. Reports syntax and style issues. Using [eslint-plugin-react](https://github.com/yannickcr/eslint-plugin-react) for additional React specific linting rules. | |
-| [SASS](http://sass-lang.com/) | Compiled CSS styles with variables, functions, and more. | [Pluralsight Course](https://www.pluralsight.com/courses/better-css)|
-| [Editor Config](http://editorconfig.org) | Enforce consistent editor settings (spaces vs tabs, etc). | [IDE Plugins](http://editorconfig.org/#download) |
-| [npm Scripts](https://docs.npmjs.com/misc/scripts)| Glues all this together in a handy automated build. | [Pluralsight course](https://www.pluralsight.com/courses/npm-build-tool-introduction), [Why not Gulp?](https://medium.com/@housecor/why-i-left-gulp-and-grunt-for-npm-scripts-3d6853dd22b8#.vtaziro8n)  |
+# install the repo with npm or yarn
+npm install
+OR
+yarn install
 
-The starter kit includes a working example app that puts all of the above to use.
-## Questions?
-Check out the [FAQ](/docs/FAQ.md)
+# start the server
+gulp
+```
+go to [http://localhost:3000](http://localhost:3000) in your browser
+
+---
+
+# Table of Contents
+* [File structure](#file-structure)
+* [Getting Started](#getting-started)
+    * [Dependencies](#dependencies)
+    * [Installing](#installing)
+    * [Running the app](#running-the-app)
+* [Configuration](#configuration)
+* [License](#license)
+
+# File structure
+```
+gulp-webpack-es2015-stack/
+ ├──config/                          * configuration files and Gulp taks
+ │   ├──gulp/                        * Gulp tasks descriptions
+ │   ├──.htmlhintrc                  * htmlhint configuration file
+ │   ├──.eslintrc.json               * eslint configuration file
+ │   ├──.sass-lint.yml               * sasslint configuration file (Yaml format)
+ │   ├──config.json                  * variables used got Gulp tasks
+ │   ├──karma.conf.js                * Karma configuration file
+ │   └──webpack.conf.js              * Webpack configuration file
+ │
+ ├──src/                             * our source files that will be compiled to javascript
+ │   ├──index.pug                    * our index.html
+ │   │
+ │   ├──html/                        * where you keep your pug templates
+ │   │   └──layout.pug               * the main pug layout
+ │   │
+ │   ├──app/                         * JavaScript/ES2015 files
+ │   │
+ │   ├──static/                      * files that will be copied to the root of the compiled site (robots.txt, favicon, ...)
+ │   │
+ │   └──assets/                      * static assets are served here
+ │       ├──img/                     * images
+ │       └──scss/                    * Sass files
+ │           ├──app.scss             * Main Sass files
+ │           └──common/              * Sass common files
+ │               ├──_bootstrap.scss  * Bootstrap Sass module import file
+ │               ├──_mixins.scss     * for you own Sass mixins here
+ │               └──_variables.scss  * for your sass variables
+ │
+ ├──test/                            * Testing directory
+ │    └──spec/                       * Jasmine test definitions
+ │
+ │
+ ├──gulpfile.js                      * gulp main configuration file
+ └──package.json                     * what npm/yarn uses to manage it's dependencies
+```
+# Getting Started
+## Dependencies
+You need to install the following on you system
+* `node` and `npm` (`brew install node`) or `yarn` (`brew install yarn`)
+* Ensure you running Node version >= 4.0.0
+* ruby (`brew install ruby`)
+
+Then install tools you'll need to run the app
+* sass (`gem install sass`)
+* gulp (`npm install gulp -g`)
+* karma (`npm install karma-cli -g`)
+
+## Installing
+* `fork` this repo
+* `clone` your fork
+* `npm install` to install all dependencies
+* `gulp` to start the dev server
+
+## Running the app
+After all dependencies are installed, just run `gulp` to start a local server using `browser-sync` which will watch your files and build them.
+browser-sync will display the address and port of your server (by default, `http://0.0.0.0:3000`).
+
+### Gulp commands
+#### Server
+```bash
+# build files then launch the server and watch files
+gulp
+# compiled version
+gulp run:dist
+```
+#### Build files
+```bash
+# build files in ./build/ (Webpack, Sass, Jade) and validate them
+gulp build
+# "compile" files in ./compile/
+# minify and concatenate every css and js including
+# Optimize images compression
+# Site ready for production
+gulp compile
+```
+#### Validate files
+```bash
+# runs the validations htmlhint, eslint, csslint, sasslint, TsLint
+gulp validate
+```
+#### Package site
+```bash
+# compile files then get the last git tag and create a zip named after it
+gulp delivery
+```
+#### Deploy site
+```bash
+# compile the site then send it to a given server path over scp
+gulp deploy
+```
+# Configuration
+Most of the configuration files are in ./config
+* `config.json`: contains the paths to the various kind of files used by Gulp
+* `.eslintrc.json`: eslint config file
+* `.sass-lint.yml`: sasslint config file
+* `webpack.conf.json`: Webpack config file
+
+# License
+[MIT](/LICENSE.md)
