@@ -1,0 +1,10 @@
+@import '../../../../scss/common/variables';
+
+.todo-item {
+  display: inline-block;
+  margin: 5px;
+  background: $todo-item-background-color;
+  padding: 5px;
+  width: 200px;
+  min-height: 100px;
+}
