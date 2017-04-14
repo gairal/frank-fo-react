@@ -58,7 +58,7 @@ const ACTION_HANDLERS = {
 // Reducer
 // ------------------------------------
 const initialState = JSON.parse(localStorage.getItem(STORE_KEY)) || [];
-export default function todoReducer(state = initialState, action) {
+export default function reducer(state = initialState, action) {
   const handler = ACTION_HANDLERS[action.type];
 
   return handler ? handler(state, action) : state;

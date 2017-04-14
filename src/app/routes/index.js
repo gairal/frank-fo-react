@@ -1,13 +1,18 @@
 import CoreLayout from '../layouts/CoreLayout';
-import Home from './Home';
-import TodoRoute from './Todo';
+import Experience from './Experience';
+import Skill from './Skill';
+import Education from './Education';
+import Interest from './Interest';
 
 export const createRoutes = store => ({
   path: '/',
   component: CoreLayout,
-  indexRoute: Home,
+  indexRoute: Experience(store),
   childRoutes: [
-    TodoRoute(store),
+    Experience(store),
+    Skill(store),
+    Education(store),
+    Interest(store),
   ],
 });
 

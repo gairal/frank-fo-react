@@ -12,6 +12,7 @@ gulp.task('browser-sync:build', function() {
       middleware: [ historyApiFallback() ]
     },
     reloadDebounce: 2000,
+    open: false,
     notify: false
   });
 });

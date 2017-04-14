@@ -12,7 +12,6 @@ export const Navigation = () => (
     <Drawer
       docked={false}
       width={200}
-      open
     >
       <MenuItem>Menu Item</MenuItem>
       <MenuItem>Menu Item 2</MenuItem>
