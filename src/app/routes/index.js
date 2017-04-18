@@ -9,7 +9,6 @@ export const createRoutes = store => ({
   component: CoreLayout,
   indexRoute: Experience(store),
   childRoutes: [
-    Experience(store),
     Skill(store),
     Education(store),
     Interest(store),
