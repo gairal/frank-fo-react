@@ -1,6 +1,11 @@
 {
-  "presets": ["es2015"],
-  "plugins": [
-    "add-module-exports"
+  "presets": [
+    "react",
+    [ "env", {
+      "targets": {
+        "browsers": "> 2%"
+      }
+    }],
+    "stage-0"
   ]
 }

@@ -4,14 +4,14 @@ import { Row, Col } from 'react-flexbox-grid';
 
 export const Education = props => (
   <Row>
-    {props.educations.map(edu =>
+    {props.educations.map(edu => (
       <Col
         xs={12}
         key={edu.id}
       >
         Education
-      </Col>,
-    )}
+      </Col>
+    ))}
   </Row>
 );
 

@@ -1,63 +1,82 @@
 // ------------------------------------
 // Constants
 // ------------------------------------
-export const TODO_ADD = 'TODO_ADD';
-export const TODO_REMOVE = 'TODO_REMOVE';
-const STORE_KEY = 'TodoData';
+export const FETCH = 'FETCH';
+export const FETCH_SUCCESS = 'FETCH_SUCCESS';
+export const FETCH_FAILURE = 'FETCH_FAILURE';
+// const STORE_KEY = 'Experiences';
 
+const API_URL = 'http://api-dot-com-gairal-frank.appspot.com/experiences/';
 // ------------------------------------
 // Actions
 // ------------------------------------
-export function add(title, desc) {
-  return {
-    type: TODO_ADD,
-    payload: {
-      title,
-      desc,
-    },
-  };
-}
+const request = (context, answer) => ({
+  type: FETCH,
+  payload: {
+    context,
+    answer,
+  },
+});
 
-export function remove(id) {
-  return {
-    type: TODO_REMOVE,
-    payload: {
-      id,
+const receiveResponse = json => ({
+  type: FETCH_SUCCESS,
+  payload: {
+    context: json.context,
+    output: json.output,
+  },
+});
+
+export const init = (context, answer) => (dispatch) => {
+  dispatch(request(context, answer));
+
+  const fetchOptions = {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
     },
   };
-}
+
+  if (context) {
+    const body = {
+      context,
+    };
+    if (answer) {
+      body.input = {
+        text: answer,
+      };
+    }
+    fetchOptions.body = JSON.stringify(body);
+  }
+
+  return fetch(API_URL, fetchOptions)
+    .then(response => response.json())
+    .then(json => dispatch(receiveResponse(json)));
+};
 
 export const actions = {
-  add,
-  remove,
+  init,
 };
 
 // ------------------------------------
 // Action Handlers
 // ------------------------------------
 const ACTION_HANDLERS = {
-  [TODO_ADD]: (state, action) => {
-    const todos = [...state, {
-      id: state.length + 1,
-      title: action.payload.title,
-      desc: action.payload.desc,
-    }];
-    localStorage.setItem(STORE_KEY, JSON.stringify(todos));
+  [INIT]: (state, action) => {
+    // const todos = [...state, {
+    //   id: state.length + 1,
+    //   title: action.payload.title,
+    //   desc: action.payload.desc,
+    // }];
+    // localStorage.setItem(STORE_KEY, JSON.stringify(todos));
 
-    return todos;
-  },
-  [TODO_REMOVE]: (state, action) => {
-    const todos = state.filter(item => item.id !== action.payload.id);
-    localStorage.setItem(STORE_KEY, JSON.stringify(todos));
-
-    return todos;
+    // return todos;
   },
 };
 
 // ------------------------------------
 // Reducer
 // ------------------------------------
-const initialState = JSON.parse(localStorage.getItem(STORE_KEY)) || [];
+const initialState = [];
 export default function reducer(state = initialState, action) {
   const handler = ACTION_HANDLERS[action.type];
 

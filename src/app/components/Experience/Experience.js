@@ -1,22 +1,35 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Row, Col } from 'react-flexbox-grid';
 
-export const Experience = props => (
-  <Row>
-    {props.experiences.map(exp =>
-      <Col
-        xs={12}
-        key={exp.id}
-      >
-        Experience
-      </Col>,
-    )}
-  </Row>
-);
+class Experience extends Component {
+  static propTypes = {
+    init: PropTypes.func.isRequired,
+    experiences: PropTypes.arrayOf(PropTypes.object),
+  }
 
-Experience.propTypes = {
-  experiences: PropTypes.arrayOf(PropTypes.object).isRequired,
-};
+  static defaultProps = {
+    experiences: [],
+  }
+
+  componentDidMount() {
+    this.props.init();
+  }
+
+  render() {
+    return (
+      <Row>
+        {this.props.experiences.map(exp => (
+          <Col
+            xs={12}
+            key={exp.id}
+          >
+            Experience
+          </Col>
+        ))}
+      </Row>
+    );
+  }
+}
 
 export default Experience;

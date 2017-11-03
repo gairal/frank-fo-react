@@ -1,8 +1,7 @@
 import { applyMiddleware, compose, createStore } from 'redux';
 import thunk from 'redux-thunk';
-import { browserHistory } from 'react-router';
 import reducers from './reducers';
-import { updateLocation } from './location';
+// import { updateLocation } from './location';
 
 export default (initialState = {}) => {
   // ======================================================
@@ -21,7 +20,7 @@ export default (initialState = {}) => {
   store.asyncReducers = {};
 
   // To unsubscribe, invoke `store.unsubscribeHistory()` anytime
-  store.unsubscribeHistory = browserHistory.listen(updateLocation(store));
+  // store.unsubscribeHistory = browserHistory.listen(updateLocation(store));
 
   return store;
 };

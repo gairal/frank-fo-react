@@ -18,11 +18,7 @@ webpackConfig.module.loaders = [
 	{
 		test: /\.(js|jsx)$/,
 		loader: 'babel-loader',
-		exclude: /node_modules/,
-		query: {
-	    presets: ['es2015', 'react', 'stage-0'],
-	    plugins: ['add-module-exports']
-		}
+		exclude: /node_modules/
 	},
 	{
 	  test   : /\.json$/,

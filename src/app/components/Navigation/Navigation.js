@@ -2,7 +2,7 @@ import React from 'react';
 // import { IndexLink } from 'react-router';
 import AppBar from 'material-ui/AppBar';
 import Drawer from 'material-ui/Drawer';
-import MenuItem from 'material-ui/MenuItem';
+import List, { ListItem, ListItemText } from 'material-ui/List';
 
 export const Navigation = () => (
   <div>
@@ -13,8 +13,16 @@ export const Navigation = () => (
       docked={false}
       width={200}
     >
-      <MenuItem>Menu Item</MenuItem>
-      <MenuItem>Menu Item 2</MenuItem>
+      <List>
+        <ListItem button>
+          <ListItemText primary="Menu Item" />
+        </ListItem>
+      </List>
+      <List>
+        <ListItem button>
+          <ListItemText primary="Menu Item 2" />
+        </ListItem>
+      </List>
     </Drawer>
   </div>
 );

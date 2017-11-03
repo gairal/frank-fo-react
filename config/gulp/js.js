@@ -3,8 +3,8 @@ const conf = require('../config.json'),
   webpack = require('webpack'),
   gulpWebpack = require('webpack-stream'),
   eslint = require('gulp-eslint'),
-  webpackDevConfig = require('../webpack.conf.dev');
-  webpackProdConfig = require('../webpack.conf.prod');
+  webpackDevConfig = require('../webpack.config.dev');
+  webpackProdConfig = require('../webpack.config.prod');
 
 function js (config) {
   'use strict';
