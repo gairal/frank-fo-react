@@ -1,65 +1,55 @@
-// ------------------------------------
-// Constants
-// ------------------------------------
-export const TODO_ADD = 'TODO_ADD';
-export const TODO_REMOVE = 'TODO_REMOVE';
-const STORE_KEY = 'TodoData';
+import { connect } from 'react-redux';
 
-// ------------------------------------
-// Actions
-// ------------------------------------
-export function add(title, desc) {
-  return {
-    type: TODO_ADD,
-    payload: {
-      title,
-      desc,
-    },
-  };
-}
+import AbstractRoute from '../AbstractRoute';
+import component from '../../components/Education';
 
-export function remove(id) {
-  return {
-    type: TODO_REMOVE,
-    payload: {
-      id,
-    },
-  };
-}
+export default class Education extends AbstractRoute {
+  constructor(store) {
+    super(store, 'educations');
+    this.initialState = {
+      educations: [],
+      isFetching: true,
+    };
 
-export const actions = {
-  add,
-  remove,
-};
+    this.component = component;
+    this.mapDispatchToProps = {
+      load: this.loadFactory(),
+    };
 
-// ------------------------------------
-// Action Handlers
-// ------------------------------------
-const ACTION_HANDLERS = {
-  [TODO_ADD]: (state, action) => {
-    const todos = [...state, {
-      id: state.length + 1,
-      title: action.payload.title,
-      desc: action.payload.desc,
-    }];
-    localStorage.setItem(STORE_KEY, JSON.stringify(todos));
+    this.ACTION_HANDLERS = {
+      [this.ACTIONS.FETCH]: state => ({
+        ...state,
+        isFetching: true,
+      }),
+      [this.ACTIONS.FETCH_SUCCESS]: (state, action) => ({
+        ...state,
+        educations: action.payload.works,
+        isFetching: false,
+      }),
+      [this.ACTIONS.FETCH_FAILURE]: state => ({
+        ...state,
+        isFetching: false,
+      }),
+    };
+  }
 
-    return todos;
-  },
-  [TODO_REMOVE]: (state, action) => {
-    const todos = state.filter(item => item.id !== action.payload.id);
-    localStorage.setItem(STORE_KEY, JSON.stringify(todos));
+  get connected() {
+    return connect(state => ({
+      works: state.educations.educations,
+      isFetching: state.educations.isFetching,
+    }), this.mapDispatchToProps)(this.component);
+  }
 
-    return todos;
-  },
-};
+  static success(json) {
+    return {
+      type: 'FETCH_SUCCESS',
+      payload: {
+        educations: json,
+      },
+    };
+  }
 
-// ------------------------------------
-// Reducer
-// ------------------------------------
-const initialState = JSON.parse(localStorage.getItem(STORE_KEY)) || [];
-export default function reducer(state = initialState, action) {
-  const handler = ACTION_HANDLERS[action.type];
-
-  return handler ? handler(state, action) : state;
+  loadFactory() {
+    return () => AbstractRoute.load(this.API_URL, AbstractRoute.request, Education.success);
+  }
 }

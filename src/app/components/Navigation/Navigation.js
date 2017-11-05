@@ -1,17 +1,17 @@
 import React from 'react';
-// import { IndexLink } from 'react-router';
-import AppBar from 'material-ui/AppBar';
-import Drawer from 'material-ui/Drawer';
-import List, { ListItem, ListItemText } from 'material-ui/List';
+import { AppBar, Toolbar, Drawer, List, ListItem, ListItemText, Typography } from 'material-ui';
 
 export const Navigation = () => (
   <div>
-    <AppBar
-      title="Title"
-    />
-    <Drawer
-      docked={false}
-      width={200}
+    <AppBar position="static" color="default">
+      <Toolbar>
+        <Typography type="title" color="inherit">
+          Title
+        </Typography>
+      </Toolbar>
+    </AppBar>
+    {/* <Drawer
+      type="permanent"
     >
       <List>
         <ListItem button>
@@ -23,7 +23,7 @@ export const Navigation = () => (
           <ListItemText primary="Menu Item 2" />
         </ListItem>
       </List>
-    </Drawer>
+    </Drawer> */}
   </div>
 );
 

@@ -1,22 +1,42 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Row, Col } from 'react-flexbox-grid';
+import { CircularProgress } from 'material-ui/Progress';
 
-export const Interest = props => (
-  <Row>
-    {props.interests.map(int => (
-      <Col
-        xs={12}
-        key={int.id}
-      >
-        Interest
-      </Col>
-    ))}
-  </Row>
-);
+class Education extends Component {
+  static propTypes = {
+    load: PropTypes.func.isRequired,
+    interests: PropTypes.arrayOf(PropTypes.object),
+    isFetching: PropTypes.bool,
+  }
 
-Interest.propTypes = {
-  interests: PropTypes.arrayOf(PropTypes.object).isRequired,
-};
+  static defaultProps = {
+    interests: [],
+    isFetching: false,
+  }
 
-export default Interest;
+  componentDidMount() {
+    this.props.load();
+  }
+
+  render() {
+    return (
+      <Row>
+        {(this.props.isFetching
+          ? <CircularProgress />
+          : null
+        )}
+        {this.props.interests.map(interest => (
+          <Col
+            xs={12}
+            key={interest.id}
+          >
+            Interest
+          </Col>
+        ))}
+      </Row>
+    );
+  }
+}
+
+export default Education;

@@ -1,84 +1,56 @@
-// ------------------------------------
-// Constants
-// ------------------------------------
-export const FETCH = 'FETCH';
-export const FETCH_SUCCESS = 'FETCH_SUCCESS';
-export const FETCH_FAILURE = 'FETCH_FAILURE';
-// const STORE_KEY = 'Experiences';
+import { connect } from 'react-redux';
 
-const API_URL = 'http://api-dot-com-gairal-frank.appspot.com/experiences/';
-// ------------------------------------
-// Actions
-// ------------------------------------
-const request = (context, answer) => ({
-  type: FETCH,
-  payload: {
-    context,
-    answer,
-  },
-});
+import AbstractRoute from '../AbstractRoute';
+import component from '../../components/Experience';
 
-const receiveResponse = json => ({
-  type: FETCH_SUCCESS,
-  payload: {
-    context: json.context,
-    output: json.output,
-  },
-});
-
-export const init = (context, answer) => (dispatch) => {
-  dispatch(request(context, answer));
-
-  const fetchOptions = {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  };
-
-  if (context) {
-    const body = {
-      context,
+export default class Experience extends AbstractRoute {
+  constructor(store) {
+    super(store, 'works');
+    this.initialState = {
+      works: [],
+      isFetching: true,
     };
-    if (answer) {
-      body.input = {
-        text: answer,
-      };
-    }
-    fetchOptions.body = JSON.stringify(body);
+
+    this.component = component;
+    this.mapDispatchToProps = {
+      load: this.loadFactory(),
+    };
+
+    this.ACTION_HANDLERS = {
+      [this.ACTIONS.FETCH]: state => ({
+        ...state,
+        isFetching: true,
+      }),
+      [this.ACTIONS.FETCH_SUCCESS]: (state, action) => ({
+        ...state,
+        works: action.payload.works,
+        isFetching: false,
+      }),
+      [this.ACTIONS.FETCH_FAILURE]: state => ({
+        ...state,
+        isFetching: false,
+      }),
+    };
   }
 
-  return fetch(API_URL, fetchOptions)
-    .then(response => response.json())
-    .then(json => dispatch(receiveResponse(json)));
-};
+  get connected() {
+    return connect(state => ({
+      works: state.works.works,
+      isFetching: state.works.isFetching,
+    }), this.mapDispatchToProps)(this.component);
+  }
 
-export const actions = {
-  init,
-};
+  static success(json) {
+    return {
+      type: 'FETCH_SUCCESS',
+      payload: {
+        works: json,
+      },
+    };
+  }
 
-// ------------------------------------
-// Action Handlers
-// ------------------------------------
-const ACTION_HANDLERS = {
-  [INIT]: (state, action) => {
-    // const todos = [...state, {
-    //   id: state.length + 1,
-    //   title: action.payload.title,
-    //   desc: action.payload.desc,
-    // }];
-    // localStorage.setItem(STORE_KEY, JSON.stringify(todos));
-
-    // return todos;
-  },
-};
-
-// ------------------------------------
-// Reducer
-// ------------------------------------
-const initialState = [];
-export default function reducer(state = initialState, action) {
-  const handler = ACTION_HANDLERS[action.type];
-
-  return handler ? handler(state, action) : state;
+  loadFactory() {
+    return () => AbstractRoute.load(
+      this.API_URL, AbstractRoute.request, Experience.success);
+  }
 }

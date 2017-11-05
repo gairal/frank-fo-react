@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
-import Experience from '../routes/Experience/ExperienceContainer';
+import CoreLayout from '../layouts/CoreLayout';
 
 class AppContainer extends Component {
   static propTypes = {
+    routes: PropTypes.arrayOf(PropTypes.object).isRequired,
     store: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
   }
 
@@ -15,14 +16,17 @@ class AppContainer extends Component {
   }
 
   render() {
-    const { store } = this.props;
+    const { store, routes } = this.props;
+    const routesElements = routes.map(
+      e => (<Route path={e.path} component={e.component} key={e.path} />));
 
     return (
       <Provider store={store}>
         <BrowserRouter>
-          <div>
-            <Route path="/" component={Experience} />
-          </div>
+          {<Route
+            path="/"
+            component={() => (<CoreLayout routes={routesElements} />)}
+          />}
         </BrowserRouter>
       </Provider>
     );

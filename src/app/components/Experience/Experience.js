@@ -1,28 +1,35 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Row, Col } from 'react-flexbox-grid';
+import { CircularProgress } from 'material-ui/Progress';
 
 class Experience extends Component {
   static propTypes = {
-    init: PropTypes.func.isRequired,
-    experiences: PropTypes.arrayOf(PropTypes.object),
+    load: PropTypes.func.isRequired,
+    works: PropTypes.arrayOf(PropTypes.object),
+    isFetching: PropTypes.bool,
   }
 
   static defaultProps = {
-    experiences: [],
+    works: [],
+    isFetching: false,
   }
 
   componentDidMount() {
-    this.props.init();
+    this.props.load();
   }
 
   render() {
     return (
       <Row>
-        {this.props.experiences.map(exp => (
+        {(this.props.isFetching
+          ? <CircularProgress />
+          : null
+        )}
+        {this.props.works.map(work => (
           <Col
             xs={12}
-            key={exp.id}
+            key={work.id}
           >
             Experience
           </Col>

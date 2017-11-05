@@ -3,7 +3,8 @@
 ---
 
 ### TODO
-- [ ] Unit Testing with Jasmine
+- [ ] Unit Testing with Mocha
+- [ ] remove flexbox
 
 ---
 
