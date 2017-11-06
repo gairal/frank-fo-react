@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
-
-import { Grid } from 'react-flexbox-grid';
+import { Grid } from 'material-ui';
 import Navigation from '../../components/Navigation';
 
 export const CoreLayout = ({ routes }) => {
@@ -13,19 +12,14 @@ export const CoreLayout = ({ routes }) => {
   });
 
   return (<MuiThemeProvider theme={theme}>
-    <div>
+    <Grid container>
       <Navigation />
-      <Grid fluid>
-        <div>
-          {routes}
-        </div>
-      </Grid>
-    </div>
+      {routes}
+    </Grid>
   </MuiThemeProvider>);
 };
 
 CoreLayout.propTypes = {
-  // routes: PropTypes.element.isRequired,
   routes: PropTypes.arrayOf(PropTypes.element).isRequired,
 };
 

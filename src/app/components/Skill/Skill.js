@@ -1,22 +1,45 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Row, Col } from 'react-flexbox-grid';
+import { CircularProgress } from 'material-ui/Progress';
+import { Grid } from 'material-ui';
 
-export const Skill = props => (
-  <Row>
-    {props.skills.map(skill => (
-      <Col
-        xs={12}
-        key={skill.id}
-      >
-        Skill
-      </Col>
-    ))}
-  </Row>
-);
+class Skill extends Component {
+  static propTypes = {
+    load: PropTypes.func.isRequired,
+    skills: PropTypes.arrayOf(PropTypes.object),
+    isFetching: PropTypes.bool,
+  }
 
-Skill.propTypes = {
-  skills: PropTypes.arrayOf(PropTypes.object).isRequired,
-};
+  static defaultProps = {
+    skills: [],
+    isFetching: false,
+  }
+
+  componentDidMount() {
+    this.props.load();
+  }
+
+  render() {
+    return (
+      <Grid item xs={12}>
+        <Grid container>
+          {(this.props.isFetching
+            ? <CircularProgress />
+            : null
+          )}
+          {this.props.skills.map(skill => (
+            <Grid
+              item
+              xs={3}
+              key={skill.id}
+            >
+              Education
+            </Grid>
+          ))}
+        </Grid>
+      </Grid>
+    );
+  }
+}
 
 export default Skill;

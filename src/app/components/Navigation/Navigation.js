@@ -1,8 +1,8 @@
 import React from 'react';
-import { AppBar, Toolbar, Drawer, List, ListItem, ListItemText, Typography } from 'material-ui';
+import { Grid, AppBar, Toolbar, Drawer, List, ListItem, ListItemText, Typography } from 'material-ui';
 
 export const Navigation = () => (
-  <div>
+  <Grid item xs={12}>
     <AppBar position="static" color="default">
       <Toolbar>
         <Typography type="title" color="inherit">
@@ -24,7 +24,7 @@ export const Navigation = () => (
         </ListItem>
       </List>
     </Drawer> */}
-  </div>
+  </Grid>
 );
 
 export default Navigation;

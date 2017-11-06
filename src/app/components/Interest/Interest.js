@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Row, Col } from 'react-flexbox-grid';
 import { CircularProgress } from 'material-ui/Progress';
+import { Grid } from 'material-ui';
 
 class Education extends Component {
   static propTypes = {
@@ -21,20 +21,23 @@ class Education extends Component {
 
   render() {
     return (
-      <Row>
-        {(this.props.isFetching
-          ? <CircularProgress />
-          : null
-        )}
-        {this.props.interests.map(interest => (
-          <Col
-            xs={12}
-            key={interest.id}
-          >
-            Interest
-          </Col>
-        ))}
-      </Row>
+      <Grid item xs={12}>
+        <Grid container>
+          {(this.props.isFetching
+            ? <CircularProgress />
+            : null
+          )}
+          {this.props.interests.map(interest => (
+            <Grid
+              item
+              xs={3}
+              key={interest.id}
+            >
+              Education
+            </Grid>
+          ))}
+        </Grid>
+      </Grid>
     );
   }
 }
