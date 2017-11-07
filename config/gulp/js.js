@@ -6,12 +6,18 @@ const conf = require('../config.json'),
   webpackDevConfig = require('../webpack.config.dev');
   webpackProdConfig = require('../webpack.config.prod');
 
+function handleError(err) {
+  console.log(err.toString());
+  this.emit('end');
+}
+
 function js (config) {
   'use strict';
   return gulp.src([conf.base.src + conf.files.js])
   .pipe(eslint({configFile: './.eslintrc.json'}))
   .pipe(eslint.format())
   .pipe(gulpWebpack(config, webpack))
+  .on('error', handleError)
   .pipe(gulp.dest(conf.base.build + conf.path.js));
 }
 

@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { LinearProgress } from 'material-ui/Progress';
 import { Grid } from 'material-ui';
 
-export const Loader = props => (
-  props.isFetching
+export const Loader = ({ isFetching }) => (
+  isFetching
     ? (
       <Grid
         container
