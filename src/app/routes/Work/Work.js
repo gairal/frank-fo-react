@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
 
 import AbstractRoute from '../AbstractRoute';
-import component from '../../components/Experience';
+import component from '../../components/Work';
 
-export default class Experience extends AbstractRoute {
+export default class Work extends AbstractRoute {
   constructor(store) {
     super(store, 'works');
     this.initialState = {
@@ -51,6 +51,6 @@ export default class Experience extends AbstractRoute {
 
   loadFactory() {
     return () => AbstractRoute.load(
-      this.API_URL, AbstractRoute.request, Experience.success);
+      this.API_URL, AbstractRoute.request, Work.success);
   }
 }

@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { CircularProgress } from 'material-ui/Progress';
-import { Grid } from 'material-ui';
+import { Grid, Paper, Typography } from 'material-ui';
+import Loader from '../core/Loader';
 
-
-class Education extends Component {
+export default class Education extends Component {
   static propTypes = {
     load: PropTypes.func.isRequired,
     educations: PropTypes.arrayOf(PropTypes.object),
@@ -23,18 +22,19 @@ class Education extends Component {
   render() {
     return (
       <Grid item xs={12}>
+        <Loader isFetching={this.props.isFetching} />
         <Grid container>
-          {(this.props.isFetching
-            ? <CircularProgress />
-            : null
-          )}
           {this.props.educations.map(edu => (
             <Grid
               item
-              xs={3}
-              key={edu.id}
+              xs={12}
+              key={edu.name}
             >
-              Education
+              <Paper elevation={4}>
+                <Typography type="headline" component="h5">
+                  {edu.name} | {edu.short_description}
+                </Typography>
+              </Paper>
             </Grid>
           ))}
         </Grid>
@@ -42,5 +42,3 @@ class Education extends Component {
     );
   }
 }
-
-export default Education;

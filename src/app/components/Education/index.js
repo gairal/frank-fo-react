@@ -1,3 +1,3 @@
-import education from './Education';
+import Education from './Education';
 
-export default education;
+export default Education;

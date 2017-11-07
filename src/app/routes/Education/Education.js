@@ -23,7 +23,7 @@ export default class Education extends AbstractRoute {
       }),
       [this.ACTIONS.FETCH_SUCCESS]: (state, action) => ({
         ...state,
-        educations: action.payload.works,
+        educations: action.payload.educations,
         isFetching: false,
       }),
       [this.ACTIONS.FETCH_FAILURE]: state => ({
@@ -35,7 +35,7 @@ export default class Education extends AbstractRoute {
 
   get connected() {
     return connect(state => ({
-      works: state.educations.educations,
+      educations: state.educations.educations,
       isFetching: state.educations.isFetching,
     }), this.mapDispatchToProps)(this.component);
   }

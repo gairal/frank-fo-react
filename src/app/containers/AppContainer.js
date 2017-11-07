@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
-import CoreLayout from '../layouts/CoreLayout';
+import Layout from '../components/core/Layout';
 
-class AppContainer extends Component {
+export default class AppContainer extends Component {
   static propTypes = {
     routes: PropTypes.arrayOf(PropTypes.object).isRequired,
     store: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
@@ -25,12 +25,10 @@ class AppContainer extends Component {
         <BrowserRouter>
           {<Route
             path="/"
-            component={() => (<CoreLayout routes={routesElements} />)}
+            component={() => (<Layout routes={routesElements} />)}
           />}
         </BrowserRouter>
       </Provider>
     );
   }
 }
-
-export default AppContainer;

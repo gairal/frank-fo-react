@@ -5,6 +5,7 @@
 ### TODO
 - [ ] Unit Testing with Mocha
 - [ ] remove flexbox
+- [ ] chrome app
 
 ---
 

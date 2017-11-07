@@ -1,3 +1,3 @@
-import interest from './Interest';
+import Interest from './Interest';
 
-export default interest;
+export default Interest;

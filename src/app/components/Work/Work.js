@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { CircularProgress } from 'material-ui/Progress';
 import { Grid, Paper, Typography } from 'material-ui';
+import Loader from '../core/Loader';
 
-class Experience extends Component {
+export default class Work extends Component {
   static propTypes = {
     load: PropTypes.func.isRequired,
     works: PropTypes.arrayOf(PropTypes.object),
@@ -22,11 +22,8 @@ class Experience extends Component {
   render() {
     return (
       <Grid item xs={12}>
+        <Loader isFetching={this.props.isFetching} />
         <Grid container>
-          {(this.props.isFetching
-            ? <CircularProgress />
-            : null
-          )}
           {this.props.works.map(work => (
             <Grid
               item
@@ -45,5 +42,3 @@ class Experience extends Component {
     );
   }
 }
-
-export default Experience;

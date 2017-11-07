@@ -1,11 +1,12 @@
 // import CoreLayout from '../layouts/CoreLayout';
-import Experience from './Experience';
+import Work from './Work';
 import Skill from './Skill';
 import Education from './Education';
 import Interest from './Interest';
 
 export default store => [
-  Experience(store),
+  Work(store),
   Education(store),
+  Skill(store),
   Interest(store),
 ];

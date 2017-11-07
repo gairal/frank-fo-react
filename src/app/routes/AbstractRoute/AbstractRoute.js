@@ -1,11 +1,11 @@
 import { injectReducer } from '../../store/reducers';
 
 export default class AbstractRoute {
-  constructor(store, key) {
+  constructor(store, key, path = '') {
     this.store = store;
     this.key = key;
     this.initialState = {};
-    this.API_URL = `https://api-dot-com-gairal-frank.appspot.com/${this.key}`;
+    this.API_URL = `https://api-dot-com-gairal-frank.appspot.com/${this.key}/${path}`;
 
     this.ACTIONS = {
       FETCH: 'FETCH',
