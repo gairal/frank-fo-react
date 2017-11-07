@@ -5,9 +5,10 @@ import component from '../../components/Interest';
 
 export default class Interest extends AbstractRoute {
   constructor(store) {
-    super(store, 'interests');
+    super(store, 'interests', 'categories');
     this.initialState = {
       interests: [],
+      travels: [],
       isFetching: true,
     };
 
@@ -23,7 +24,7 @@ export default class Interest extends AbstractRoute {
       }),
       [this.ACTIONS.FETCH_SUCCESS]: (state, action) => ({
         ...state,
-        interests: action.payload.works,
+        interests: action.payload.interests,
         isFetching: false,
       }),
       [this.ACTIONS.FETCH_FAILURE]: state => ({
@@ -35,7 +36,8 @@ export default class Interest extends AbstractRoute {
 
   get connected() {
     return connect(state => ({
-      works: state.interests.interests,
+      interests: state.interests.interests,
+      travels: state.interests.travels,
       isFetching: state.interests.isFetching,
     }), this.mapDispatchToProps)(this.component);
   }
