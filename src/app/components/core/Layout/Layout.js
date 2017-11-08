@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
 import { Grid } from 'material-ui';
-import { lightBlue, green, red } from 'material-ui/colors';
+import { blue, green, red } from 'material-ui/colors';
 import { Route, Switch } from 'react-router-dom';
 import Header from '../Header';
-// import SideNav from '../SideNav';
+import SideNav from '../SideNav';
 
 export default class Layout extends Component {
   static propTypes = {
@@ -22,8 +22,8 @@ export default class Layout extends Component {
 
     this.palette = {
       palette: {
-        type: 'dark',
-        primary: lightBlue, // Purple and green play nicely together.
+        // type: 'dark',
+        primary: blue, // Purple and green play nicely together.
         secondary: {
           ...green,
           A400: '#00e677',

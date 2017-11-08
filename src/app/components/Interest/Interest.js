@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Grid } from 'material-ui';
+import { Grid, Divider } from 'material-ui';
 import List, { ListItem, ListItemText, ListSubheader } from 'material-ui/List';
 import Loader from '../core/Loader';
+import Map from './Map';
 
 export default class Interest extends Component {
   static propTypes = {
@@ -26,19 +27,7 @@ export default class Interest extends Component {
     return (
       <Grid item xs={12}>
         <Loader isFetching={this.props.isFetching} />
-        <Grid container>
-          {this.props.travels.map(travel => (
-            <Grid
-              item
-              xs={12}
-              md={6}
-              lg={4}
-              key={travel.place}
-            >
-            travel
-            </Grid>
-          ))}
-        </Grid>
+        <Map travels={this.props.travels} />
         <List subheader>
           {this.props.interests.map(category => (
             <div key={category.name}>
@@ -48,6 +37,7 @@ export default class Interest extends Component {
                   <ListItemText primary={interest.name} />
                 </ListItem>
               ))}
+              <Divider />
             </div>
           ))}
         </List>

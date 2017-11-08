@@ -1,57 +1,58 @@
-import { connect } from 'react-redux';
-
 import AbstractRoute from '../AbstractRoute';
 import component from '../../components/Interest';
 
 export default class Interest extends AbstractRoute {
   constructor(store) {
     super(store, 'interests', 'categories');
-    this.initialState = {
-      interests: [],
-      travels: [],
-      isFetching: true,
-    };
-
     this.component = component;
-    this.mapDispatchToProps = {
-      load: this.loadFactory(),
-    };
+    this.initialState.travels = [];
 
-    this.ACTION_HANDLERS = {
-      [this.ACTIONS.FETCH]: state => ({
-        ...state,
-        isFetching: true,
-      }),
-      [this.ACTIONS.FETCH_SUCCESS]: (state, action) => ({
-        ...state,
-        interests: action.payload.interests,
-        isFetching: false,
-      }),
-      [this.ACTIONS.FETCH_FAILURE]: state => ({
-        ...state,
-        isFetching: false,
-      }),
-    };
+    this.ACTION_HANDLERS[this.ACTIONS.FETCH_SUCCESS] = (state, action) => ({
+      ...state,
+      data: action.payload.json,
+      travels: action.payload.travels,
+      isFetching: false,
+    });
+
+    this.mapStateToProps.travels = 'travels';
   }
 
-  get connected() {
-    return connect(state => ({
-      interests: state.interests.interests,
-      travels: state.interests.travels,
-      isFetching: state.interests.isFetching,
-    }), this.mapDispatchToProps)(this.component);
-  }
-
-  static success(json) {
+  static success({ json, travels }) {
     return {
       type: 'FETCH_SUCCESS',
       payload: {
-        interests: json,
+        json,
+        travels,
       },
     };
   }
 
   loadFactory() {
-    return () => AbstractRoute.load(this.API_URL, AbstractRoute.request, Interest.success);
+    const API_URLS = [
+      this.API_URL,
+      'https://api-dot-com-gairal-frank.appspot.com/travels',
+    ];
+
+    return () => (dispatch) => {
+      dispatch(AbstractRoute.request());
+
+      const fetchOptions = {
+        method: 'GET',
+      };
+
+      return Promise.all(API_URLS.map(url => fetch(url, fetchOptions)))
+        .then(responses =>
+          Promise.all(responses.map(res => res.json()))
+            .then((jsons) => {
+              const payload = jsons.reduce((acc, e) => {
+                if (e[0].name) {
+                  return { ...acc, json: e };
+                }
+                return { ...acc, travels: e };
+              }, {});
+
+              return dispatch(Interest.success(payload));
+            }));
+    };
   }
 }
