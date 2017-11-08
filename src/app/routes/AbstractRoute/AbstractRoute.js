@@ -2,9 +2,10 @@ import { connect } from 'react-redux';
 import { injectReducer } from '../../store/reducers';
 
 export default class AbstractRoute {
-  constructor(store, key, path = '') {
+  constructor(store, key, icon, path = '') {
     this.store = store;
     this.key = key;
+    this.icon = icon;
 
     this.API_URL = `https://api-dot-com-gairal-frank.appspot.com/${this.key}/${path}`;
 
@@ -57,6 +58,8 @@ export default class AbstractRoute {
     injectReducer(this.store, { key: this.key, reducer: this.getReducer() });
 
     return {
+      key: this.key,
+      icon: this.icon,
       path: `/${this.key}`,
       component: this.connected,
     };

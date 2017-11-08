@@ -3,7 +3,7 @@ import component from '../../components/Work';
 
 export default class Work extends AbstractRoute {
   constructor(store) {
-    super(store, 'works');
+    super(store, 'works', 'work');
     this.component = component;
   }
 }

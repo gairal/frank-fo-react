@@ -5,6 +5,12 @@ import { AppBar, Toolbar, Typography, IconButton, Icon } from 'material-ui';
 const Header = ({ title }) => (
   <AppBar position="fixed" color="primary">
     <Toolbar>
+      <IconButton
+        color="contrast"
+        aria-label="open drawer"
+      >
+        <Icon color="contrast">menu</Icon>
+      </IconButton>
       <Typography type="headline" component="h1" color="inherit" style={{ flex: 1 }}>
         {title}
       </Typography>

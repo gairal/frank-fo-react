@@ -3,7 +3,7 @@ import component from '../../components/Interest';
 
 export default class Interest extends AbstractRoute {
   constructor(store) {
-    super(store, 'interests', 'categories');
+    super(store, 'interests', 'language', 'categories');
     this.component = component;
     this.initialState.travels = [];
 

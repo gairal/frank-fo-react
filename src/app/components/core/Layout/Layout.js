@@ -67,7 +67,7 @@ export default class Layout extends Component {
       <MuiThemeProvider theme={this.theme}>
         <Grid container>
           <Header title={this.state.title} />
-          {/* <SideNav /> */}
+          <SideNav routes={this.props.routes} />
           <Grid item xs={12}>
             <main>
               <Switch>

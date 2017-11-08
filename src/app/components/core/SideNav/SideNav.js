@@ -1,21 +1,51 @@
-import React from 'react';
-import { Drawer, List, ListItem, ListItemText, Hidden } from 'material-ui';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import {
+  AppBar,
+  Toolbar,
+  Drawer,
+  List,
+  ListItem,
+  ListItemText,
+  ListItemIcon,
+  Icon,
+  Hidden,
+  Typography } from 'material-ui';
 
-export default class SideNav {
-  constructor() {
+export default class SideNav extends Component {
+  static propTypes = {
+    routes: PropTypes.arrayOf(PropTypes.object).isRequired,
+  }
+
+  constructor(props) {
+    super(props);
     this.state = {
       mobileOpen: false,
     };
 
     this.drawer = (
-      <List>
-        <ListItem button>
-          <ListItemText primary="Menu Item 2" />
-        </ListItem>
-        <ListItem button>
-          <ListItemText primary="version" secondari="4.0.0-react" />
-        </ListItem>
-      </List>
+      <div>
+        <AppBar position="static" color="primary">
+          <Toolbar>
+            <Typography type="headline" component="h1" color="inherit">
+              frank g.
+            </Typography>
+          </Toolbar>
+        </AppBar>
+        <List>
+          {this.props.routes.map(e => (
+            <ListItem button key={e.path}>
+              <ListItemIcon>
+                <Icon color="contrast">{e.icon}</Icon>
+              </ListItemIcon>
+              <ListItemText primary={e.path} />
+            </ListItem>
+          ))}
+          <ListItem button>
+            <ListItemText primary="version" secondary="4.0.0-react" />
+          </ListItem>
+        </List>
+      </div>
     );
   }
 
