@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { withScriptjs, withGoogleMap, GoogleMap } from 'react-google-maps';
+import GoogleMap from 'react-google-maps/lib/components/GoogleMap';
+import { withScriptjs, withGoogleMap } from 'react-google-maps/lib';
 
 const GMap = withScriptjs(withGoogleMap(() => (
   <GoogleMap

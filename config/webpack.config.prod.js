@@ -1,6 +1,7 @@
 const baseWebpackConfig = require('./webpack.config.base'),
 merge = require('webpack-merge'),
-webpack = require('webpack');
+webpack = require('webpack'),
+UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = merge(baseWebpackConfig, {
   plugins: [
@@ -9,10 +10,6 @@ module.exports = merge(baseWebpackConfig, {
   	    NODE_ENV: JSON.stringify('production')
   	  }
   	}),
-  	new webpack.optimize.UglifyJsPlugin({
-  		compress: {
-          warnings: false
-      }
-    })
+  	new UglifyJsPlugin()
   ]
 })
