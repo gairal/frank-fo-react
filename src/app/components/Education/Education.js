@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Grid, Paper, Typography } from 'material-ui';
+import { Grid, Typography, Avatar, Chip, Icon } from 'material-ui';
+import Card, { CardContent, CardMedia } from 'material-ui/Card';
 import Loader from '../core/Loader';
 
 export default class Education extends Component {
@@ -28,13 +29,36 @@ export default class Education extends Component {
             <Grid
               item
               xs={12}
-              key={edu.name}
+              key={edu.year_in}
             >
-              <Paper elevation={4}>
-                <Typography type="headline" component="h5">
-                  {edu.name} | {edu.short_description}
-                </Typography>
-              </Paper>
+              <Card
+                elevation={4}
+                style={{ display: 'flex' }}
+              >
+                <CardMedia
+                  image={`/assets/img/${edu.image.name}`}
+                  title={edu.name}
+                  style={{ height: '120px', width: '120px', flex: 'none' }}
+                />
+                <CardContent>
+                  <Typography type="body1" component="h2">
+                    {edu.name} | {edu.short_description}
+                  </Typography>
+                  <div style={{ display: 'flex' }}>
+                    <Chip
+                      avatar={<Avatar><Icon style={{ fontSize: '19px' }}>date_range</Icon></Avatar>}
+                      label={edu.year_in}
+                    />
+                    <Chip
+                      avatar={<Avatar><Icon style={{ fontSize: '19px' }}>location_city</Icon></Avatar>}
+                      label={edu.place}
+                    />
+                  </div>
+                  <Typography type="caption" component="p">
+                    {edu.diploma}
+                  </Typography>
+                </CardContent>
+              </Card>
             </Grid>
           ))}
         </Grid>

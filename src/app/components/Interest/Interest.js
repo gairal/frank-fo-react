@@ -32,11 +32,11 @@ export default class Interest extends Component {
           {this.props.interests.map(category => (
             <div key={category.name}>
               <ListSubheader>{category.name}</ListSubheader>
-              {category.interests.map(interest => (
+              {category.interests ? category.interests.map(interest => (
                 <ListItem key={interest.name}>
                   <ListItemText primary={interest.name} />
                 </ListItem>
-              ))}
+              )) : null}
               <Divider />
             </div>
           ))}

@@ -12,7 +12,7 @@ const SkillCard = ({ category }) => (
         {category.name}
       </Typography>
       <List>
-        {category.skills.map((skill) => {
+        {category.skills ? category.skills.map((skill) => {
           let skillTitle = skill.name;
           if (skill.description) {
             skillTitle += ` | ${skill.description}`;
@@ -28,7 +28,7 @@ const SkillCard = ({ category }) => (
               <ListItemText primary={skillTitle} />
             </ListItem>
           );
-        })}
+        }) : null}
       </List>
     </CardContent>
   </Card>

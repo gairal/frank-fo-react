@@ -1,16 +1,26 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
+import { withStyles, MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
 import { Grid } from 'material-ui';
 import { blue, green, red } from 'material-ui/colors';
 import { Route, Switch } from 'react-router-dom';
 import Header from '../Header';
 import SideNav from '../SideNav';
 
-export default class Layout extends Component {
+const drawerWidth = 240;
+const styles = theme => ({
+  content: {
+    [theme.breakpoints.up('md')]: {
+      marginLeft: drawerWidth,
+    },
+  },
+});
+
+class Layout extends Component {
   static propTypes = {
     routes: PropTypes.arrayOf(PropTypes.object).isRequired,
     history: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+    classes: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
   }
 
   constructor(props) {
@@ -18,6 +28,7 @@ export default class Layout extends Component {
 
     this.state = {
       title: '',
+      mobileOpen: false,
     };
 
     this.palette = {
@@ -52,6 +63,10 @@ export default class Layout extends Component {
     return createMuiTheme(this.palette);
   }
 
+  handleDrawerToggle = () => {
+    this.setState({ mobileOpen: !this.state.mobileOpen });
+  };
+
   updateTitle(location) {
     const title = location.pathname.substr(1);
 
@@ -66,10 +81,17 @@ export default class Layout extends Component {
     return (
       <MuiThemeProvider theme={this.theme}>
         <Grid container>
-          <Header title={this.state.title} />
-          <SideNav routes={this.props.routes} />
+          <SideNav
+            mobileOpen={this.state.mobileOpen}
+            routes={this.props.routes}
+            handleDrawerToggle={this.handleDrawerToggle}
+          />
+          <Header
+            title={this.state.title}
+            handleDrawerToggle={this.handleDrawerToggle}
+          />
           <Grid item xs={12}>
-            <main>
+            <main className={this.props.classes.content}>
               <Switch>
                 {this.routes}
               </Switch>
@@ -80,3 +102,5 @@ export default class Layout extends Component {
     );
   }
 }
+
+export default withStyles(styles, { withTheme: true })(Layout);

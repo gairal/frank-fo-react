@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import { withStyles } from 'material-ui/styles';
 import {
   AppBar,
   Toolbar,
@@ -10,19 +12,29 @@ import {
   ListItemIcon,
   Icon,
   Hidden,
+  Divider,
   Typography } from 'material-ui';
 
-export default class SideNav extends Component {
+const drawerWidth = 240;
+const styles = theme => ({
+  drawerPaper: {
+    width: 250,
+    [theme.breakpoints.up('md')]: {
+      width: drawerWidth,
+    },
+  },
+});
+
+class SideNav extends Component {
   static propTypes = {
     routes: PropTypes.arrayOf(PropTypes.object).isRequired,
+    classes: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+    mobileOpen: PropTypes.bool.isRequired,
+    handleDrawerToggle: PropTypes.func.isRequired,
   }
 
   constructor(props) {
     super(props);
-    this.state = {
-      mobileOpen: false,
-    };
-
     this.drawer = (
       <div>
         <AppBar position="static" color="primary">
@@ -34,13 +46,16 @@ export default class SideNav extends Component {
         </AppBar>
         <List>
           {this.props.routes.map(e => (
-            <ListItem button key={e.path}>
-              <ListItemIcon>
-                <Icon color="contrast">{e.icon}</Icon>
-              </ListItemIcon>
-              <ListItemText primary={e.path} />
-            </ListItem>
+            <Link to={e.path} key={e.path}>
+              <ListItem button>
+                <ListItemIcon>
+                  <Icon color="contrast">{e.icon}</Icon>
+                </ListItemIcon>
+                <ListItemText primary={e.path} />
+              </ListItem>
+            </Link>
           ))}
+          <Divider />
           <ListItem button>
             <ListItemText primary="version" secondary="4.0.0-react" />
           </ListItem>
@@ -50,15 +65,20 @@ export default class SideNav extends Component {
   }
 
   render() {
+    const { classes } = this.props;
+
     return (
       <div>
         <Hidden mdUp>
           <Drawer
             type="temporary"
-            open={this.state.mobileOpen}
-            onRequestClose={this.handleDrawerToggle}
+            open={this.props.mobileOpen}
+            onRequestClose={this.props.handleDrawerToggle}
             ModalProps={{
               keepMounted: true, // Better open performance on mobile.
+            }}
+            classes={{
+              paper: classes.drawerPaper,
             }}
           >
             {this.drawer}
@@ -68,6 +88,9 @@ export default class SideNav extends Component {
           <Drawer
             type="permanent"
             open
+            classes={{
+              paper: classes.drawerPaper,
+            }}
           >
             {this.drawer}
           </Drawer>
@@ -76,3 +99,5 @@ export default class SideNav extends Component {
     );
   }
 }
+
+export default withStyles(styles, { withTheme: true })(SideNav);
