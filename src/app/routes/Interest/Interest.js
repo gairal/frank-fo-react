@@ -30,7 +30,7 @@ export default class Interest extends AbstractRoute {
   loadFactory() {
     const API_URLS = [
       this.API_URL,
-      'https://api-dot-com-gairal-frank.appspot.com/travels',
+      'https://com-gairal-frank-api.appspot.com/travels',
     ];
 
     return () => (dispatch) => {

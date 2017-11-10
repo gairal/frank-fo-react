@@ -7,7 +7,7 @@ export default class AbstractRoute {
     this.key = key;
     this.icon = icon;
 
-    this.API_URL = `https://api-dot-com-gairal-frank.appspot.com/${this.key}/${path}`;
+    this.API_URL = `https://com-gairal-frank-api.appspot.com/${this.key}/${path}`;
 
     this.initialState = {
       data: [],
