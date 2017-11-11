@@ -7,24 +7,48 @@ export default class Interest extends AbstractRoute {
     this.component = component;
     this.initialState.travels = [];
 
-    this.ACTION_HANDLERS[this.ACTIONS.FETCH_SUCCESS] = (state, action) => ({
-      ...state,
-      data: action.payload.json,
-      travels: action.payload.travels,
-      isFetching: false,
-    });
+    this.ACTIONS = {
+      FETCH: 'INTEREST_FETCH',
+      FETCH_SUCCESS: 'INTEREST_FETCH_SUCCESS',
+      FETCH_FAILURE: 'INTEREST_FETCH_FAILURE',
+    };
 
-    this.mapStateToProps.travels = 'travels';
+    this.init();
+  }
+
+  // actions
+  static request() {
+    return {
+      type: 'INTEREST_FETCH',
+    };
   }
 
   static success({ json, travels }) {
     return {
-      type: 'FETCH_SUCCESS',
+      type: 'INTEREST_FETCH_SUCCESS',
       payload: {
         json,
         travels,
       },
     };
+  }
+
+  static fail(err) {
+    return {
+      type: 'INTEREST_FETCH_FAILURE',
+      payload: {
+        err,
+      },
+    };
+  }
+
+  static fetchSuccess(state, action) {
+    return ({
+      ...state,
+      data: action.payload.json,
+      travels: action.payload.travels,
+      isFetching: false,
+    });
   }
 
   loadFactory() {
@@ -34,7 +58,7 @@ export default class Interest extends AbstractRoute {
     ];
 
     return () => (dispatch) => {
-      dispatch(AbstractRoute.request());
+      dispatch(Interest.request());
 
       const fetchOptions = {
         method: 'GET',
@@ -52,7 +76,15 @@ export default class Interest extends AbstractRoute {
               }, {});
 
               return dispatch(Interest.success(payload));
-            }));
+            }))
+        .catch(err => dispatch(Interest.fail(err)));
     };
+  }
+
+  init() {
+    super.init();
+
+    this.ACTION_HANDLERS[this.ACTIONS.FETCH_SUCCESS] = Interest.fetchSuccess;
+    this.mapStateToProps.travels = 'travels';
   }
 }

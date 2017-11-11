@@ -14,36 +14,14 @@ export default class AbstractRoute {
       isFetching: true,
     };
 
-    this.ACTIONS = {
-      FETCH: 'FETCH',
-      FETCH_SUCCESS: 'FETCH_SUCCESS',
-      FETCH_FAILURE: 'FETCH_FAILURE',
-    };
-
-    this.ACTION_HANDLERS = {
-      [this.ACTIONS.FETCH]: state => ({
-        ...state,
-        isFetching: true,
-      }),
-      [this.ACTIONS.FETCH_SUCCESS]: (state, action) => ({
-        ...state,
-        data: action.payload.json,
-        isFetching: false,
-      }),
-      [this.ACTIONS.FETCH_FAILURE]: state => ({
-        ...state,
-        isFetching: false,
-      }),
-    };
+    this.ACTIONS = {};
+    this.ACTION_HANDLERS = {};
 
     this.mapStateToProps = {
       [this.key]: 'data',
       isFetching: 'isFetching',
     };
-
-    this.mapDispatchToProps = {
-      load: this.loadFactory(),
-    };
+    this.mapDispatchToProps = {};
   }
 
   get connected() {
@@ -56,7 +34,6 @@ export default class AbstractRoute {
 
   get route() {
     injectReducer(this.store, { key: this.key, reducer: this.getReducer() });
-
     return {
       key: this.key,
       icon: this.icon,
@@ -75,27 +52,37 @@ export default class AbstractRoute {
     };
   }
 
-  static request() {
-    return {
-      type: 'FETCH',
-      payload: {},
-    };
+  // reducer functions
+  static fetch(state) {
+    return ({
+      ...state,
+      isFetching: true,
+    });
   }
 
-  static success(json) {
-    return {
-      type: 'FETCH_SUCCESS',
-      payload: {
-        json,
-      },
-    };
+  static fetchSuccess(state, action) {
+    return ({
+      ...state,
+      data: action.payload.json,
+      isFetching: false,
+    });
+  }
+
+  static fetchFail(state) {
+    return ({
+      ...state,
+      isFetching: false,
+    });
   }
 
   loadFactory() {
     const API_URL = this.API_URL;
+    const request = this.constructor.request;
+    const success = this.constructor.success;
+    const fail = this.constructor.fail;
 
     return () => (dispatch) => {
-      dispatch(AbstractRoute.request());
+      dispatch(request());
 
       const fetchOptions = {
         method: 'GET',
@@ -103,7 +90,16 @@ export default class AbstractRoute {
 
       return fetch(API_URL, fetchOptions)
         .then(response => response.json())
-        .then(json => dispatch(AbstractRoute.success(json)));
+        .then(json => dispatch(success(json)))
+        .catch(err => dispatch(fail(err)));
     };
+  }
+
+  init() {
+    this.ACTION_HANDLERS[this.ACTIONS.FETCH] = AbstractRoute.fetch;
+    this.ACTION_HANDLERS[this.ACTIONS.FETCH_SUCCESS] = AbstractRoute.fetchSuccess;
+    this.ACTION_HANDLERS[this.ACTIONS.FETCH_FAILURE] = AbstractRoute.fetchFail;
+
+    this.mapDispatchToProps.load = this.loadFactory();
   }
 }

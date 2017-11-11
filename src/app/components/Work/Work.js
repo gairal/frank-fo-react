@@ -7,12 +7,11 @@ import Loader from '../core/Loader';
 export default class Work extends Component {
   static propTypes = {
     load: PropTypes.func.isRequired,
-    works: PropTypes.arrayOf(PropTypes.object),
+    works: PropTypes.arrayOf(PropTypes.object).isRequired,
     isFetching: PropTypes.bool,
   }
 
   static defaultProps = {
-    works: [],
     isFetching: false,
   }
 

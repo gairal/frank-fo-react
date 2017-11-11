@@ -7,12 +7,11 @@ import Loader from '../core/Loader';
 export default class Education extends Component {
   static propTypes = {
     load: PropTypes.func.isRequired,
-    educations: PropTypes.arrayOf(PropTypes.object),
+    educations: PropTypes.arrayOf(PropTypes.object).isRequired,
     isFetching: PropTypes.bool,
   }
 
   static defaultProps = {
-    educations: [],
     isFetching: false,
   }
 
