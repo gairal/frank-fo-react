@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles, MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
-import { Grid } from 'material-ui';
 import { blue, green, red } from 'material-ui/colors';
 import { Route, Switch } from 'react-router-dom';
 import Header from '../Header';
@@ -29,6 +28,7 @@ class Layout extends Component {
     this.state = {
       title: '',
       mobileOpen: false,
+      isFetching: false,
     };
 
     this.palette = {
@@ -59,10 +59,6 @@ class Layout extends Component {
     return routes;
   }
 
-  get theme() {
-    return createMuiTheme(this.palette);
-  }
-
   handleDrawerToggle = () => {
     this.setState({ mobileOpen: !this.state.mobileOpen });
   };
@@ -70,7 +66,8 @@ class Layout extends Component {
   updateTitle(location) {
     const title = location.pathname.substr(1);
 
-    this.setState(() => ({
+    this.setState(state => ({
+      ...state,
       title,
     }));
 
@@ -79,25 +76,21 @@ class Layout extends Component {
 
   render() {
     return (
-      <MuiThemeProvider theme={this.theme}>
-        <Grid container>
-          <SideNav
-            mobileOpen={this.state.mobileOpen}
-            routes={this.props.routes}
-            handleDrawerToggle={this.handleDrawerToggle}
-          />
-          <Header
-            title={this.state.title}
-            handleDrawerToggle={this.handleDrawerToggle}
-          />
-          <Grid item xs={12}>
-            <main className={this.props.classes.content}>
-              <Switch>
-                {this.routes}
-              </Switch>
-            </main>
-          </Grid>
-        </Grid>
+      <MuiThemeProvider theme={createMuiTheme(this.palette)}>
+        <SideNav
+          mobileOpen={this.state.mobileOpen}
+          routes={this.props.routes}
+          handleDrawerToggle={this.handleDrawerToggle}
+        />
+        <Header
+          title={this.state.title}
+          handleDrawerToggle={this.handleDrawerToggle}
+        />
+        <main className={this.props.classes.content}>
+          <Switch>
+            {this.routes}
+          </Switch>
+        </main>
       </MuiThemeProvider>
     );
   }

@@ -29,7 +29,9 @@
         "hidden": ".**"
     },
     "vendor":{
-        "js": [],
+        "js": [
+            "node_modules/normalize.css/normalize.css"
+        ],
         "assets": [
           "node_modules/font-awesome/fonts/fontawesome-webfont.eot",
           "node_modules/font-awesome/fonts/fontawesome-webfont.svg",

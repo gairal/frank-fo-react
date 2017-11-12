@@ -21,7 +21,7 @@ export default class Work extends Component {
 
   render() {
     return (
-      <Grid item xs={12}>
+      <section>
         <Loader isFetching={this.props.isFetching} />
         <Grid container>
           {this.props.works.map(work => (
@@ -61,7 +61,7 @@ export default class Work extends Component {
             </Grid>
           ))}
         </Grid>
-      </Grid>
+      </section>
     );
   }
 }

@@ -16,12 +16,9 @@ import {
   Typography } from 'material-ui';
 
 const drawerWidth = 240;
-const styles = theme => ({
+const styles = () => ({
   drawerPaper: {
-    width: 250,
-    [theme.breakpoints.up('md')]: {
-      width: drawerWidth,
-    },
+    width: drawerWidth,
   },
 });
 
@@ -100,4 +97,4 @@ class SideNav extends Component {
   }
 }
 
-export default withStyles(styles, { withTheme: true })(SideNav);
+export default withStyles(styles)(SideNav);

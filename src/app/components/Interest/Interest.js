@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Grid, Divider } from 'material-ui';
+import { Divider } from 'material-ui';
 import List, { ListItem, ListItemText, ListSubheader } from 'material-ui/List';
 import Loader from '../core/Loader';
 import Map from './Map';
@@ -25,7 +25,7 @@ export default class Interest extends Component {
 
   render() {
     return (
-      <Grid item xs={12}>
+      <section>
         <Loader isFetching={this.props.isFetching} />
         <Map travels={this.props.travels} />
         <List subheader>
@@ -41,7 +41,7 @@ export default class Interest extends Component {
             </div>
           ))}
         </List>
-      </Grid>
+      </section>
     );
   }
 }

@@ -21,7 +21,7 @@ export default class Education extends Component {
 
   render() {
     return (
-      <Grid item xs={12}>
+      <section>
         <Loader isFetching={this.props.isFetching} />
         <Grid container>
           {this.props.educations.map(edu => (
@@ -61,7 +61,7 @@ export default class Education extends Component {
             </Grid>
           ))}
         </Grid>
-      </Grid>
+      </section>
     );
   }
 }

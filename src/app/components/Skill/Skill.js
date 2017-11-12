@@ -22,7 +22,7 @@ export default class Skill extends Component {
 
   render() {
     return (
-      <Grid item xs={12}>
+      <section>
         <Loader isFetching={this.props.isFetching} />
         <Grid container>
           {this.props.skills.map(category => (
@@ -37,7 +37,7 @@ export default class Skill extends Component {
             </Grid>
           ))}
         </Grid>
-      </Grid>
+      </section>
     );
   }
 }
