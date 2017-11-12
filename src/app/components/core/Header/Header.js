@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
 import { withStyles } from 'material-ui/styles';
 import { AppBar, Toolbar, Typography, IconButton, Icon } from 'material-ui';
 import Menu, { MenuItem } from 'material-ui/Menu';
@@ -21,7 +22,7 @@ const styles = theme => ({
 
 class Header extends Component {
   static propTypes = {
-    title: PropTypes.string.isRequired,
+    history: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
     classes: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
     handleDrawerToggle: PropTypes.func.isRequired,
   };
@@ -32,7 +33,15 @@ class Header extends Component {
     this.state = {
       anchorEl: null,
       open: false,
+      title: '',
     };
+  }
+
+  componentDidMount() {
+    this.updateTitle(this.props.history.location);
+    this.props.history.listen((location) => {
+      this.updateTitle(location);
+    });
   }
 
   handleOpenMenu = (event) => {
@@ -41,6 +50,17 @@ class Header extends Component {
 
   handleRequestClose = () => {
     this.setState({ open: false });
+  }
+
+  updateTitle(location) {
+    const title = location.pathname.substr(1);
+
+    this.setState(state => ({
+      ...state,
+      title,
+    }));
+
+    document.title = `frank gairal -- ${title}`;
   }
 
   render() {
@@ -56,7 +76,7 @@ class Header extends Component {
             <Icon color="contrast">menu</Icon>
           </IconButton>
           <Typography type="headline" component="h1" color="inherit" style={{ flex: 1 }}>
-            {this.props.title}
+            {this.state.title}
           </Typography>
           <IconButton
             color="contrast"
@@ -89,4 +109,4 @@ class Header extends Component {
   }
 }
 
-export default withStyles(styles, { withTheme: true })(Header);
+export default withRouter(withStyles(styles, { withTheme: true })(Header));

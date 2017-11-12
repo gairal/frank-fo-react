@@ -6,6 +6,7 @@
 - [ ] Unit Testing with Mocha
 - [ ] remove flexbox
 - [ ] chrome app
+- [ ] update state of nav with active route
 
 ---
 

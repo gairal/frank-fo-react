@@ -18,7 +18,6 @@ const styles = theme => ({
 class Layout extends Component {
   static propTypes = {
     routes: PropTypes.arrayOf(PropTypes.object).isRequired,
-    history: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
     classes: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
   }
 
@@ -44,35 +43,9 @@ class Layout extends Component {
     };
   }
 
-  componentDidMount() {
-    this.updateTitle(this.props.history.location);
-    this.props.history.listen((location) => {
-      this.updateTitle(location);
-    });
-  }
-
-  get routes() {
-    const routes = this.props.routes.map(
-      e => <Route path={e.path} component={e.component} key={e.path} />);
-    routes.push(<Route component={this.props.routes[0].component} key="default" />);
-
-    return routes;
-  }
-
   handleDrawerToggle = () => {
     this.setState({ mobileOpen: !this.state.mobileOpen });
   };
-
-  updateTitle(location) {
-    const title = location.pathname.substr(1);
-
-    this.setState(state => ({
-      ...state,
-      title,
-    }));
-
-    document.title = `frank gairal -- ${title}`;
-  }
 
   render() {
     return (
@@ -88,7 +61,10 @@ class Layout extends Component {
         />
         <main className={this.props.classes.content}>
           <Switch>
-            {this.routes}
+            {this.props.routes
+              .map(e => <Route path={e.path} component={e.component} key={e.path} />)
+              .concat(<Route component={this.props.routes[0].component} key="default" />)
+            }
           </Switch>
         </main>
       </MuiThemeProvider>

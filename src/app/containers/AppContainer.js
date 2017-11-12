@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { BrowserRouter, withRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-
+import Routes from '../routes';
 import Layout from '../components/core/Layout';
 
 export default class AppContainer extends Component {
   static propTypes = {
-    routes: PropTypes.arrayOf(PropTypes.object).isRequired,
     store: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
   }
 
@@ -16,13 +15,13 @@ export default class AppContainer extends Component {
   }
 
   render() {
-    const { store, routes } = this.props;
-    const RoutedLayout = withRouter(Layout);
+    const { store } = this.props;
+    const routes = new Routes(store);
 
     return (
       <Provider store={store}>
         <BrowserRouter>
-          <RoutedLayout routes={routes} />
+          <Layout routes={routes} />
         </BrowserRouter>
       </Provider>
     );

@@ -11,7 +11,7 @@ export const Loader = ({ isFetching }) => (
         alignItems="center"
         direction="row"
         justify="center"
-        style={{ width: '100%', display: 'block' }}
+        style={{ display: 'block' }}
       >
         <LinearProgress mode="query" />
       </Grid>
