@@ -16,15 +16,19 @@ export default class SkillLevel extends Component {
   }
 
   componentDidMount() {
-    const interval = setInterval(() => {
+    this.interval = setInterval(() => {
       if (this.state.progress >= this.props.level) {
-        clearInterval(interval);
+        clearInterval(this.interval);
       } else {
         this.setState(prevState => ({
-          progress: prevState.progress + 1,
+          progress: prevState.progress + 5,
         }));
       }
     }, 5);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
   }
 
   render() {
