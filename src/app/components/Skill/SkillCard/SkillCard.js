@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Grid } from 'material-ui';
 import Card, { CardContent } from 'material-ui/Card';
-import List, { ListItem, ListItemText, ListItemIcon } from 'material-ui/List';
+import { ListItem, ListItemText, ListItemIcon } from 'material-ui/List';
 import Typography from 'material-ui/Typography';
 import SkillLevel from '../SkillLevel';
 
@@ -11,7 +12,7 @@ const SkillCard = ({ category }) => (
       <Typography type="headline" component="h2">
         {category.name}
       </Typography>
-      <List>
+      <Grid container>
         {category.skills ? category.skills.map((skill) => {
           let skillTitle = skill.name;
           if (skill.description) {
@@ -21,15 +22,23 @@ const SkillCard = ({ category }) => (
           const progress = skill.level || 0;
 
           return (
-            <ListItem key={skill.name}>
-              <ListItemIcon>
-                <SkillLevel level={progress} />
-              </ListItemIcon>
-              <ListItemText primary={skillTitle} />
-            </ListItem>
+            <Grid
+              item
+              xs={12}
+              md={6}
+              lg={4}
+              key={skill.name}
+            >
+              <ListItem key={skill.name}>
+                <ListItemIcon>
+                  <SkillLevel level={progress} />
+                </ListItemIcon>
+                <ListItemText primary={skillTitle} style={{ flex: '1 1 0' }} />
+              </ListItem>
+            </Grid>
           );
         }) : null}
-      </List>
+      </Grid>
     </CardContent>
   </Card>
 );

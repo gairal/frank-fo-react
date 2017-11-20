@@ -33,7 +33,7 @@ export default class SkillLevel extends Component {
 
   render() {
     return (
-      <CircularProgress mode="determinate" value={this.state.progress} thickness={7} />
+      <CircularProgress mode="determinate" value={this.state.progress} thickness={5} />
     );
   }
 }

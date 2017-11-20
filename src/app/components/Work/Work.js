@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Grid, Typography, Avatar, Chip, Icon } from 'material-ui';
 import Card, { CardContent, CardMedia } from 'material-ui/Card';
+import Utils from '../../Utils';
 
 export default class Work extends Component {
   static propTypes = {
@@ -32,20 +33,24 @@ export default class Work extends Component {
                   title={work.name}
                   style={{ height: '120px', width: '120px', flex: 'none' }}
                 />
-                <CardContent>
+                <CardContent style={{ width: '100%' }}>
                   <Typography type="body1" component="h2">
                     {work.name} | {work.title}
                   </Typography>
-                  <div style={{ display: 'flex' }}>
-                    <Chip
-                      avatar={<Avatar><Icon style={{ fontSize: '19px' }}>date_range</Icon></Avatar>}
-                      label={work.date_in}
-                    />
-                    <Chip
-                      avatar={<Avatar><Icon style={{ fontSize: '19px' }}>location_city</Icon></Avatar>}
-                      label={work.place}
-                    />
-                  </div>
+                  <Grid container style={{ textTransform: 'uppercase' }}>
+                    <Grid item xs={12} md style={{ flexGrow: 0 }}>
+                      <Chip
+                        avatar={<Avatar><Icon style={{ fontSize: '19px' }}>date_range</Icon></Avatar>}
+                        label={Utils.formatDate(work.date_in, work.date_out)}
+                      />
+                    </Grid>
+                    <Grid item xs={12} md>
+                      <Chip
+                        avatar={<Avatar><Icon style={{ fontSize: '19px' }}>location_city</Icon></Avatar>}
+                        label={work.place}
+                      />
+                    </Grid>
+                  </Grid>
                   <Typography type="caption" component="p">
                     {work.description}
                   </Typography>

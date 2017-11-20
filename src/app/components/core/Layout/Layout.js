@@ -27,7 +27,7 @@ class Layout extends Component {
     super(props);
 
     this.state = {
-      mobileOpen: true,
+      mobileOpen: false,
     };
 
     this.palette = {

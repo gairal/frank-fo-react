@@ -25,8 +25,6 @@ export default class Skill extends Component {
             <Grid
               item
               xs={12}
-              md={6}
-              lg={4}
               key={category.name}
             >
               <SkillCard category={category} />
