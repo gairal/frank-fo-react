@@ -27,7 +27,7 @@ class SideNav extends Component {
     routes: PropTypes.arrayOf(PropTypes.object).isRequired,
     classes: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
     mobileOpen: PropTypes.bool.isRequired,
-    handleDrawerToggle: PropTypes.func.isRequired,
+    toggleDrawer: PropTypes.func.isRequired,
   }
 
   constructor(props) {
@@ -43,7 +43,7 @@ class SideNav extends Component {
         </AppBar>
         <List>
           {this.props.routes.map(e => (
-            <Link to={e.path} key={e.path}>
+            <Link to={e.path} key={e.path} onClick={this.props.toggleDrawer}>
               <ListItem button>
                 <ListItemIcon>
                   <Icon color="contrast">{e.icon}</Icon>
@@ -70,7 +70,7 @@ class SideNav extends Component {
           <Drawer
             type="temporary"
             open={this.props.mobileOpen}
-            onRequestClose={this.props.handleDrawerToggle}
+            onRequestClose={this.props.toggleDrawer}
             ModalProps={{
               keepMounted: true, // Better open performance on mobile.
             }}

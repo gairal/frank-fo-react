@@ -8,8 +8,12 @@
 
 /******* GLOBAL *******/
 .root {
-  padding-top: 64px;
+  padding-top: 56px;
   // height: 100vh;
+
+  @media (min-width: $breakpoint-sm) {
+    padding-top: 64px;
+  }
 }
 
 main {

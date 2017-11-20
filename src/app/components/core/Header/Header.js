@@ -24,7 +24,7 @@ class Header extends Component {
   static propTypes = {
     history: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
     classes: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
-    handleDrawerToggle: PropTypes.func.isRequired,
+    toggleDrawer: PropTypes.func.isRequired,
   };
 
   constructor(props) {
@@ -70,7 +70,7 @@ class Header extends Component {
           <IconButton
             color="contrast"
             aria-label="open drawer"
-            onClick={this.props.handleDrawerToggle}
+            onClick={this.props.toggleDrawer}
             className={this.props.classes.navIconHide}
           >
             <Icon color="contrast">menu</Icon>

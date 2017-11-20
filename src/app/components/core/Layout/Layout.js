@@ -27,8 +27,7 @@ class Layout extends Component {
     super(props);
 
     this.state = {
-      title: '',
-      mobileOpen: false,
+      mobileOpen: true,
     };
 
     this.palette = {
@@ -44,7 +43,7 @@ class Layout extends Component {
     };
   }
 
-  handleDrawerToggle = () => {
+  toggleDrawer = () => {
     this.setState({ mobileOpen: !this.state.mobileOpen });
   };
 
@@ -55,11 +54,10 @@ class Layout extends Component {
         <SideNav
           mobileOpen={this.state.mobileOpen}
           routes={this.props.routes}
-          handleDrawerToggle={this.handleDrawerToggle}
+          toggleDrawer={this.toggleDrawer}
         />
         <Header
-          title={this.state.title}
-          handleDrawerToggle={this.handleDrawerToggle}
+          toggleDrawer={this.toggleDrawer}
         />
         <StoredLoader />
         <main className={this.props.classes.content}>
