@@ -2,17 +2,11 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Grid, Typography, Avatar, Chip, Icon } from 'material-ui';
 import Card, { CardContent, CardMedia } from 'material-ui/Card';
-import Loader from '../core/Loader';
 
 export default class Work extends Component {
   static propTypes = {
     load: PropTypes.func.isRequired,
     works: PropTypes.arrayOf(PropTypes.object).isRequired,
-    isFetching: PropTypes.bool,
-  }
-
-  static defaultProps = {
-    isFetching: false,
   }
 
   componentDidMount() {
@@ -22,7 +16,6 @@ export default class Work extends Component {
   render() {
     return (
       <section>
-        <Loader isFetching={this.props.isFetching} />
         <Grid container>
           {this.props.works.map(work => (
             <Grid

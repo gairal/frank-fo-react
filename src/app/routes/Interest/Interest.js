@@ -8,7 +8,6 @@ export default class Interest extends AbstractRoute {
     this.initialState.travels = [];
 
     this.ACTIONS = {
-      FETCH: 'INTEREST_FETCH',
       FETCH_SUCCESS: 'INTEREST_FETCH_SUCCESS',
       FETCH_FAILURE: 'INTEREST_FETCH_FAILURE',
     };
@@ -17,12 +16,6 @@ export default class Interest extends AbstractRoute {
   }
 
   // actions
-  static request() {
-    return {
-      type: 'INTEREST_FETCH',
-    };
-  }
-
   static success({ json, travels }) {
     return {
       type: 'INTEREST_FETCH_SUCCESS',
@@ -47,7 +40,6 @@ export default class Interest extends AbstractRoute {
       ...state,
       data: action.payload.json,
       travels: action.payload.travels,
-      isFetching: false,
     });
   }
 
@@ -58,7 +50,7 @@ export default class Interest extends AbstractRoute {
     ];
 
     return () => (dispatch) => {
-      dispatch(Interest.request());
+      dispatch(AbstractRoute.showLoader());
 
       const fetchOptions = {
         method: 'GET',
@@ -75,9 +67,13 @@ export default class Interest extends AbstractRoute {
                 return { ...acc, travels: e };
               }, {});
 
-              return dispatch(Interest.success(payload));
+              dispatch(Interest.success(payload));
+              return dispatch(AbstractRoute.hideLoader());
             }))
-        .catch(err => dispatch(Interest.fail(err)));
+        .catch((err) => {
+          dispatch(Interest.fail(err));
+          return dispatch(AbstractRoute.hideLoader());
+        });
     };
   }
 

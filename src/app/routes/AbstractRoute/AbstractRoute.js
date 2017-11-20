@@ -11,7 +11,6 @@ export default class AbstractRoute {
 
     this.initialState = {
       data: [],
-      isFetching: true,
     };
 
     this.ACTIONS = {};
@@ -19,17 +18,18 @@ export default class AbstractRoute {
 
     this.mapStateToProps = {
       [this.key]: 'data',
-      isFetching: 'isFetching',
     };
     this.mapDispatchToProps = {};
   }
 
   get connected() {
-    return connect(state => Object.keys(this.mapStateToProps)
+    const mapStateToProps = state => Object.keys(this.mapStateToProps)
       .reduce((acc, e) => ({
         ...acc,
         [e]: state[this.key][this.mapStateToProps[e]],
-      }), {}), this.mapDispatchToProps)(this.component);
+      }), {});
+
+    return connect(mapStateToProps, this.mapDispatchToProps)(this.component);
   }
 
   get route() {
@@ -53,36 +53,36 @@ export default class AbstractRoute {
   }
 
   // reducer functions
-  static fetch(state) {
-    return ({
-      ...state,
-      isFetching: true,
-    });
-  }
-
   static fetchSuccess(state, action) {
     return ({
       ...state,
       data: action.payload.json,
-      isFetching: false,
     });
   }
 
   static fetchFail(state) {
-    return ({
-      ...state,
-      isFetching: false,
-    });
+    return state;
+  }
+
+  static showLoader() {
+    return {
+      type: 'LOADER_SHOW',
+    };
+  }
+
+  static hideLoader() {
+    return {
+      type: 'LOADER_HIDE',
+    };
   }
 
   loadFactory() {
     const API_URL = this.API_URL;
-    const request = this.constructor.request;
     const success = this.constructor.success;
     const fail = this.constructor.fail;
 
     return () => (dispatch) => {
-      dispatch(request());
+      dispatch(AbstractRoute.showLoader());
 
       const fetchOptions = {
         method: 'GET',
@@ -90,13 +90,18 @@ export default class AbstractRoute {
 
       return fetch(API_URL, fetchOptions)
         .then(response => response.json())
-        .then(json => dispatch(success(json)))
-        .catch(err => dispatch(fail(err)));
+        .then((json) => {
+          dispatch(success(json));
+          return dispatch(AbstractRoute.hideLoader());
+        })
+        .catch((err) => {
+          dispatch(fail(err));
+          return dispatch(AbstractRoute.hideLoader());
+        });
     };
   }
 
   init() {
-    this.ACTION_HANDLERS[this.ACTIONS.FETCH] = AbstractRoute.fetch;
     this.ACTION_HANDLERS[this.ACTIONS.FETCH_SUCCESS] = AbstractRoute.fetchSuccess;
     this.ACTION_HANDLERS[this.ACTIONS.FETCH_FAILURE] = AbstractRoute.fetchFail;
 

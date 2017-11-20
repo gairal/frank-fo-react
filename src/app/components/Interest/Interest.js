@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Divider } from 'material-ui';
 import List, { ListItem, ListItemText, ListSubheader } from 'material-ui/List';
-import Loader from '../core/Loader';
 import Map from './Map';
 
 export default class Interest extends Component {
@@ -10,13 +9,11 @@ export default class Interest extends Component {
     load: PropTypes.func.isRequired,
     interests: PropTypes.arrayOf(PropTypes.object),
     travels: PropTypes.arrayOf(PropTypes.object),
-    isFetching: PropTypes.bool,
   }
 
   static defaultProps = {
     interests: [],
     travels: [],
-    isFetching: false,
   }
 
   componentDidMount() {
@@ -26,7 +23,6 @@ export default class Interest extends Component {
   render() {
     return (
       <section>
-        <Loader isFetching={this.props.isFetching} />
         <Map travels={this.props.travels} />
         <List subheader>
           {this.props.interests.map(category => (

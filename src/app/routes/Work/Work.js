@@ -7,18 +7,10 @@ export default class Work extends AbstractRoute {
     this.component = component;
 
     this.ACTIONS = {
-      FETCH: 'WORK_FETCH',
       FETCH_SUCCESS: 'WORK_FETCH_SUCCESS',
       FETCH_FAILURE: 'WORK_FETCH_FAILURE',
     };
     this.init();
-  }
-
-  // actions
-  static request() {
-    return {
-      type: 'WORK_FETCH',
-    };
   }
 
   static success(json) {

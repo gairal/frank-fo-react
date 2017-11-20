@@ -1,19 +1,16 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Grid } from 'material-ui';
-import Loader from '../core/Loader';
 import SkillCard from './SkillCard';
 
 export default class Skill extends Component {
   static propTypes = {
     load: PropTypes.func.isRequired,
     skills: PropTypes.arrayOf(PropTypes.object),
-    isFetching: PropTypes.bool,
   }
 
   static defaultProps = {
     skills: [],
-    isFetching: false,
   }
 
   componentDidMount() {
@@ -23,7 +20,6 @@ export default class Skill extends Component {
   render() {
     return (
       <section>
-        <Loader isFetching={this.props.isFetching} />
         <Grid container>
           {this.props.skills.map(category => (
             <Grid

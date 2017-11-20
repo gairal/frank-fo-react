@@ -5,6 +5,7 @@ import { blue, green, red } from 'material-ui/colors';
 import { Route, Switch } from 'react-router-dom';
 import Header from '../Header';
 import SideNav from '../SideNav';
+import Loader from '../../../containers/Loader';
 
 const drawerWidth = 240;
 const styles = theme => ({
@@ -19,6 +20,7 @@ class Layout extends Component {
   static propTypes = {
     routes: PropTypes.arrayOf(PropTypes.object).isRequired,
     classes: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+    store: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
   }
 
   constructor(props) {
@@ -27,7 +29,6 @@ class Layout extends Component {
     this.state = {
       title: '',
       mobileOpen: false,
-      isFetching: false,
     };
 
     this.palette = {
@@ -48,6 +49,7 @@ class Layout extends Component {
   };
 
   render() {
+    const StoredLoader = Loader(this.props.store);
     return (
       <MuiThemeProvider theme={createMuiTheme(this.palette)}>
         <SideNav
@@ -59,6 +61,7 @@ class Layout extends Component {
           title={this.state.title}
           handleDrawerToggle={this.handleDrawerToggle}
         />
+        <StoredLoader />
         <main className={this.props.classes.content}>
           <Switch>
             {this.props.routes

@@ -21,7 +21,7 @@ export default class AppContainer extends Component {
     return (
       <Provider store={store}>
         <BrowserRouter>
-          <Layout routes={routes} />
+          <Layout routes={routes} store={store} />
         </BrowserRouter>
       </Provider>
     );

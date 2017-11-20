@@ -7,7 +7,6 @@ export default class Work extends AbstractRoute {
     this.component = component;
 
     this.ACTIONS = {
-      FETCH: 'SKILL_FETCH',
       FETCH_SUCCESS: 'SKILL_FETCH_SUCCESS',
       FETCH_FAILURE: 'SKILL_FETCH_FAILURE',
     };
@@ -15,12 +14,6 @@ export default class Work extends AbstractRoute {
   }
 
   // actions
-  static request() {
-    return {
-      type: 'SKILL_FETCH',
-    };
-  }
-
   static success(json) {
     return {
       type: 'SKILL_FETCH_SUCCESS',
