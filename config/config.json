@@ -11,6 +11,7 @@
         "css": "assets/css/",
         "images": "assets/img/",
         "fonts": "assets/fonts/",
+        "pdf": "assets/pdf/",
         "js": "app/",
         "static": "static/"
     },
@@ -21,6 +22,7 @@
         "pugindex": "index.pug",
         "sass": "app.scss",
         "sassAll": "**/*.scss",
+        "pdf": "**/*.pdf",
         "css": "**/*.css",
         "js": "**/*.js",
         "fonts": "**",
