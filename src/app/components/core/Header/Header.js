@@ -53,7 +53,7 @@ class Header extends Component {
   }
 
   updateTitle(location) {
-    const title = location.pathname.substr(1);
+    const title = location.pathname.substr(1) || 'works';
 
     this.setState(state => ({
       ...state,

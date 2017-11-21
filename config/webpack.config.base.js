@@ -5,8 +5,12 @@ const webpackConfig = {
 	module : {}
 };
 
+webpackConfig.entry = {
+	app: './src/app/app.js',
+}
+
 webpackConfig.output = {
-	filename: 'app.js'
+	filename: '[name].js'
 }
 
 webpackConfig.plugins = [

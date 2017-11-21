@@ -1,1 +1,1 @@
-var requireDir = require('require-dir')('./config/gulp', { recurse: true });
+require('require-dir')('./config/gulp', { recurse: true });
