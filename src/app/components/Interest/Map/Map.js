@@ -1,13 +1,16 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import GoogleMap from 'react-google-maps/lib/components/GoogleMap';
+import Marker from 'react-google-maps/lib/components/Marker';
 import { withScriptjs, withGoogleMap } from 'react-google-maps/lib';
 
-const GMap = withScriptjs(withGoogleMap(() => (
+const GMap = withScriptjs(withGoogleMap(({ children, center, zoom }) => (
   <GoogleMap
-    defaultZoom={8}
-    defaultCenter={{ lat: -34.397, lng: 150.644 }}
-  />
+    zoom={zoom}
+    center={center}
+  >
+    { children }
+  </GoogleMap>
 )));
 
 export default class Map extends Component {
@@ -15,8 +18,45 @@ export default class Map extends Component {
     travels: PropTypes.arrayOf(PropTypes.object).isRequired,
   }
 
-  componentDidMount() {
+  constructor(props) {
+    super(props);
 
+    this.state = {
+      markers: [],
+      center: { lat: 48.856149, lng: 2.3386383 },
+      zoom: 8,
+    };
+  }
+
+  componentDidUpdate() {
+    if (this.props.travels.length && !this.state.markers.length) {
+      this.travel(0);
+    }
+  }
+
+  travel(index) {
+    const currTravel = this.props.travels[index];
+    if (!currTravel) {
+      this.setState(prevState => ({
+        ...prevState,
+        zoom: 2,
+      }));
+
+      return;
+    }
+
+    const travel = {
+      lat: currTravel.coordinates.latitude,
+      lng: currTravel.coordinates.longitude,
+    };
+
+    this.setState(prevState => ({
+      ...prevState,
+      markers: prevState.markers.concat(travel),
+      center: travel,
+    }));
+
+    setTimeout(() => this.travel(index + 1), 2000);
   }
 
   render() {
@@ -27,7 +67,16 @@ export default class Map extends Component {
         containerElement={<div style={{ height: '400px' }} />}
         mapElement={<div style={{ height: '100%' }} />}
         travels={this.props.travels}
-      />
+        center={this.state.center}
+        zoom={this.state.zoom}
+      >
+        {this.state.markers.map(e => (
+          <Marker
+            key={e.lat}
+            position={e}
+          />
+        ))}
+      </GMap>
     );
   }
 }

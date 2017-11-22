@@ -18,6 +18,10 @@
             "transform": "redux/es/${member}",
             "preventFullImport": true
         },
+        "react-google-maps/lib/components": {
+            "transform": "react-google-maps/lib/components/${member}",
+            "preventFullImport": true
+        },
         "react-google-maps/lib": {
             "transform": "react-google-maps/lib/${member}",
             "preventFullImport": true
