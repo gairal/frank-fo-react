@@ -90,18 +90,26 @@ class Header extends Component {
             open={this.state.open}
             onRequestClose={this.handleRequestClose}
           >
-            <MenuItem onClick={this.handleRequestClose}>
-              <Icon>email</Icon> frank@gairal.com
-            </MenuItem>
-            <MenuItem onClick={this.handleRequestClose}>
-              <Icon>phone</Icon> +33 95 67 65 87
-            </MenuItem>
-            <MenuItem onClick={this.handleRequestClose}>
-              <Icon>link</Icon> +33 95 67 65 87
-            </MenuItem>
-            <MenuItem onClick={this.handleRequestClose}>
-              <Icon>file_download</Icon> RESUME.PDF
-            </MenuItem>
+            <a href="mailto:frank@gairal.com" target="_blank" rel="noopener noreferrer" title="frank@gairal.com">
+              <MenuItem onClick={this.handleRequestClose}>
+                <Icon>email</Icon> frank@gairal.com
+              </MenuItem>
+            </a>
+            <a href="tel:+33695676587" target="_blank" rel="noopener noreferrer" title="+33 6 95 67 65 87">
+              <MenuItem onClick={this.handleRequestClose}>
+                <Icon>phone</Icon> +33 95 67 65 87
+              </MenuItem>
+            </a>
+            <a href="https://linkedin.com/in/gairal" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+              <MenuItem onClick={this.handleRequestClose}>
+                <Icon>link</Icon> LinkedIn
+              </MenuItem>
+            </a>
+            <a href="/assets/pdf/frank.gairal.pdf" target="_blank" rel="noopener noreferrer" title="resume">
+              <MenuItem onClick={this.handleRequestClose}>
+                <Icon>file_download</Icon> RESUME.PDF
+              </MenuItem>
+            </a>
           </Menu>
         </Toolbar>
       </AppBar>
