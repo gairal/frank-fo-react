@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { LinearProgress } from 'material-ui/Progress';
 
-export const Loader = ({ isFetching }) => (
+const Loader = ({ isFetching }) => (
   isFetching
     ? <LinearProgress mode="query" />
     : null

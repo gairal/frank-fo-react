@@ -90,12 +90,12 @@ class Header extends Component {
             open={this.state.open}
             onRequestClose={this.handleRequestClose}
           >
-            <a href="mailto:frank@gairal.com" target="_blank" rel="noopener noreferrer" title="frank@gairal.com">
+            <a href="mailto:frank@gairal.com" rel="noopener noreferrer" title="frank@gairal.com">
               <MenuItem onClick={this.handleRequestClose}>
                 <Icon>email</Icon> frank@gairal.com
               </MenuItem>
             </a>
-            <a href="tel:+33695676587" target="_blank" rel="noopener noreferrer" title="+33 6 95 67 65 87">
+            <a href="tel:+33695676587" rel="noopener noreferrer" title="+33 6 95 67 65 87">
               <MenuItem onClick={this.handleRequestClose}>
                 <Icon>phone</Icon> +33 95 67 65 87
               </MenuItem>

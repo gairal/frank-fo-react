@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Grid, Typography, Avatar, Chip, Icon } from 'material-ui';
-import Card, { CardContent, CardMedia } from 'material-ui/Card';
-import Utils from '../../Utils';
+import { Grid } from 'material-ui';
+import XpCard from '../core/XpCard';
 
 export default class Education extends Component {
   static propTypes = {
@@ -24,38 +23,15 @@ export default class Education extends Component {
               xs={12}
               key={edu.year_in}
             >
-              <Card
-                elevation={4}
-                style={{ display: 'flex' }}
-              >
-                <CardMedia
-                  image={`/assets/img/${edu.image.name}`}
-                  title={edu.name}
-                  style={{ height: '120px', width: '120px', flex: 'none' }}
-                />
-                <CardContent>
-                  <Typography type="body1" component="h2">
-                    {edu.name} | {edu.short_description}
-                  </Typography>
-                  <Grid container style={{ textTransform: 'uppercase' }}>
-                    <Grid item xs={12} md style={{ flexGrow: 0 }}>
-                      <Chip
-                        avatar={<Avatar><Icon style={{ fontSize: '19px' }}>date_range</Icon></Avatar>}
-                        label={Utils.formatDate(edu.year_in, edu.year_out)}
-                      />
-                    </Grid>
-                    <Grid item xs={12} md>
-                      <Chip
-                        avatar={<Avatar><Icon style={{ fontSize: '19px' }}>location_city</Icon></Avatar>}
-                        label={edu.place}
-                      />
-                    </Grid>
-                  </Grid>
-                  <Typography type="caption" component="p">
-                    {edu.diploma}
-                  </Typography>
-                </CardContent>
-              </Card>
+              <XpCard
+                img={edu.image.name}
+                name={edu.name}
+                title={edu.short_description}
+                date_in={new Date(edu.year_in)}
+                date_out={new Date(edu.year_out)}
+                place={edu.place}
+                subHeadline={edu.diploma}
+              />
             </Grid>
           ))}
         </Grid>

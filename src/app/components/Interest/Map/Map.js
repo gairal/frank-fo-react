@@ -26,6 +26,8 @@ export default class Map extends Component {
       center: { lat: 48.856149, lng: 2.3386383 },
       zoom: 8,
     };
+
+    this.isAlive = true;
   }
 
   componentDidUpdate() {
@@ -34,29 +36,35 @@ export default class Map extends Component {
     }
   }
 
+  componentWillUnmount() {
+    this.isAlive = false;
+  }
+
   travel(index) {
-    const currTravel = this.props.travels[index];
-    if (!currTravel) {
+    if (this.isAlive) {
+      const currTravel = this.props.travels[index];
+      if (!currTravel) {
+        this.setState(prevState => ({
+          ...prevState,
+          zoom: 2,
+        }));
+
+        return;
+      }
+
+      const travel = {
+        lat: currTravel.coordinates.latitude,
+        lng: currTravel.coordinates.longitude,
+      };
+
       this.setState(prevState => ({
         ...prevState,
-        zoom: 2,
+        markers: prevState.markers.concat(travel),
+        center: travel,
       }));
 
-      return;
+      setTimeout(() => this.travel(index + 1), 2000);
     }
-
-    const travel = {
-      lat: currTravel.coordinates.latitude,
-      lng: currTravel.coordinates.longitude,
-    };
-
-    this.setState(prevState => ({
-      ...prevState,
-      markers: prevState.markers.concat(travel),
-      center: travel,
-    }));
-
-    setTimeout(() => this.travel(index + 1), 2000);
   }
 
   render() {

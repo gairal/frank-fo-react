@@ -28,3 +28,20 @@ a {
   }
 }
 /******* SECTION XXX *******/
+
+.card-media {
+  flex: 'none';
+  width: 80px;
+  height: 80px;
+
+  @media (min-width: $breakpoint-sm) {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.card-chips {
+  @media (min-width: $breakpoint-md) {
+    margin-bottom: 5px !important; // sass-lint:disable-line no-important
+  }
+}

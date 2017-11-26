@@ -43,12 +43,12 @@ class SideNav extends Component {
         </AppBar>
         <List>
           {this.props.routes.map(e => (
-            <Link to={e.path} key={e.path} onClick={this.props.toggleDrawer}>
+            <Link to={e.path} key={e.key} onClick={this.props.toggleDrawer}>
               <ListItem button>
                 <ListItemIcon>
                   <Icon color="contrast">{e.icon}</Icon>
                 </ListItemIcon>
-                <ListItemText primary={e.path} />
+                <ListItemText primary={e.key} />
               </ListItem>
             </Link>
           ))}
