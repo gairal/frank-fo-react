@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles, MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
 import { blue, green, red } from 'material-ui/colors';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, Redirect } from 'react-router-dom';
 import Header from '../Header';
 import SideNav from '../SideNav';
 import Loader from '../../../containers/Loader';
@@ -64,7 +64,7 @@ class Layout extends Component {
           <Switch>
             {this.props.routes
               .map(e => <Route path={e.path} component={e.component} key={e.path} />)
-              .concat(<Route component={this.props.routes[0].component} key="default" />)
+              .concat(<Redirect to={this.props.routes[0].path} key="default" />)
             }
           </Switch>
         </main>

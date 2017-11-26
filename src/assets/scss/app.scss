@@ -45,3 +45,11 @@ a {
     margin-bottom: 5px !important; // sass-lint:disable-line no-important
   }
 }
+
+.nav-link {
+  &.active {
+    h3 {
+      color: color(gairal-blue) !important; // sass-lint:disable-line no-important
+    }
+  }
+}

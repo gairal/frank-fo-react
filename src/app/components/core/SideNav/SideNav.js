@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { withStyles } from 'material-ui/styles';
 import {
   AppBar,
@@ -43,14 +43,14 @@ class SideNav extends Component {
         </AppBar>
         <List>
           {this.props.routes.map(e => (
-            <Link to={e.path} key={e.key} onClick={this.props.toggleDrawer}>
+            <NavLink to={e.path} key={e.key} onClick={this.props.toggleDrawer} className="nav-link">
               <ListItem button>
                 <ListItemIcon>
                   <Icon color="contrast">{e.icon}</Icon>
                 </ListItemIcon>
                 <ListItemText primary={e.key} />
               </ListItem>
-            </Link>
+            </NavLink>
           ))}
           <Divider />
           <ListItem button>
