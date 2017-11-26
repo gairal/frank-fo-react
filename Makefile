@@ -29,3 +29,7 @@ release:
 .PHONY: start
 start:
 	yarn run start
+
+deploy:
+	gulp release
+	gcloud app deploy --project com-gairal-frank

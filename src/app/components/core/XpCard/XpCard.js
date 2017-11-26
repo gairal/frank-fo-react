@@ -44,8 +44,8 @@ XpCard.propTypes = {
   img: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  date_in: PropTypes.instanceOf(Date).isRequired,
-  date_out: PropTypes.instanceOf(Date).isRequired,
+  date_in: PropTypes.string.isRequired,
+  date_out: PropTypes.string.isRequired,
   place: PropTypes.string.isRequired,
   subHeadline: PropTypes.string.isRequired,
 };

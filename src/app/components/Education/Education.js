@@ -27,8 +27,8 @@ export default class Education extends Component {
                 img={edu.image.name}
                 name={edu.name}
                 title={edu.short_description}
-                date_in={new Date(edu.year_in)}
-                date_out={new Date(edu.year_out)}
+                date_in={edu.year_in}
+                date_out={edu.year_out}
                 place={edu.place}
                 subHeadline={edu.diploma}
               />

@@ -27,8 +27,8 @@ export default class Work extends Component {
                 img={work.image.name}
                 name={work.name}
                 title={work.title}
-                date_in={new Date(work.date_in)}
-                date_out={new Date(work.date_out)}
+                date_in={work.date_in}
+                date_out={work.date_out}
                 place={work.place}
                 subHeadline={work.description}
               />

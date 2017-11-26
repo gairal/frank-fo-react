@@ -5,12 +5,14 @@ export default class Utils {
       'July', 'August', 'September', 'October', 'November', 'December',
     ];
 
-    const yIn = dateIn.getFullYear();
-    const mIn = monthNames[dateIn.getMonth()];
+    const dIn = new Date(dateIn);
+    const yIn = dIn.getFullYear();
+    const mIn = monthNames[dIn.getMonth()];
 
     if (dateOut) {
-      const yOut = dateOut.getFullYear();
-      const mOut = monthNames[dateOut.getMonth()];
+      const dOut = new Date(dateOut);
+      const yOut = dOut.getFullYear();
+      const mOut = monthNames[dOut.getMonth()];
       return `${yIn} ${mIn} - ${yOut} ${mOut}`;
     }
 
