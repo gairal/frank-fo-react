@@ -45,9 +45,13 @@ XpCard.propTypes = {
   name: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   date_in: PropTypes.string.isRequired,
-  date_out: PropTypes.string.isRequired,
+  date_out: PropTypes.string,
   place: PropTypes.string.isRequired,
   subHeadline: PropTypes.string.isRequired,
+};
+
+XpCard.defaultProps = {
+  date_out: null,
 };
 
 export default XpCard;
