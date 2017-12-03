@@ -91,12 +91,12 @@ export default class AbstractRoute {
       return fetch(API_URL, fetchOptions)
         .then(response => response.json())
         .then((json) => {
-          dispatch(success(json));
-          return dispatch(AbstractRoute.hideLoader());
+          dispatch(AbstractRoute.hideLoader());
+          return dispatch(success(json));
         })
         .catch((err) => {
-          dispatch(fail(err));
-          return dispatch(AbstractRoute.hideLoader());
+          dispatch(AbstractRoute.hideLoader());
+          return dispatch(fail(err));
         });
     };
   }

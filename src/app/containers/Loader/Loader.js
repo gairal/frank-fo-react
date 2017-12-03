@@ -30,11 +30,12 @@ const reducer = (state = initialState, action) => {
   return handler ? handler(state, action) : state;
 };
 
-export default (store) => {
+export default (store, type) => {
   injectReducer(store, { key: 'loader', reducer });
 
   const mapStateToProps = state => ({
     isFetching: state.loader.isFetching,
+    type,
   });
 
   return connect(mapStateToProps)(Loader);

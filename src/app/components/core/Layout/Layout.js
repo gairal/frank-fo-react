@@ -48,7 +48,8 @@ class Layout extends Component {
   };
 
   render() {
-    const StoredLoader = Loader(this.props.store);
+    const StoredLLoader = Loader(this.props.store);
+    // const StoredCLoader = Loader(this.props.store, 'circular');
     return (
       <MuiThemeProvider theme={createMuiTheme(this.palette)}>
         <SideNav
@@ -59,8 +60,9 @@ class Layout extends Component {
         <Header
           toggleDrawer={this.toggleDrawer}
         />
-        <StoredLoader />
+        <StoredLLoader />
         <main className={this.props.classes.content}>
+          {/* <StoredCLoader /> */}
           <Switch>
             {this.props.routes
               .map(e => <Route path={e.path} component={e.component} key={e.path} />)
