@@ -54,7 +54,7 @@ class SideNav extends Component {
           ))}
           <Divider />
           <ListItem button>
-            <ListItemText primary="version" secondary="4.0.0-react" />
+            <ListItemText primary="version" secondary="4.0.1-react" />
           </ListItem>
         </List>
       </div>

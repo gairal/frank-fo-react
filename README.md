@@ -3,10 +3,11 @@
 ---
 
 ### TODO
-- [ ] Unit Testing with Mocha
+- [ ] Unit Testing with Jest
 - [ ] remove flexbox
 - [ ] chrome app
 - [ ] update state of nav with active route
+- [ ] Remove gulp
 
 ---
 
