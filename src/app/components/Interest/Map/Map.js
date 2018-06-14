@@ -53,8 +53,8 @@ export default class Map extends Component {
       }
 
       const travel = {
-        lat: currTravel.coordinates.latitude,
-        lng: currTravel.coordinates.longitude,
+        lat: currTravel.coordinates.Lat,
+        lng: currTravel.coordinates.Lng,
       };
 
       this.setState(prevState => ({
