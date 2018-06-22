@@ -3,11 +3,12 @@
 ---
 
 ### TODO
+- [ ] Remove gulp
 - [ ] Unit Testing with Jest
+- [ ] React Native version
 - [ ] remove flexbox
 - [ ] chrome app
 - [ ] update state of nav with active route
-- [ ] Remove gulp
 
 ---
 
@@ -76,14 +77,13 @@ gulp-webpack-es2015-stack/
  │   │
  │   ├──static/                      * files that will be copied to the root of the compiled site (robots.txt, favicon, ...)
  │   │
- │   └──assets/                      * static assets are served here
- │       ├──img/                     * images
- │       └──scss/                    * Sass files
- │           ├──app.scss             * Main Sass files
- │           └──common/              * Sass common files
- │               ├──_bootstrap.scss  * Bootstrap Sass module import file
- │               ├──_mixins.scss     * for you own Sass mixins here
- │               └──_variables.scss  * for your sass variables
+ │   ├──img/                         * images
+ │   └──scss/                        * Sass files
+ │       ├──app.scss                 * Main Sass files
+ │       └──common/                  * Sass common files
+ │           ├──_bootstrap.scss      * Bootstrap Sass module import file
+ │           ├──_mixins.scss         * for you own Sass mixins here
+ │           └──_variables.scss      * for your sass variables
  │
  ├──test/                            * Testing directory
  │    └──spec/                       * Jasmine test definitions

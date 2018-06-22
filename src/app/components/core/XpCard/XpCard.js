@@ -4,13 +4,15 @@ import { Grid, Typography, Avatar, Chip, Icon } from 'material-ui';
 import Card, { CardContent, CardMedia } from 'material-ui/Card';
 import Utils from '../../../Utils';
 
-const XpCard = ({ img, name, title, date_in, date_out, place, subHeadline }) => (
+const XpCard = ({
+  img, name, title, date_in, date_out, place, subHeadline, // eslint-disable-line camelcase
+}) => (
   <Card
     elevation={4}
     style={{ display: 'flex' }}
   >
     <CardMedia
-      image={`/assets/img/${img}`}
+      image={`/img/${img}`}
       title={name}
       style={{ flex: 'none' }}
       className="card-media"

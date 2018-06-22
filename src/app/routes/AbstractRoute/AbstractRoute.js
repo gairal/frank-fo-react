@@ -43,8 +43,7 @@ export default class AbstractRoute {
   }
 
   getReducer() {
-    const initialState = this.initialState;
-    const ACTION_HANDLERS = this.ACTION_HANDLERS;
+    const { initialState, ACTION_HANDLERS } = this;
 
     return (state = initialState, action) => {
       const handler = ACTION_HANDLERS[action.type];
@@ -77,9 +76,8 @@ export default class AbstractRoute {
   }
 
   loadFactory() {
-    const API_URL = this.API_URL;
-    const success = this.constructor.success;
-    const fail = this.constructor.fail;
+    const { API_URL } = this;
+    const { success, fail } = this.constructor;
 
     return () => (dispatch) => {
       dispatch(AbstractRoute.showLoader());

@@ -1,0 +1,14 @@
+/* COLORS */
+@function color($key) {
+  @return map-get($colors, $key);
+}
+
+/* Z-INDEX */
+@function z-index($key) {
+  @return map-get($z-index, $key);
+}
+
+/* TRANSITION */
+@function transition($key) {
+  @return map-get($transition, $key);
+}

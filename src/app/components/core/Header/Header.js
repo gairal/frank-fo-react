@@ -105,7 +105,7 @@ class Header extends Component {
                 <Icon>link</Icon> LinkedIn
               </MenuItem>
             </a>
-            <a href="/assets/pdf/frank.gairal.pdf" target="_blank" rel="noopener noreferrer" title="resume">
+            <a href="/pdf/frank.gairal.pdf" target="_blank" rel="noopener noreferrer" title="resume">
               <MenuItem onClick={this.handleRequestClose}>
                 <Icon>file_download</Icon> RESUME.PDF
               </MenuItem>

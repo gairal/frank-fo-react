@@ -6,19 +6,19 @@ self.addEventListener('install', function (e) {
         [
           '/',
           // '/app/app.js',
-          // '/assets/css/app.css',
+          // '/css/app.css',
           // '/node_modules/normalize.css/normalize.css',
           '/app/frank.gairal.min.js',
-          '/assets/css/frank.gairal.min.css'
+          '/css/frank.gairal.min.css'
         ]
       );
-    }));
+    }).catch(err => console.error(err)));
   } catch (error) {}
 });
 
 self.addEventListener('fetch', function (event) {
   event.respondWith(caches.match(event.request).then(function (response) {
     return response || fetch(event.request);
-  }));
+  }).catch(err => console.error(err)));
 });
 /* eslint-enable */

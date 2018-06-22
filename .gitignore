@@ -53,8 +53,6 @@ typings/
 
 #ignore src generated html
 _SpecRunner.html
-/app/assets/less/*.css
-/app/assets/scss/*.css
 ./*.zip
 /reports
 TESTS-*.xml

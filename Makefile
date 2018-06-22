@@ -4,32 +4,35 @@ VERSION := $(shell git describe --abbrev=0 --tags)
 # Install project and dependencies
 .PHONY: install
 install:
-	yarn config set registry https://mirror.ekino.com/npm/npm
-	yarn install
-	yarn config delete registry
+	npm install
 
 # Lint and test
 .PHONY: test
 test:
-	yarn run lint
+	npm run lint
+	npm run test
 
 # Build
 .PHONY: build
 build:
 	make install
-	yarn run build
+	npm run build
 
 # Release
 .PHONY: release
 release:
 	make install
-	yarn run release
+	npm run release
 
 # start
-.PHONY: start
+.PHONY: start debug startprod
 start:
-	yarn run start
+	npm run start
+startprod:
+	npm run startprod
+debug:
+	npm run debug
 
 deploy:
-	gulp release
+	make release
 	gcloud app deploy --project com-gairal-frank

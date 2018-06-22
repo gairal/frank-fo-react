@@ -13,7 +13,8 @@ import {
   Icon,
   Hidden,
   Divider,
-  Typography } from 'material-ui';
+  Typography,
+} from 'material-ui';
 
 const drawerWidth = 240;
 const styles = () => ({
@@ -54,7 +55,7 @@ class SideNav extends Component {
           ))}
           <Divider />
           <ListItem button>
-            <ListItemText primary="version" secondary="4.0.2-react" />
+            <ListItemText primary="version" secondary="4.1.0-react" />
           </ListItem>
         </List>
       </div>
