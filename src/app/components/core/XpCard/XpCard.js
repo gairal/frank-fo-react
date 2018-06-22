@@ -21,15 +21,15 @@ const XpCard = ({
         {name} | {title}
       </Typography>
       <Grid container style={{ textTransform: 'uppercase' }} className="card-chips">
-        <Grid item xs={12} md style={{ flexGrow: 0, marginRight: '0.5rem' }}>
+        <Grid item xs={12} md style={{ flexGrow: 0, marginRight: '0.2rem', marginBottom: '.5rem' }}>
           <Chip
-            avatar={<Avatar><Icon style={{ fontSize: '19px' }}>date_range</Icon></Avatar>}
+            avatar={<Avatar><Icon style={{ fontSize: '19px', color: '#fff' }}>date_range</Icon></Avatar>}
             label={Utils.formatDate(date_in, date_out)}
           />
         </Grid>
         <Grid item xs={12} md>
           <Chip
-            avatar={<Avatar><Icon style={{ fontSize: '19px' }}>location_city</Icon></Avatar>}
+            avatar={<Avatar><Icon style={{ fontSize: '19px', color: '#fff' }}>location_city</Icon></Avatar>}
             label={place}
           />
         </Grid>
