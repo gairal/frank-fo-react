@@ -1,4 +1,3 @@
-// import CoreLayout from '../layouts/CoreLayout';
 import Work from './Work';
 import Skill from './Skill';
 import Education from './Education';

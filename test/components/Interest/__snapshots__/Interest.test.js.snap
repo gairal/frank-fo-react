@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components > Interest Renders correctly default 1`] = `
+<section>
+  <div
+    style={
+      Object {
+        "height": "100%",
+      }
+    }
+  />
+  <ul
+    className="MuiList-root-1 MuiList-padding-2"
+  >
+    <li>
+      <ul>
+        <li
+          className="MuiListSubheader-root-5 MuiListSubheader-sticky-9"
+        >
+          test
+        </li>
+      </ul>
+      <hr
+        className="MuiDivider-root-10"
+      />
+    </li>
+  </ul>
+</section>
+`;
+
+exports[`components > Interest Renders correctly with interests 1`] = `
+<section>
+  <div
+    style={
+      Object {
+        "height": "100%",
+      }
+    }
+  />
+  <ul
+    className="MuiList-root-1 MuiList-padding-2"
+  >
+    <li>
+      <ul>
+        <li
+          className="MuiListSubheader-root-5 MuiListSubheader-sticky-9"
+        >
+          test
+        </li>
+        <li
+          className="MuiListItem-root-14 MuiListItem-default-17 MuiListItem-gutters-21"
+          disabled={false}
+        >
+          <div
+            className="MuiListItemText-root-24"
+          >
+            <span
+              className="MuiTypography-root-30 MuiTypography-subheading-37 MuiListItemText-primary-27"
+            >
+              test
+            </span>
+          </div>
+        </li>
+      </ul>
+      <hr
+        className="MuiDivider-root-10"
+      />
+    </li>
+  </ul>
+</section>
+`;

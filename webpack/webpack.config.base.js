@@ -74,7 +74,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, '../src/js/'),
+      '@': path.resolve(__dirname, '../src/app/'),
       Conf: path.resolve(__dirname, '../conf/'),
       Abstract: path.resolve(__dirname, '../src/js/contentScripts/abstract/'),
     },

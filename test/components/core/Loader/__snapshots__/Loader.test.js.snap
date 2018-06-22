@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components > core > Loader Appears when request fetching 1`] = `
+<div
+  className="MuiLinearProgress-root-1 MuiLinearProgress-colorPrimary-2"
+  mode="query"
+  role="progressbar"
+>
+  <div
+    className="MuiLinearProgress-bar-9 MuiLinearProgress-barColorPrimary-10 MuiLinearProgress-bar1Indeterminate-12"
+    style={Object {}}
+  />
+  <div
+    className="MuiLinearProgress-bar-9 MuiLinearProgress-barColorPrimary-10 MuiLinearProgress-bar2Indeterminate-13"
+    style={Object {}}
+  />
+</div>
+`;
+
+exports[`components > core > Loader Renders correctly circular 1`] = `
+<div
+  style={
+    Object {
+      "marginTop": "30vh",
+      "textAlign": "center",
+    }
+  }
+>
+  <div
+    className="MuiCircularProgress-root-17 MuiCircularProgress-colorPrimary-20 MuiCircularProgress-indeterminate-19"
+    role="progressbar"
+    style={
+      Object {
+        "height": 200,
+        "width": 200,
+      }
+    }
+  >
+    <svg
+      className="MuiCircularProgress-svg-22"
+      viewBox="22 22 44 44"
+    >
+      <circle
+        className="MuiCircularProgress-circle-23 MuiCircularProgress-circleIndeterminate-25"
+        cx={44}
+        cy={44}
+        fill="none"
+        r={20.2}
+        strokeWidth={3.6}
+        style={Object {}}
+      />
+    </svg>
+  </div>
+</div>
+`;
+
+exports[`components > core > Loader Renders correctly default 1`] = `null`;
+
+exports[`components > core > Loader Renders correctly linear 1`] = `
+<div
+  className="MuiLinearProgress-root-1 MuiLinearProgress-colorPrimary-2"
+  mode="query"
+  role="progressbar"
+>
+  <div
+    className="MuiLinearProgress-bar-9 MuiLinearProgress-barColorPrimary-10 MuiLinearProgress-bar1Indeterminate-12"
+    style={Object {}}
+  />
+  <div
+    className="MuiLinearProgress-bar-9 MuiLinearProgress-barColorPrimary-10 MuiLinearProgress-bar2Indeterminate-13"
+    style={Object {}}
+  />
+</div>
+`;

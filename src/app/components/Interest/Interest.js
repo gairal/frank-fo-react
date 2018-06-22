@@ -6,8 +6,8 @@ import Map from './Map';
 export default class Interest extends Component {
   static propTypes = {
     load: PropTypes.func.isRequired,
-    interests: PropTypes.arrayOf(PropTypes.object),
-    travels: PropTypes.arrayOf(PropTypes.object),
+    interests: PropTypes.arrayOf(PropTypes.shape()),
+    travels: PropTypes.arrayOf(PropTypes.shape()),
   }
 
   static defaultProps = {

@@ -7,7 +7,7 @@ import Layout from '../components/core/Layout';
 
 export default class AppContainer extends Component {
   static propTypes = {
-    store: PropTypes.object.isRequired, // eslint-disable-line react/forbid-prop-types
+    store: PropTypes.shape().isRequired,
   }
 
   shouldComponentUpdate() {

@@ -6,7 +6,7 @@ import SkillCard from './SkillCard';
 export default class Skill extends Component {
   static propTypes = {
     load: PropTypes.func.isRequired,
-    skills: PropTypes.arrayOf(PropTypes.object),
+    skills: PropTypes.arrayOf(PropTypes.shape()),
   }
 
   static defaultProps = {

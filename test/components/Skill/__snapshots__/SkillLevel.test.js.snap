@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components > Skill > SkillLevel Renders correctly default 1`] = `
+<div
+  aria-valuenow={0}
+  className="MuiCircularProgress-root-1 MuiCircularProgress-colorPrimary-4 MuiCircularProgress-static-2"
+  role="progressbar"
+  style={
+    Object {
+      "height": 40,
+      "transform": "rotate(-90deg)",
+      "width": 40,
+    }
+  }
+>
+  <svg
+    className="MuiCircularProgress-svg-6"
+    viewBox="22 22 44 44"
+  >
+    <circle
+      className="MuiCircularProgress-circle-7 MuiCircularProgress-circleStatic-8"
+      cx={44}
+      cy={44}
+      fill="none"
+      r={19.5}
+      strokeWidth={5}
+      style={
+        Object {
+          "strokeDasharray": "122.522",
+          "strokeDashoffset": "122.522px",
+        }
+      }
+    />
+  </svg>
+</div>
+`;

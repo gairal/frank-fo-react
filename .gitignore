@@ -50,6 +50,7 @@ build/
 compile/
 dist/
 typings/
+coverage/
 
 #ignore src generated html
 _SpecRunner.html

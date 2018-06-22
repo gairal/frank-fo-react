@@ -11,4 +11,7 @@ module.exports = {
     '@/(.*)$': '<rootDir>/src/app/$1',
     'Mocks(.*)$': '<rootDir>/test/mocks$1',
   },
+  transformIgnorePatterns: [
+    'node_modules/(?!(react-router-dom|react-router|redux|lodash-es)/)',
+  ],
 };

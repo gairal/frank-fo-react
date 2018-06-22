@@ -1,6 +1,7 @@
+import 'es6-promise/auto';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'es6-promise/auto';
+import { hot } from 'react-hot-loader';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import createStore from './store/createStore';
 import AppContainer from './containers/AppContainer';
@@ -22,3 +23,4 @@ const render = () => {
 };
 
 render();
+export default hot(module)(render);

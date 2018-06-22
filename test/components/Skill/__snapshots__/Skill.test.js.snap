@@ -1,0 +1,170 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components > Skill Renders correctly default 1`] = `
+<section>
+  <div
+    className="MuiGrid-container-1"
+  >
+    <div
+      className="MuiGrid-item-2 MuiGrid-grid-xs-12-40"
+    >
+      <div
+        className="MuiPaper-root-98 MuiPaper-elevation2-102 MuiPaper-rounded-99 MuiCard-root-97"
+      >
+        <div
+          className="MuiCardContent-root-125"
+        >
+          <h2
+            className="MuiTypography-root-126 MuiTypography-headline-131"
+          >
+            test
+          </h2>
+          <div
+            className="MuiGrid-container-1"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`components > Skill Renders correctly with categories 1`] = `
+<section>
+  <div
+    className="MuiGrid-container-1"
+  >
+    <div
+      className="MuiGrid-item-2 MuiGrid-grid-xs-12-40"
+    >
+      <div
+        className="MuiPaper-root-98 MuiPaper-elevation2-102 MuiPaper-rounded-99 MuiCard-root-97"
+      >
+        <div
+          className="MuiCardContent-root-125"
+        >
+          <h2
+            className="MuiTypography-root-126 MuiTypography-headline-131"
+          >
+            test
+          </h2>
+          <div
+            className="MuiGrid-container-1"
+          >
+            <div
+              className="MuiGrid-item-2 MuiGrid-grid-xs-12-40 MuiGrid-grid-md-6-62 MuiGrid-grid-lg-4-74"
+            >
+              <li
+                className="MuiListItem-root-150 MuiListItem-default-153 MuiListItem-gutters-157"
+                disabled={false}
+              >
+                <div
+                  aria-valuenow={0}
+                  className="MuiCircularProgress-root-161 MuiCircularProgress-colorPrimary-164 MuiCircularProgress-static-162"
+                  role="progressbar"
+                  style={
+                    Object {
+                      "height": 40,
+                      "transform": "rotate(-90deg)",
+                      "width": 40,
+                    }
+                  }
+                >
+                  <svg
+                    className="MuiCircularProgress-svg-166"
+                    viewBox="22 22 44 44"
+                  >
+                    <circle
+                      className="MuiCircularProgress-circle-167 MuiCircularProgress-circleStatic-168"
+                      cx={44}
+                      cy={44}
+                      fill="none"
+                      r={19.5}
+                      strokeWidth={5}
+                      style={
+                        Object {
+                          "strokeDasharray": "122.522",
+                          "strokeDashoffset": "122.522px",
+                        }
+                      }
+                    />
+                  </svg>
+                </div>
+                <div
+                  className="MuiListItemText-root-170"
+                  style={
+                    Object {
+                      "flex": "1 1 0",
+                    }
+                  }
+                >
+                  <span
+                    className="MuiTypography-root-126 MuiTypography-subheading-133 MuiListItemText-primary-173"
+                  >
+                    test1 | test
+                  </span>
+                </div>
+              </li>
+            </div>
+            <div
+              className="MuiGrid-item-2 MuiGrid-grid-xs-12-40 MuiGrid-grid-md-6-62 MuiGrid-grid-lg-4-74"
+            >
+              <li
+                className="MuiListItem-root-150 MuiListItem-default-153 MuiListItem-gutters-157"
+                disabled={false}
+              >
+                <div
+                  aria-valuenow={0}
+                  className="MuiCircularProgress-root-161 MuiCircularProgress-colorPrimary-164 MuiCircularProgress-static-162"
+                  role="progressbar"
+                  style={
+                    Object {
+                      "height": 40,
+                      "transform": "rotate(-90deg)",
+                      "width": 40,
+                    }
+                  }
+                >
+                  <svg
+                    className="MuiCircularProgress-svg-166"
+                    viewBox="22 22 44 44"
+                  >
+                    <circle
+                      className="MuiCircularProgress-circle-167 MuiCircularProgress-circleStatic-168"
+                      cx={44}
+                      cy={44}
+                      fill="none"
+                      r={19.5}
+                      strokeWidth={5}
+                      style={
+                        Object {
+                          "strokeDasharray": "122.522",
+                          "strokeDashoffset": "122.522px",
+                        }
+                      }
+                    />
+                  </svg>
+                </div>
+                <div
+                  className="MuiListItemText-root-170"
+                  style={
+                    Object {
+                      "flex": "1 1 0",
+                    }
+                  }
+                >
+                  <span
+                    className="MuiTypography-root-126 MuiTypography-subheading-133 MuiListItemText-primary-173"
+                  >
+                    test2
+                  </span>
+                </div>
+              </li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`;

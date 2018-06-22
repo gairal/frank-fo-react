@@ -37,7 +37,7 @@ module.exports = {
   settings: {
     'import/resolver': {
       alias: [
-        ['@', path.resolve(__dirname, 'src/js')],
+        ['@', path.resolve(__dirname, 'src/app')],
         ['Mocks', path.resolve(__dirname, 'test/mocks')],
       ],
     },

@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components > core > LLoader Renders correctly 1`] = `
+<div
+  className="MuiLinearProgress-root-1 MuiLinearProgress-colorPrimary-2"
+  mode="query"
+  role="progressbar"
+>
+  <div
+    className="MuiLinearProgress-bar-9 MuiLinearProgress-barColorPrimary-10 MuiLinearProgress-bar1Indeterminate-12"
+    style={Object {}}
+  />
+  <div
+    className="MuiLinearProgress-bar-9 MuiLinearProgress-barColorPrimary-10 MuiLinearProgress-bar2Indeterminate-13"
+    style={Object {}}
+  />
+</div>
+`;

@@ -4,12 +4,12 @@
     [ "env", {
       "targets": {
         "browsers": "> 2%"
-      },
-      "modules": false
+      }
     }],
     "stage-0"
   ],
   "plugins": [
+    "react-hot-loader/babel",
     "lodash",
     ["transform-imports", {
         "@material-ui/core": {

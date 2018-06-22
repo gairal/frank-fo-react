@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components > core > XpCard Renders correctly default 1`] = `
+<div
+  className="MuiPaper-root-2 MuiPaper-elevation4-8 MuiPaper-rounded-3 MuiCard-root-1"
+  style={
+    Object {
+      "display": "flex",
+      "marginBottom": "1rem",
+      "padding": "1rem",
+    }
+  }
+>
+  <div
+    className="MuiCardMedia-root-29 card-media"
+    style={
+      Object {
+        "backgroundImage": "url(\\"/img/test\\")",
+        "flex": "none",
+      }
+    }
+    title="test"
+  />
+  <div
+    className="MuiCardContent-root-31"
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  >
+    <h2
+      className="MuiTypography-root-32 MuiTypography-title-38"
+    >
+      test
+       | 
+      test
+    </h2>
+    <div
+      className="MuiGrid-container-56 card-chips"
+      style={
+        Object {
+          "textTransform": "uppercase",
+        }
+      }
+    >
+      <div
+        className="MuiGrid-item-57 MuiGrid-grid-xs-12-95 MuiGrid-grid-md-true-111"
+        style={
+          Object {
+            "flexGrow": 0,
+            "marginBottom": ".5rem",
+            "marginRight": "0.2rem",
+          }
+        }
+      >
+        <div
+          className="MuiChip-root-152"
+          onKeyDown={[Function]}
+          role="button"
+          tabIndex={-1}
+        >
+          <div
+            className="MuiAvatar-root-159 MuiAvatar-colorDefault-160 MuiChip-avatar-155"
+          >
+            <span
+              aria-hidden="true"
+              className="material-icons MuiIcon-root-162 MuiChip-avatarChildren-156"
+              style={
+                Object {
+                  "color": "#fff",
+                  "fontSize": "19px",
+                }
+              }
+            >
+              date_range
+            </span>
+          </div>
+          <span
+            className="MuiChip-label-157"
+          >
+            NaN undefined - present
+          </span>
+        </div>
+      </div>
+      <div
+        className="MuiGrid-item-57 MuiGrid-grid-xs-12-95 MuiGrid-grid-md-true-111"
+      >
+        <div
+          className="MuiChip-root-152"
+          onKeyDown={[Function]}
+          role="button"
+          tabIndex={-1}
+        >
+          <div
+            className="MuiAvatar-root-159 MuiAvatar-colorDefault-160 MuiChip-avatar-155"
+          >
+            <span
+              aria-hidden="true"
+              className="material-icons MuiIcon-root-162 MuiChip-avatarChildren-156"
+              style={
+                Object {
+                  "color": "#fff",
+                  "fontSize": "19px",
+                }
+              }
+            >
+              location_city
+            </span>
+          </div>
+          <span
+            className="MuiChip-label-157"
+          >
+            test
+          </span>
+        </div>
+      </div>
+    </div>
+    <p
+      className="MuiTypography-root-32 MuiTypography-caption-42"
+      style={
+        Object {
+          "marginTop": "0.5rem",
+        }
+      }
+    >
+      test
+    </p>
+  </div>
+</div>
+`;
