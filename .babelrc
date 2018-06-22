@@ -4,12 +4,18 @@
     [ "env", {
       "targets": {
         "browsers": "> 2%"
-      }
+      },
+      "modules": false
     }],
     "stage-0"
   ],
   "plugins": [
+    "lodash",
     ["transform-imports", {
+        "@material-ui/core": {
+            "transform": "@material-ui/core/${member}",
+            "preventFullImport": true
+        },
         "react-router-dom": {
             "transform": "react-router-dom/es/${member}",
             "preventFullImport": true

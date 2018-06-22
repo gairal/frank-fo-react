@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Divider } from 'material-ui';
-import List, { ListItem, ListItemText, ListSubheader } from 'material-ui/List';
+import { Divider, List, ListItem, ListItemText, ListSubheader } from '@material-ui/core';
 import Map from './Map';
 
 export default class Interest extends Component {
@@ -24,17 +23,19 @@ export default class Interest extends Component {
     return (
       <section>
         <Map travels={this.props.travels} />
-        <List subheader>
+        <List>
           {this.props.interests.map(category => (
-            <div key={category.name}>
-              <ListSubheader>{category.name}</ListSubheader>
-              {category.interests ? category.interests.map(interest => (
-                <ListItem key={interest.name}>
-                  <ListItemText primary={interest.name} />
-                </ListItem>
-              )) : null}
+            <li key={category.name}>
+              <ul>
+                <ListSubheader>{category.name}</ListSubheader>
+                {category.interests ? category.interests.map(interest => (
+                  <ListItem key={interest.name}>
+                    <ListItemText primary={interest.name} />
+                  </ListItem>
+                )) : null}
+              </ul>
               <Divider />
-            </div>
+            </li>
           ))}
         </List>
       </section>

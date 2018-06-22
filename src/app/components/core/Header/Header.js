@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
-import { withStyles } from 'material-ui/styles';
-import { AppBar, Toolbar, Typography, IconButton, Icon } from 'material-ui';
-import Menu, { MenuItem } from 'material-ui/Menu';
+import { withStyles } from '@material-ui/core/styles';
+import { AppBar, Toolbar, Typography, IconButton, Icon, ListItemIcon, ListItemText, Menu, MenuItem } from '@material-ui/core';
 
 const drawerWidth = 240;
 const styles = theme => ({
@@ -32,7 +31,6 @@ class Header extends Component {
 
     this.state = {
       anchorEl: null,
-      open: false,
       title: '',
     };
   }
@@ -45,11 +43,11 @@ class Header extends Component {
   }
 
   handleOpenMenu = (event) => {
-    this.setState({ open: true, anchorEl: event.currentTarget });
+    this.setState({ anchorEl: event.currentTarget });
   }
 
   handleRequestClose = () => {
-    this.setState({ open: false });
+    this.setState({ anchorEl: null });
   }
 
   updateTitle(location) {
@@ -68,46 +66,67 @@ class Header extends Component {
       <AppBar position="fixed" color="primary" className={this.props.classes.appBar}>
         <Toolbar>
           <IconButton
-            color="contrast"
+            color="inherit"
             aria-label="open drawer"
             onClick={this.props.toggleDrawer}
             className={this.props.classes.navIconHide}
           >
-            <Icon color="contrast">menu</Icon>
+            <Icon>menu</Icon>
           </IconButton>
-          <Typography type="headline" component="h1" color="inherit" style={{ flex: 1 }}>
+          <Typography variant="display1" component="h1" color="inherit" style={{ flex: 1 }}>
             {this.state.title}
           </Typography>
           <IconButton
-            color="contrast"
+            color="inherit"
             aria-label="options"
             onClick={this.handleOpenMenu}
           >
-            <Icon color="contrast">more_vert</Icon>
+            <Icon>more_vert</Icon>
           </IconButton>
           <Menu
             anchorEl={this.state.anchorEl}
-            open={this.state.open}
-            onRequestClose={this.handleRequestClose}
+            open={Boolean(this.state.anchorEl)}
+            onClose={this.handleRequestClose}
           >
-            <a href="mailto:frank@gairal.com" rel="noopener noreferrer" title="frank@gairal.com">
+            <a
+              href="mailto:frank@gairal.com"
+              rel="noopener noreferrer"
+              title="frank@gairal.com"
+            >
               <MenuItem onClick={this.handleRequestClose}>
-                <Icon>email</Icon> frank@gairal.com
+                <ListItemIcon>
+                  <Icon>email</Icon>
+                </ListItemIcon>
+                <ListItemText inset primary="frank@gairal.com" />
               </MenuItem>
             </a>
             <a href="tel:+33695676587" rel="noopener noreferrer" title="+33 6 95 67 65 87">
               <MenuItem onClick={this.handleRequestClose}>
-                <Icon>phone</Icon> +33 95 67 65 87
+                <ListItemIcon>
+                  <Icon>phone</Icon>
+                </ListItemIcon>
+                <ListItemText inset primary="+33 95 67 65 87" />
               </MenuItem>
             </a>
             <a href="https://linkedin.com/in/gairal" target="_blank" rel="noopener noreferrer" title="LinkedIn">
               <MenuItem onClick={this.handleRequestClose}>
-                <Icon>link</Icon> LinkedIn
+                <ListItemIcon>
+                  <Icon>link</Icon>
+                </ListItemIcon>
+                <ListItemText inset primary="LinkedIn" />
               </MenuItem>
             </a>
-            <a href="/pdf/frank.gairal.pdf" target="_blank" rel="noopener noreferrer" title="resume">
+            <a
+              href="/pdf/frank.gairal.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="resume"
+            >
               <MenuItem onClick={this.handleRequestClose}>
-                <Icon>file_download</Icon> RESUME.PDF
+                <ListItemIcon>
+                  <Icon>file_download</Icon>
+                </ListItemIcon>
+                <ListItemText inset primary="resume.pdf" />
               </MenuItem>
             </a>
           </Menu>
@@ -117,4 +136,8 @@ class Header extends Component {
   }
 }
 
-export default withRouter(withStyles(styles, { withTheme: true })(Header));
+const headerWithStyle = withStyles(styles, { withTheme: true })(Header);
+const header = withRouter(headerWithStyle);
+
+export default header;
+// export default withRouter(withStyles(styles, { withTheme: true })(Header));

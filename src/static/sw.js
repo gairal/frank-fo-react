@@ -7,7 +7,6 @@ self.addEventListener('install', function (e) {
           '/',
           // '/app/app.js',
           // '/css/app.css',
-          // '/node_modules/normalize.css/normalize.css',
           '/app/frank.gairal.min.js',
           '/css/frank.gairal.min.css'
         ]

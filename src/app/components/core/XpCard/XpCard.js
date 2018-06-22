@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Grid, Typography, Avatar, Chip, Icon } from 'material-ui';
-import Card, { CardContent, CardMedia } from 'material-ui/Card';
+import { Grid, Typography, Avatar, Chip, Icon, Card, CardContent, CardMedia } from '@material-ui/core';
 import Utils from '../../../Utils';
 
 const XpCard = ({
@@ -9,7 +8,7 @@ const XpCard = ({
 }) => (
   <Card
     elevation={4}
-    style={{ display: 'flex' }}
+    style={{ display: 'flex', marginBottom: '1rem', padding: '1rem' }}
   >
     <CardMedia
       image={`/img/${img}`}
@@ -18,11 +17,11 @@ const XpCard = ({
       className="card-media"
     />
     <CardContent style={{ width: '100%' }}>
-      <Typography type="body1" component="h2">
+      <Typography variant="title" component="h2">
         {name} | {title}
       </Typography>
       <Grid container style={{ textTransform: 'uppercase' }} className="card-chips">
-        <Grid item xs={12} md style={{ flexGrow: 0 }}>
+        <Grid item xs={12} md style={{ flexGrow: 0, marginRight: '0.5rem' }}>
           <Chip
             avatar={<Avatar><Icon style={{ fontSize: '19px' }}>date_range</Icon></Avatar>}
             label={Utils.formatDate(date_in, date_out)}
@@ -35,7 +34,7 @@ const XpCard = ({
           />
         </Grid>
       </Grid>
-      <Typography type="caption" component="p">
+      <Typography variant="caption" component="p" style={{ marginTop: '0.5rem' }}>
         {subHeadline}
       </Typography>
     </CardContent>

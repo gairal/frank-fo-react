@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { CircularProgress } from 'material-ui/Progress';
+import { CircularProgress } from '@material-ui/core';
 
 export default class SkillLevel extends Component {
   static propTypes = {
@@ -33,7 +33,7 @@ export default class SkillLevel extends Component {
 
   render() {
     return (
-      <CircularProgress mode="determinate" value={this.state.progress} thickness={5} />
+      <CircularProgress variant="static" value={this.state.progress} thickness={5} />
     );
   }
 }

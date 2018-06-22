@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-import { withStyles } from 'material-ui/styles';
+import { withStyles } from '@material-ui/core/styles';
 import {
   AppBar,
   Toolbar,
@@ -14,7 +14,7 @@ import {
   Hidden,
   Divider,
   Typography,
-} from 'material-ui';
+} from '@material-ui/core';
 
 const drawerWidth = 240;
 const styles = () => ({
@@ -37,7 +37,7 @@ class SideNav extends Component {
       <div>
         <AppBar position="static" color="primary">
           <Toolbar>
-            <Typography type="headline" component="h1" color="inherit">
+            <Typography variant="title" component="h1" color="inherit">
               frank g.
             </Typography>
           </Toolbar>
@@ -47,7 +47,7 @@ class SideNav extends Component {
             <NavLink to={e.path} key={e.key} onClick={this.props.toggleDrawer} className="nav-link">
               <ListItem button>
                 <ListItemIcon>
-                  <Icon color="contrast">{e.icon}</Icon>
+                  <Icon color="error">{e.icon}</Icon>
                 </ListItemIcon>
                 <ListItemText primary={e.key} />
               </ListItem>
@@ -66,12 +66,12 @@ class SideNav extends Component {
     const { classes } = this.props;
 
     return (
-      <div>
+      <React.Fragment>
         <Hidden mdUp>
           <Drawer
-            type="temporary"
+            variant="temporary"
             open={this.props.mobileOpen}
-            onRequestClose={this.props.toggleDrawer}
+            onClose={this.props.toggleDrawer}
             ModalProps={{
               keepMounted: true, // Better open performance on mobile.
             }}
@@ -82,9 +82,9 @@ class SideNav extends Component {
             {this.drawer}
           </Drawer>
         </Hidden>
-        <Hidden mdDown implementation="css">
+        <Hidden smDown implementation="css">
           <Drawer
-            type="permanent"
+            variant="permanent"
             open
             classes={{
               paper: classes.drawerPaper,
@@ -93,7 +93,7 @@ class SideNav extends Component {
             {this.drawer}
           </Drawer>
         </Hidden>
-      </div>
+      </React.Fragment>
     );
   }
 }

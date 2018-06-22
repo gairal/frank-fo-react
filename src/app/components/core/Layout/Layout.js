@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { withStyles, MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
-import { blue, green, red } from 'material-ui/colors';
+import { withStyles, MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import { blue, green, red } from '@material-ui/core/colors';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import Header from '../Header';
 import SideNav from '../SideNav';
@@ -29,18 +29,17 @@ class Layout extends Component {
     this.state = {
       mobileOpen: false,
     };
-
-    this.palette = {
+    this.theme = createMuiTheme({
       palette: {
         // type: 'dark',
-        primary: blue, // Purple and green play nicely together.
+        primary: blue,
         secondary: {
           ...green,
           A400: '#00e677',
         },
         error: red,
       },
-    };
+    });
   }
 
   toggleDrawer = () => {
@@ -51,7 +50,7 @@ class Layout extends Component {
     const StoredLLoader = Loader(this.props.store);
     // const StoredCLoader = Loader(this.props.store, 'circular');
     return (
-      <MuiThemeProvider theme={createMuiTheme(this.palette)}>
+      <MuiThemeProvider theme={this.theme}>
         <SideNav
           mobileOpen={this.state.mobileOpen}
           routes={this.props.routes}
@@ -62,7 +61,6 @@ class Layout extends Component {
         />
         <StoredLLoader />
         <main className={this.props.classes.content}>
-          {/* <StoredCLoader /> */}
           <Switch>
             {this.props.routes
               .map(e => <Route path={e.path} component={e.component} key={e.path} />)

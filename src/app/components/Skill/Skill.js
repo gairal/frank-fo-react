@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Grid } from 'material-ui';
+import { Grid } from '@material-ui/core';
 import SkillCard from './SkillCard';
 
 export default class Skill extends Component {

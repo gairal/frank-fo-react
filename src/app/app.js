@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'es6-promise/auto';
+import CssBaseline from '@material-ui/core/CssBaseline';
 import createStore from './store/createStore';
 import AppContainer from './containers/AppContainer';
 
@@ -12,7 +13,10 @@ const MOUNT_NODE = document.getElementById('root');
 
 const render = () => {
   ReactDOM.render(
-    <AppContainer store={store} />,
+    <React.Fragment>
+      <CssBaseline />
+      <AppContainer store={store} />
+    </React.Fragment>,
     MOUNT_NODE,
   );
 };

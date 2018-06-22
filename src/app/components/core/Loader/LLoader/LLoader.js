@@ -1,4 +1,4 @@
 import React from 'react';
-import { LinearProgress } from 'material-ui/Progress';
+import { LinearProgress } from '@material-ui/core';
 
 export default () => <LinearProgress mode="query" />;

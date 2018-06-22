@@ -1,7 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const config = require('./webpack.config.prod');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 const serveProdConfig = Object.assign({}, config);
 
@@ -20,6 +19,5 @@ serveProdConfig.devServer = {
 
 serveProdConfig.plugins.push(new webpack.NamedModulesPlugin());
 serveProdConfig.plugins.push(new webpack.HotModuleReplacementPlugin());
-serveProdConfig.plugins.push(new BundleAnalyzerPlugin());
 
 module.exports = serveProdConfig;

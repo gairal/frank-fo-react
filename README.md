@@ -6,7 +6,6 @@
 - [ ] Remove gulp
 - [ ] Unit Testing with Jest
 - [ ] React Native version
-- [ ] remove flexbox
 - [ ] chrome app
 - [ ] update state of nav with active route
 

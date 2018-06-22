@@ -30,8 +30,8 @@ module.exports = {
     }),
     new CopyWebpackPlugin([
       { from: './src/img', to: 'img' },
+      { from: './src/pdf', to: 'pdf' },
       { from: './src/static', to: '' },
-      { from: './node_modules/normalize.css/normalize.css', to: 'node_modules/normalize.css/normalize.css' },
     ]),
     new WriteFilePlugin(),
   ],

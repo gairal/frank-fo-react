@@ -1,15 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Grid } from 'material-ui';
-import Card, { CardContent } from 'material-ui/Card';
-import { ListItem, ListItemText, ListItemIcon } from 'material-ui/List';
-import Typography from 'material-ui/Typography';
+import { Grid, Card, CardContent, ListItem, ListItemText, ListItemIcon, Typography } from '@material-ui/core';
 import SkillLevel from '../SkillLevel';
 
 const SkillCard = ({ category }) => (
   <Card>
     <CardContent>
-      <Typography type="headline" component="h2">
+      <Typography variant="headline" component="h2">
         {category.name}
       </Typography>
       <Grid container>
