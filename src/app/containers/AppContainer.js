@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import CssBaseline from '@material-ui/core/CssBaseline';
 import Routes from '../routes';
-import Layout from '../components/core/Layout';
+import LayoutWith from '../components/core/Layout';
 
 export default class AppContainer extends Component {
   static propTypes = {
@@ -19,11 +20,14 @@ export default class AppContainer extends Component {
     const routes = new Routes(store);
 
     return (
-      <Provider store={store}>
-        <BrowserRouter>
-          <Layout routes={routes} store={store} />
-        </BrowserRouter>
-      </Provider>
+      <React.Fragment>
+        <CssBaseline />
+        <Provider store={store}>
+          <Router>
+            <LayoutWith routes={routes} store={store} />
+          </Router>
+        </Provider>
+      </React.Fragment>
     );
   }
 }

@@ -16,7 +16,7 @@ const styles = theme => ({
   },
 });
 
-class Layout extends Component {
+export class Layout extends Component {
   static propTypes = {
     routes: PropTypes.arrayOf(PropTypes.shape()).isRequired,
     classes: PropTypes.shape().isRequired,

@@ -1,0 +1,171 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components > core > Header Renders correctly default 1`] = `
+<header
+  className="MuiPaper-root-11 MuiPaper-elevation4-17 MuiAppBar-root-3 MuiAppBar-positionFixed-4 MuiAppBar-colorPrimary-9 mui-fixed Header-appBar-1"
+>
+  <div
+    className="MuiToolbar-root-38 MuiToolbar-gutters-39"
+  >
+    <button
+      aria-label="open drawer"
+      className="MuiButtonBase-root-46 MuiIconButton-root-40 MuiIconButton-colorInherit-41 Header-navIconHide-2"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex="0"
+      type="button"
+    >
+      <span
+        className="MuiIconButton-label-45"
+      >
+        <span
+          aria-hidden="true"
+          className="material-icons MuiIcon-root-49"
+        >
+          menu
+        </span>
+      </span>
+      <span
+        className="MuiTouchRipple-root-55"
+      />
+    </button>
+    <h1
+      className="MuiTypography-root-62 MuiTypography-display1-66 MuiTypography-colorInherit-81"
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      works
+    </h1>
+    <button
+      aria-label="options"
+      className="MuiButtonBase-root-46 MuiIconButton-root-40 MuiIconButton-colorInherit-41"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex="0"
+      type="button"
+    >
+      <span
+        className="MuiIconButton-label-45"
+      >
+        <span
+          aria-hidden="true"
+          className="material-icons MuiIcon-root-49"
+        >
+          more_vert
+        </span>
+      </span>
+      <span
+        className="MuiTouchRipple-root-55"
+      />
+    </button>
+  </div>
+</header>
+`;
+
+exports[`components > core > Header Updates it's title 1`] = `
+<header
+  className="MuiPaper-root-11 MuiPaper-elevation4-17 MuiAppBar-root-3 MuiAppBar-positionFixed-4 MuiAppBar-colorPrimary-9 mui-fixed Header-appBar-1"
+>
+  <div
+    className="MuiToolbar-root-38 MuiToolbar-gutters-39"
+  >
+    <button
+      aria-label="open drawer"
+      className="MuiButtonBase-root-46 MuiIconButton-root-40 MuiIconButton-colorInherit-41 Header-navIconHide-2"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex="0"
+      type="button"
+    >
+      <span
+        className="MuiIconButton-label-45"
+      >
+        <span
+          aria-hidden="true"
+          className="material-icons MuiIcon-root-49"
+        >
+          menu
+        </span>
+      </span>
+      <span
+        className="MuiTouchRipple-root-55"
+      />
+    </button>
+    <h1
+      className="MuiTypography-root-62 MuiTypography-display1-66 MuiTypography-colorInherit-81"
+      style={
+        Object {
+          "flex": 1,
+        }
+      }
+    >
+      skills
+    </h1>
+    <button
+      aria-label="options"
+      className="MuiButtonBase-root-46 MuiIconButton-root-40 MuiIconButton-colorInherit-41"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex="0"
+      type="button"
+    >
+      <span
+        className="MuiIconButton-label-45"
+      >
+        <span
+          aria-hidden="true"
+          className="material-icons MuiIcon-root-49"
+        >
+          more_vert
+        </span>
+      </span>
+      <span
+        className="MuiTouchRipple-root-55"
+      />
+    </button>
+  </div>
+</header>
+`;

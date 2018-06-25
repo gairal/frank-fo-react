@@ -1,0 +1,691 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components > core > Layout Can toggle drawer 1`] = `
+Array [
+  <div
+    className="HiddenCss-smDown-8"
+  >
+    <div
+      className="MuiDrawer-docked-18"
+    >
+      <div
+        className="MuiPaper-root-29 MuiPaper-elevation0-31 MuiDrawer-paper-19 SideNav-drawerPaper-2 MuiDrawer-paperAnchorLeft-20 MuiDrawer-paperAnchorDockedLeft-24"
+      >
+        <div>
+          <header
+            className="MuiPaper-root-29 MuiPaper-elevation4-35 MuiAppBar-root-56 MuiAppBar-positionStatic-60 MuiAppBar-colorPrimary-62"
+          >
+            <div
+              className="MuiToolbar-root-64 MuiToolbar-gutters-65"
+            >
+              <h1
+                className="MuiTypography-root-66 MuiTypography-title-72 MuiTypography-colorInherit-85"
+              >
+                frank g.
+              </h1>
+            </div>
+          </header>
+          <ul
+            className="MuiList-root-90 MuiList-padding-91"
+          >
+            <a
+              aria-current="page"
+              className="nav-link active"
+              href="/works"
+              onClick={[Function]}
+              style={Object {}}
+            >
+              <div
+                className="MuiButtonBase-root-104 MuiListItem-root-94 MuiListItem-default-97 MuiListItem-gutters-101 MuiListItem-button-102"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                role="button"
+                tabIndex="0"
+              >
+                <span
+                  aria-hidden="true"
+                  className="material-icons MuiIcon-root-108 MuiIcon-colorError-112 MuiListItemIcon-root-107"
+                >
+                  work
+                </span>
+                <div
+                  className="MuiListItemText-root-114"
+                >
+                  <span
+                    className="MuiTypography-root-66 MuiTypography-subheading-73 MuiListItemText-primary-117"
+                  >
+                    works
+                  </span>
+                </div>
+                <span
+                  className="MuiTouchRipple-root-120"
+                />
+              </div>
+            </a>
+            <a
+              aria-current={null}
+              className="nav-link"
+              href="/educations"
+              onClick={[Function]}
+              style={undefined}
+            >
+              <div
+                className="MuiButtonBase-root-104 MuiListItem-root-94 MuiListItem-default-97 MuiListItem-gutters-101 MuiListItem-button-102"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                role="button"
+                tabIndex="0"
+              >
+                <span
+                  aria-hidden="true"
+                  className="material-icons MuiIcon-root-108 MuiIcon-colorError-112 MuiListItemIcon-root-107"
+                >
+                  account_balance
+                </span>
+                <div
+                  className="MuiListItemText-root-114"
+                >
+                  <span
+                    className="MuiTypography-root-66 MuiTypography-subheading-73 MuiListItemText-primary-117"
+                  >
+                    educations
+                  </span>
+                </div>
+                <span
+                  className="MuiTouchRipple-root-120"
+                />
+              </div>
+            </a>
+            <a
+              aria-current={null}
+              className="nav-link"
+              href="/skills"
+              onClick={[Function]}
+              style={undefined}
+            >
+              <div
+                className="MuiButtonBase-root-104 MuiListItem-root-94 MuiListItem-default-97 MuiListItem-gutters-101 MuiListItem-button-102"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                role="button"
+                tabIndex="0"
+              >
+                <span
+                  aria-hidden="true"
+                  className="material-icons MuiIcon-root-108 MuiIcon-colorError-112 MuiListItemIcon-root-107"
+                >
+                  build
+                </span>
+                <div
+                  className="MuiListItemText-root-114"
+                >
+                  <span
+                    className="MuiTypography-root-66 MuiTypography-subheading-73 MuiListItemText-primary-117"
+                  >
+                    skills
+                  </span>
+                </div>
+                <span
+                  className="MuiTouchRipple-root-120"
+                />
+              </div>
+            </a>
+            <a
+              aria-current={null}
+              className="nav-link"
+              href="/interests"
+              onClick={[Function]}
+              style={undefined}
+            >
+              <div
+                className="MuiButtonBase-root-104 MuiListItem-root-94 MuiListItem-default-97 MuiListItem-gutters-101 MuiListItem-button-102"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                role="button"
+                tabIndex="0"
+              >
+                <span
+                  aria-hidden="true"
+                  className="material-icons MuiIcon-root-108 MuiIcon-colorError-112 MuiListItemIcon-root-107"
+                >
+                  language
+                </span>
+                <div
+                  className="MuiListItemText-root-114"
+                >
+                  <span
+                    className="MuiTypography-root-66 MuiTypography-subheading-73 MuiListItemText-primary-117"
+                  >
+                    interests
+                  </span>
+                </div>
+                <span
+                  className="MuiTouchRipple-root-120"
+                />
+              </div>
+            </a>
+            <hr
+              className="MuiDivider-root-127"
+            />
+            <div
+              className="MuiButtonBase-root-104 MuiListItem-root-94 MuiListItem-default-97 MuiListItem-gutters-101 MuiListItem-button-102"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="button"
+              tabIndex="0"
+            >
+              <div
+                className="MuiListItemText-root-114"
+              >
+                <span
+                  className="MuiTypography-root-66 MuiTypography-subheading-73 MuiListItemText-primary-117"
+                >
+                  version
+                </span>
+                <p
+                  className="MuiTypography-root-66 MuiTypography-body1-75 MuiTypography-colorTextSecondary-88 MuiListItemText-secondary-118"
+                >
+                  4.1.0-react
+                </p>
+              </div>
+              <span
+                className="MuiTouchRipple-root-120"
+              />
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <header
+    className="MuiPaper-root-29 MuiPaper-elevation4-35 MuiAppBar-root-56 MuiAppBar-positionFixed-57 MuiAppBar-colorPrimary-62 mui-fixed Header-appBar-131"
+  >
+    <div
+      className="MuiToolbar-root-64 MuiToolbar-gutters-65"
+    >
+      <button
+        aria-label="open drawer"
+        className="MuiButtonBase-root-104 MuiIconButton-root-133 MuiIconButton-colorInherit-134 Header-navIconHide-132"
+        disabled={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex="0"
+        type="button"
+      >
+        <span
+          className="MuiIconButton-label-138"
+        >
+          <span
+            aria-hidden="true"
+            className="material-icons MuiIcon-root-108"
+          >
+            menu
+          </span>
+        </span>
+        <span
+          className="MuiTouchRipple-root-120"
+        />
+      </button>
+      <h1
+        className="MuiTypography-root-66 MuiTypography-display1-70 MuiTypography-colorInherit-85"
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        works
+      </h1>
+      <button
+        aria-label="options"
+        className="MuiButtonBase-root-104 MuiIconButton-root-133 MuiIconButton-colorInherit-134"
+        disabled={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex="0"
+        type="button"
+      >
+        <span
+          className="MuiIconButton-label-138"
+        >
+          <span
+            aria-hidden="true"
+            className="material-icons MuiIcon-root-108"
+          >
+            more_vert
+          </span>
+        </span>
+        <span
+          className="MuiTouchRipple-root-120"
+        />
+      </button>
+    </div>
+  </header>,
+  <div
+    className="MuiLinearProgress-root-239 MuiLinearProgress-colorPrimary-240"
+    mode="query"
+    role="progressbar"
+  >
+    <div
+      className="MuiLinearProgress-bar-247 MuiLinearProgress-barColorPrimary-248 MuiLinearProgress-bar1Indeterminate-250"
+      style={Object {}}
+    />
+    <div
+      className="MuiLinearProgress-bar-247 MuiLinearProgress-barColorPrimary-248 MuiLinearProgress-bar2Indeterminate-251"
+      style={Object {}}
+    />
+  </div>,
+  <main
+    className="Layout-content-1"
+  >
+    <section>
+      <div
+        className="MuiGrid-container-143"
+      />
+    </section>
+  </main>,
+]
+`;
+
+exports[`components > core > Layout Renders correctly default 1`] = `
+Array [
+  <div
+    className="HiddenCss-smDown-8"
+  >
+    <div
+      className="MuiDrawer-docked-18"
+    >
+      <div
+        className="MuiPaper-root-29 MuiPaper-elevation0-31 MuiDrawer-paper-19 SideNav-drawerPaper-2 MuiDrawer-paperAnchorLeft-20 MuiDrawer-paperAnchorDockedLeft-24"
+      >
+        <div>
+          <header
+            className="MuiPaper-root-29 MuiPaper-elevation4-35 MuiAppBar-root-56 MuiAppBar-positionStatic-60 MuiAppBar-colorPrimary-62"
+          >
+            <div
+              className="MuiToolbar-root-64 MuiToolbar-gutters-65"
+            >
+              <h1
+                className="MuiTypography-root-66 MuiTypography-title-72 MuiTypography-colorInherit-85"
+              >
+                frank g.
+              </h1>
+            </div>
+          </header>
+          <ul
+            className="MuiList-root-90 MuiList-padding-91"
+          >
+            <a
+              aria-current="page"
+              className="nav-link active"
+              href="/works"
+              onClick={[Function]}
+              style={Object {}}
+            >
+              <div
+                className="MuiButtonBase-root-104 MuiListItem-root-94 MuiListItem-default-97 MuiListItem-gutters-101 MuiListItem-button-102"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                role="button"
+                tabIndex="0"
+              >
+                <span
+                  aria-hidden="true"
+                  className="material-icons MuiIcon-root-108 MuiIcon-colorError-112 MuiListItemIcon-root-107"
+                >
+                  work
+                </span>
+                <div
+                  className="MuiListItemText-root-114"
+                >
+                  <span
+                    className="MuiTypography-root-66 MuiTypography-subheading-73 MuiListItemText-primary-117"
+                  >
+                    works
+                  </span>
+                </div>
+                <span
+                  className="MuiTouchRipple-root-120"
+                />
+              </div>
+            </a>
+            <a
+              aria-current={null}
+              className="nav-link"
+              href="/educations"
+              onClick={[Function]}
+              style={undefined}
+            >
+              <div
+                className="MuiButtonBase-root-104 MuiListItem-root-94 MuiListItem-default-97 MuiListItem-gutters-101 MuiListItem-button-102"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                role="button"
+                tabIndex="0"
+              >
+                <span
+                  aria-hidden="true"
+                  className="material-icons MuiIcon-root-108 MuiIcon-colorError-112 MuiListItemIcon-root-107"
+                >
+                  account_balance
+                </span>
+                <div
+                  className="MuiListItemText-root-114"
+                >
+                  <span
+                    className="MuiTypography-root-66 MuiTypography-subheading-73 MuiListItemText-primary-117"
+                  >
+                    educations
+                  </span>
+                </div>
+                <span
+                  className="MuiTouchRipple-root-120"
+                />
+              </div>
+            </a>
+            <a
+              aria-current={null}
+              className="nav-link"
+              href="/skills"
+              onClick={[Function]}
+              style={undefined}
+            >
+              <div
+                className="MuiButtonBase-root-104 MuiListItem-root-94 MuiListItem-default-97 MuiListItem-gutters-101 MuiListItem-button-102"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                role="button"
+                tabIndex="0"
+              >
+                <span
+                  aria-hidden="true"
+                  className="material-icons MuiIcon-root-108 MuiIcon-colorError-112 MuiListItemIcon-root-107"
+                >
+                  build
+                </span>
+                <div
+                  className="MuiListItemText-root-114"
+                >
+                  <span
+                    className="MuiTypography-root-66 MuiTypography-subheading-73 MuiListItemText-primary-117"
+                  >
+                    skills
+                  </span>
+                </div>
+                <span
+                  className="MuiTouchRipple-root-120"
+                />
+              </div>
+            </a>
+            <a
+              aria-current={null}
+              className="nav-link"
+              href="/interests"
+              onClick={[Function]}
+              style={undefined}
+            >
+              <div
+                className="MuiButtonBase-root-104 MuiListItem-root-94 MuiListItem-default-97 MuiListItem-gutters-101 MuiListItem-button-102"
+                onBlur={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                role="button"
+                tabIndex="0"
+              >
+                <span
+                  aria-hidden="true"
+                  className="material-icons MuiIcon-root-108 MuiIcon-colorError-112 MuiListItemIcon-root-107"
+                >
+                  language
+                </span>
+                <div
+                  className="MuiListItemText-root-114"
+                >
+                  <span
+                    className="MuiTypography-root-66 MuiTypography-subheading-73 MuiListItemText-primary-117"
+                  >
+                    interests
+                  </span>
+                </div>
+                <span
+                  className="MuiTouchRipple-root-120"
+                />
+              </div>
+            </a>
+            <hr
+              className="MuiDivider-root-127"
+            />
+            <div
+              className="MuiButtonBase-root-104 MuiListItem-root-94 MuiListItem-default-97 MuiListItem-gutters-101 MuiListItem-button-102"
+              onBlur={[Function]}
+              onFocus={[Function]}
+              onKeyDown={[Function]}
+              onKeyUp={[Function]}
+              onMouseDown={[Function]}
+              onMouseLeave={[Function]}
+              onMouseUp={[Function]}
+              onTouchEnd={[Function]}
+              onTouchMove={[Function]}
+              onTouchStart={[Function]}
+              role="button"
+              tabIndex="0"
+            >
+              <div
+                className="MuiListItemText-root-114"
+              >
+                <span
+                  className="MuiTypography-root-66 MuiTypography-subheading-73 MuiListItemText-primary-117"
+                >
+                  version
+                </span>
+                <p
+                  className="MuiTypography-root-66 MuiTypography-body1-75 MuiTypography-colorTextSecondary-88 MuiListItemText-secondary-118"
+                >
+                  4.1.0-react
+                </p>
+              </div>
+              <span
+                className="MuiTouchRipple-root-120"
+              />
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <header
+    className="MuiPaper-root-29 MuiPaper-elevation4-35 MuiAppBar-root-56 MuiAppBar-positionFixed-57 MuiAppBar-colorPrimary-62 mui-fixed Header-appBar-131"
+  >
+    <div
+      className="MuiToolbar-root-64 MuiToolbar-gutters-65"
+    >
+      <button
+        aria-label="open drawer"
+        className="MuiButtonBase-root-104 MuiIconButton-root-133 MuiIconButton-colorInherit-134 Header-navIconHide-132"
+        disabled={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex="0"
+        type="button"
+      >
+        <span
+          className="MuiIconButton-label-138"
+        >
+          <span
+            aria-hidden="true"
+            className="material-icons MuiIcon-root-108"
+          >
+            menu
+          </span>
+        </span>
+        <span
+          className="MuiTouchRipple-root-120"
+        />
+      </button>
+      <h1
+        className="MuiTypography-root-66 MuiTypography-display1-70 MuiTypography-colorInherit-85"
+        style={
+          Object {
+            "flex": 1,
+          }
+        }
+      >
+        works
+      </h1>
+      <button
+        aria-label="options"
+        className="MuiButtonBase-root-104 MuiIconButton-root-133 MuiIconButton-colorInherit-134"
+        disabled={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex="0"
+        type="button"
+      >
+        <span
+          className="MuiIconButton-label-138"
+        >
+          <span
+            aria-hidden="true"
+            className="material-icons MuiIcon-root-108"
+          >
+            more_vert
+          </span>
+        </span>
+        <span
+          className="MuiTouchRipple-root-120"
+        />
+      </button>
+    </div>
+  </header>,
+  <div
+    className="MuiLinearProgress-root-239 MuiLinearProgress-colorPrimary-240"
+    mode="query"
+    role="progressbar"
+  >
+    <div
+      className="MuiLinearProgress-bar-247 MuiLinearProgress-barColorPrimary-248 MuiLinearProgress-bar1Indeterminate-250"
+      style={Object {}}
+    />
+    <div
+      className="MuiLinearProgress-bar-247 MuiLinearProgress-barColorPrimary-248 MuiLinearProgress-bar2Indeterminate-251"
+      style={Object {}}
+    />
+  </div>,
+  <main
+    className="Layout-content-1"
+  >
+    <section>
+      <div
+        className="MuiGrid-container-143"
+      />
+    </section>
+  </main>,
+]
+`;
