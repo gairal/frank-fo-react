@@ -17,9 +17,9 @@
     "es2015"
   ],
   "scripts": {
-    "start": "./node_modules/.bin/webpack-dev-server --config ./webpack/webpack.config.js --hot",
-    "startprod": "./node_modules/.bin/webpack-dev-server --config ./webpack/webpack.config.serveprod.js --hot",
-    "debug": "./node_modules/.bin/webpack-dev-server --config ./webpack/webpack.config.debug.js --hot",
+    "start": "./node_modules/.bin/webpack-dev-server --config ./webpack/webpack.config.js",
+    "startprod": "./node_modules/.bin/webpack-dev-server --config ./webpack/webpack.config.serveprod.js",
+    "debug": "./node_modules/.bin/webpack-dev-server --config ./webpack/webpack.config.debug.js",
     "build": "./node_modules/.bin/webpack --config ./webpack/webpack.config.js",
     "release": "./node_modules/.bin/webpack --config ./webpack/webpack.config.prod.js",
     "lint": "./node_modules/.bin/eslint ./src/ && ./node_modules/.bin/eslint ./test/ && ./node_modules/.bin/stylelint './src/**/*.scss'",
