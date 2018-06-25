@@ -1,7 +1,7 @@
 import component from '@/components/Interest';
 import AbstractRoute from './AbstractRoute';
 
-export default class Interest extends AbstractRoute {
+class Interest extends AbstractRoute {
   constructor(store) {
     super(store, 'interests', 'language', 'categories');
     this.component = component;
@@ -46,7 +46,7 @@ export default class Interest extends AbstractRoute {
   loadFactory() {
     const API_URLS = [
       this.API_URL,
-      'https://com-gairal-frank-bo.appspot.com/travels',
+      `${this.API_URL_BASE}/travels`,
     ];
 
     return () => (dispatch) => {
@@ -84,3 +84,5 @@ export default class Interest extends AbstractRoute {
     this.mapStateToProps.travels = 'travels';
   }
 }
+
+export default store => new Interest(store).route;

@@ -1,7 +1,7 @@
 import component from '@/components/Education';
 import AbstractRoute from './AbstractRoute';
 
-export default class Work extends AbstractRoute {
+class Education extends AbstractRoute {
   constructor(store) {
     super(store, 'educations', 'account_balance');
     this.component = component;
@@ -32,3 +32,5 @@ export default class Work extends AbstractRoute {
     };
   }
 }
+
+export default store => new Education(store).route;

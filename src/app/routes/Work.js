@@ -1,7 +1,7 @@
 import component from '@/components/Work';
 import AbstractRoute from './AbstractRoute';
 
-export default class Work extends AbstractRoute {
+class Work extends AbstractRoute {
   constructor(store) {
     super(store, 'works', 'work');
     this.component = component;
@@ -31,3 +31,5 @@ export default class Work extends AbstractRoute {
     };
   }
 }
+
+export default store => new Work(store).route;

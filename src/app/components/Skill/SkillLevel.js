@@ -13,22 +13,33 @@ export default class SkillLevel extends Component {
     this.state = {
       progress: 0,
     };
+
+    this.interval = null;
   }
 
   componentDidMount() {
-    this.interval = setInterval(() => {
-      if (this.state.progress >= this.props.level) {
-        clearInterval(this.interval);
-      } else {
-        this.setState(prevState => ({
-          progress: prevState.progress + 5,
-        }));
-      }
-    }, 5);
+    this.animateLevel();
   }
 
   componentWillUnmount() {
     clearInterval(this.interval);
+  }
+
+  updateLevel(resolve) {
+    if (this.state.progress >= this.props.level) {
+      clearInterval(this.interval);
+      resolve(this.state.progress);
+    } else {
+      this.setState(prevState => ({
+        progress: prevState.progress + 5,
+      }));
+    }
+  }
+
+  animateLevel() {
+    return new Promise((resolve) => {
+      this.interval = setInterval(() => this.updateLevel(resolve), 5);
+    });
   }
 
   render() {

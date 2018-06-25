@@ -3,11 +3,9 @@
 ---
 
 ### TODO
-- [ ] Remove gulp
-- [ ] Unit Testing with Jest
+- [ ] react-hot-loader
 - [ ] React Native version
 - [ ] chrome app
-- [ ] update state of nav with active route
 
 ---
 
