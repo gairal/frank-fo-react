@@ -74,7 +74,6 @@ export default class Map extends Component {
         loadingElement={<div style={{ height: '100%' }} />}
         containerElement={<div style={{ height: '400px' }} />}
         mapElement={<div style={{ height: '100%' }} />}
-        travels={this.props.travels}
         center={this.state.center}
         zoom={this.state.zoom}
       >

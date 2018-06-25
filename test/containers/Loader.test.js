@@ -25,10 +25,10 @@ describe('LoaderContainer', () => {
   });
 
   it.skip('Can change state', () => {
-    // dumbComponent.props.actions.showLoader();
-    store.dispatch(() => ({ type: ' LOADER_SHOW' }));
-    expect(dumbComponent.props.isFetching).toBeTruthy();
-    store.dispatch(() => ({ type: ' LOADER_HIDE' }));
-    expect(dumbComponent.props.isFetching).toBeFalsy();
+    dumbComponent.props.actions.showLoader();
+    // store.dispatch(() => ({ type: ' LOADER_SHOW' }));
+    // expect(dumbComponent.props.isFetching).toBeTruthy();
+    // store.dispatch(() => ({ type: ' LOADER_HIDE' }));
+    // expect(dumbComponent.props.isFetching).toBeFalsy();
   });
 });

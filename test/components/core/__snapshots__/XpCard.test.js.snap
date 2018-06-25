@@ -13,6 +13,7 @@ exports[`components > core > XpCard Renders correctly default 1`] = `
 >
   <div
     className="MuiCardMedia-root-29 card-media"
+    src={undefined}
     style={
       Object {
         "backgroundImage": "url(\\"/img/test\\")",
@@ -56,6 +57,7 @@ exports[`components > core > XpCard Renders correctly default 1`] = `
       >
         <div
           className="MuiChip-root-152"
+          onClick={undefined}
           onKeyDown={[Function]}
           role="button"
           tabIndex={-1}
@@ -88,6 +90,7 @@ exports[`components > core > XpCard Renders correctly default 1`] = `
       >
         <div
           className="MuiChip-root-152"
+          onClick={undefined}
           onKeyDown={[Function]}
           role="button"
           tabIndex={-1}
