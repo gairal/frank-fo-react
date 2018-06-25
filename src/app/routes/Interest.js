@@ -85,4 +85,4 @@ class Interest extends AbstractRoute {
   }
 }
 
-export default store => new Interest(store).route;
+export default s => Interest.export(s);

@@ -33,4 +33,4 @@ class Skill extends AbstractRoute {
   }
 }
 
-export default store => new Skill(store).route;
+export default s => Skill.export(s);

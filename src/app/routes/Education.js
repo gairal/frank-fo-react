@@ -33,4 +33,4 @@ class Education extends AbstractRoute {
   }
 }
 
-export default store => new Education(store).route;
+export default s => Education.export(s);

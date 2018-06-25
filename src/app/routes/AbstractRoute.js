@@ -106,4 +106,15 @@ export default class AbstractRoute {
 
     this.mapDispatchToProps.load = this.loadFactory();
   }
+
+  /**
+   * Default export method
+   *
+   * @static
+   * @param {*} store
+   * @memberof AbstractRoute
+   */
+  static export(store) {
+    return new this(store).route;
+  }
 }

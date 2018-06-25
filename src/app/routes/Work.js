@@ -32,4 +32,4 @@ class Work extends AbstractRoute {
   }
 }
 
-export default store => new Work(store).route;
+export default s => Work.export(s);

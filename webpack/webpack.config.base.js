@@ -8,7 +8,7 @@ const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
   entry: {
-    app: './src/app/app.js',
+    app: './src/app/index.js',
   },
   output: {
     filename: 'js/[name].js',
