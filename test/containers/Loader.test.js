@@ -3,7 +3,7 @@ import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import createStore from '@/store/createStore';
 import LoaderComponent from '@/components/core/Loader';
-import LoaderContainer from '@/containers/Loader';
+import LoaderContainer, { showLoader, hideLoader } from '@/containers/Loader';
 
 describe('LoaderContainer', () => {
   const store = createStore();
@@ -24,11 +24,10 @@ describe('LoaderContainer', () => {
     expect(tree).toMatchSnapshot();
   });
 
-  it.skip('Can change state', () => {
-    dumbComponent.props.actions.showLoader();
-    // store.dispatch(() => ({ type: ' LOADER_SHOW' }));
-    // expect(dumbComponent.props.isFetching).toBeTruthy();
-    // store.dispatch(() => ({ type: ' LOADER_HIDE' }));
-    // expect(dumbComponent.props.isFetching).toBeFalsy();
+  it('Can change state', () => {
+    store.dispatch(showLoader());
+    expect(dumbComponent.props.isFetching).toBeTruthy();
+    store.dispatch(hideLoader());
+    expect(dumbComponent.props.isFetching).toBeFalsy();
   });
 });

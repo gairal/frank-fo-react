@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 import { injectReducer } from '@/store/reducers';
+import * as actions from '../containers/Loader';
 
 export default class AbstractRoute {
   constructor(store, key, icon, path = '') {
@@ -64,24 +65,12 @@ export default class AbstractRoute {
     return state;
   }
 
-  static showLoader() {
-    return {
-      type: 'LOADER_SHOW',
-    };
-  }
-
-  static hideLoader() {
-    return {
-      type: 'LOADER_HIDE',
-    };
-  }
-
   loadFactory() {
     const { API_URL } = this;
     const { success, fail } = this.constructor;
 
     return () => (dispatch) => {
-      dispatch(AbstractRoute.showLoader());
+      dispatch(actions.showLoader());
 
       const fetchOptions = {
         method: 'GET',
@@ -90,11 +79,11 @@ export default class AbstractRoute {
       return fetch(API_URL, fetchOptions)
         .then(response => response.json())
         .then((json) => {
-          dispatch(AbstractRoute.hideLoader());
+          dispatch(actions.hideLoader());
           return dispatch(success(json));
         })
         .catch((err) => {
-          dispatch(AbstractRoute.hideLoader());
+          dispatch(actions.hideLoader());
           return dispatch(fail(err));
         });
     };

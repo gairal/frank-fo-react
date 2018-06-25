@@ -1,5 +1,6 @@
 import component from '@/components/Interest';
 import AbstractRoute from './AbstractRoute';
+import { showLoader, hideLoader } from '../containers/Loader';
 
 class Interest extends AbstractRoute {
   constructor(store) {
@@ -50,7 +51,7 @@ class Interest extends AbstractRoute {
     ];
 
     return () => (dispatch) => {
-      dispatch(AbstractRoute.showLoader());
+      dispatch(showLoader());
 
       const fetchOptions = {
         method: 'GET',
@@ -68,11 +69,11 @@ class Interest extends AbstractRoute {
               }, {});
 
               dispatch(Interest.success(payload));
-              return dispatch(AbstractRoute.hideLoader());
+              return dispatch(hideLoader());
             }))
         .catch((err) => {
           dispatch(Interest.fail(err));
-          return dispatch(AbstractRoute.hideLoader());
+          return dispatch(hideLoader());
         });
     };
   }

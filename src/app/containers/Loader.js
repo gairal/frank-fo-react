@@ -2,8 +2,8 @@ import { connect } from 'react-redux';
 import { injectReducer } from '@/store/reducers';
 import Loader from '@/components/core/Loader';
 
-const LOADER_SHOW = 'LOADER_SHOW';
-const LOADER_HIDE = 'LOADER_HIDE';
+export const LOADER_SHOW = 'LOADER_SHOW';
+export const LOADER_HIDE = 'LOADER_HIDE';
 
 // ------------------------------------
 // Action Handlers
@@ -18,6 +18,14 @@ const ACTION_HANDLERS = {
     isFetching: false,
   }),
 };
+
+export const showLoader = () => ({
+  type: LOADER_SHOW,
+});
+
+export const hideLoader = () => ({
+  type: LOADER_HIDE,
+});
 
 const initialState = {
   title: '',
