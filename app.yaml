@@ -39,6 +39,9 @@ skip_files:
   - ^(.*/)?gulp$
   - ^(.*/)?src$
   - ^(.*/)?build$
+  - ^(.*/)?webpack$
+  - ^(.*/)?test$
+  - ^(.*/)?coverage$
   - ^README\..*
   - \.gitignore
   - ^\.git/.*
