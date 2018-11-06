@@ -15,27 +15,26 @@ exports[`components > core > SideNav Renders correctly default 1`] = `
           className="MuiPaper-root-28 MuiPaper-elevation4-34 MuiAppBar-root-55 MuiAppBar-positionStatic-59 MuiAppBar-colorPrimary-61"
         >
           <div
-            className="MuiToolbar-root-63 MuiToolbar-gutters-64"
+            className="MuiToolbar-root-63 MuiToolbar-regular-65 MuiToolbar-gutters-64"
           >
             <h1
-              className="MuiTypography-root-65 MuiTypography-title-71 MuiTypography-colorInherit-84"
+              className="MuiTypography-root-67 MuiTypography-title-73 MuiTypography-colorInherit-86"
             >
               frank g.
             </h1>
           </div>
         </header>
         <ul
-          className="MuiList-root-89 MuiList-padding-90"
+          className="MuiList-root-92 MuiList-padding-93"
         >
           <a
             aria-current={null}
             className="nav-link"
-            href="categories"
+            href="/categories"
             onClick={[Function]}
-            style={undefined}
           >
             <div
-              className="MuiButtonBase-root-103 MuiListItem-root-93 MuiListItem-default-96 MuiListItem-gutters-100 MuiListItem-button-101"
+              className="MuiButtonBase-root-106 MuiListItem-root-96 MuiListItem-default-99 MuiListItem-gutters-103 MuiListItem-button-104"
               onBlur={[Function]}
               onFocus={[Function]}
               onKeyDown={[Function]}
@@ -51,29 +50,29 @@ exports[`components > core > SideNav Renders correctly default 1`] = `
             >
               <span
                 aria-hidden="true"
-                className="material-icons MuiIcon-root-107 MuiIcon-colorError-111 MuiListItemIcon-root-106"
+                className="material-icons MuiIcon-root-110 MuiIcon-colorError-114 MuiListItemIcon-root-109"
               >
                 build
               </span>
               <div
-                className="MuiListItemText-root-113"
+                className="MuiListItemText-root-117"
               >
                 <span
-                  className="MuiTypography-root-65 MuiTypography-subheading-72 MuiListItemText-primary-116"
+                  className="MuiTypography-root-67 MuiTypography-subheading-74 MuiListItemText-primary-120"
                 >
                   skills
                 </span>
               </div>
               <span
-                className="MuiTouchRipple-root-119"
+                className="MuiTouchRipple-root-123"
               />
             </div>
           </a>
           <hr
-            className="MuiDivider-root-126"
+            className="MuiDivider-root-130"
           />
           <div
-            className="MuiButtonBase-root-103 MuiListItem-root-93 MuiListItem-default-96 MuiListItem-gutters-100 MuiListItem-button-101"
+            className="MuiButtonBase-root-106 MuiListItem-root-96 MuiListItem-default-99 MuiListItem-gutters-103 MuiListItem-button-104"
             onBlur={[Function]}
             onFocus={[Function]}
             onKeyDown={[Function]}
@@ -88,21 +87,21 @@ exports[`components > core > SideNav Renders correctly default 1`] = `
             tabIndex="0"
           >
             <div
-              className="MuiListItemText-root-113"
+              className="MuiListItemText-root-117"
             >
               <span
-                className="MuiTypography-root-65 MuiTypography-subheading-72 MuiListItemText-primary-116"
+                className="MuiTypography-root-67 MuiTypography-subheading-74 MuiListItemText-primary-120"
               >
                 version
               </span>
               <p
-                className="MuiTypography-root-65 MuiTypography-body1-74 MuiTypography-colorTextSecondary-87 MuiListItemText-secondary-117"
+                className="MuiTypography-root-67 MuiTypography-body1-76 MuiTypography-colorTextSecondary-90 MuiListItemText-secondary-121"
               >
-                4.1.0-react
+                4.2.0-react
               </p>
             </div>
             <span
-              className="MuiTouchRipple-root-119"
+              className="MuiTouchRipple-root-123"
             />
           </div>
         </ul>

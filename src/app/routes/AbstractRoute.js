@@ -25,13 +25,19 @@ export default class AbstractRoute {
   }
 
   get connected() {
-    const mapStateToProps = state => Object.keys(this.mapStateToProps)
-      .reduce((acc, e) => ({
-        ...acc,
-        [e]: state[this.key][this.mapStateToProps[e]],
-      }), {});
+    const mapStateToProps = state =>
+      Object.keys(this.mapStateToProps).reduce(
+        (acc, e) => ({
+          ...acc,
+          [e]: state[this.key][this.mapStateToProps[e]],
+        }),
+        {},
+      );
 
-    return connect(mapStateToProps, this.mapDispatchToProps)(this.component);
+    return connect(
+      mapStateToProps,
+      this.mapDispatchToProps,
+    )(this.component);
   }
 
   get route() {
@@ -55,10 +61,10 @@ export default class AbstractRoute {
 
   // reducer functions
   static fetchSuccess(state, action) {
-    return ({
+    return {
       ...state,
       data: action.payload.json,
-    });
+    };
   }
 
   static fetchFail(state) {
@@ -69,7 +75,7 @@ export default class AbstractRoute {
     const { API_URL } = this;
     const { success, fail } = this.constructor;
 
-    return () => (dispatch) => {
+    return () => dispatch => {
       dispatch(actions.showLoader());
 
       const fetchOptions = {
@@ -78,11 +84,11 @@ export default class AbstractRoute {
 
       return fetch(API_URL, fetchOptions)
         .then(response => response.json())
-        .then((json) => {
+        .then(json => {
           dispatch(actions.hideLoader());
           return dispatch(success(json));
         })
-        .catch((err) => {
+        .catch(err => {
           dispatch(actions.hideLoader());
           return dispatch(fail(err));
         });
@@ -90,7 +96,8 @@ export default class AbstractRoute {
   }
 
   init() {
-    this.ACTION_HANDLERS[this.ACTIONS.FETCH_SUCCESS] = AbstractRoute.fetchSuccess;
+    this.ACTION_HANDLERS[this.ACTIONS.FETCH_SUCCESS] =
+      AbstractRoute.fetchSuccess;
     this.ACTION_HANDLERS[this.ACTIONS.FETCH_FAILURE] = AbstractRoute.fetchFail;
 
     this.mapDispatchToProps.load = this.loadFactory();

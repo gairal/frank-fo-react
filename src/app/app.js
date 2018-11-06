@@ -8,8 +8,6 @@ import '../scss/app.scss';
 const initialState = window.__INITIAL_STATE__; // eslint-disable-line no-underscore-dangle
 const store = createStore(initialState);
 
-const App = () => (
-  <AppContainer store={store} />
-);
+const App = () => <AppContainer store={store} />;
 
 export default hot(module)(App);

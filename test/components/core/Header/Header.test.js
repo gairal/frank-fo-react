@@ -7,17 +7,16 @@ import Header from '@/components/core/Header';
 describe('components > core > Header', () => {
   const component = renderer.create(
     <Router>
-      <Header
-        toggleDrawer={jest.fn}
-      />
-    </Router>);
+      <Header toggleDrawer={jest.fn} />
+    </Router>,
+  );
 
   it('Renders correctly default', () => {
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 
-  it('Updates it\'s title', () => {
+  it('Updates it`s title', () => {
     component.root.instance.history.push('/skills');
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

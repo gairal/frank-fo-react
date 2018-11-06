@@ -2,7 +2,13 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import { withStyles } from '@material-ui/core/styles';
-import { AppBar, Toolbar, Typography, IconButton, Icon } from '@material-ui/core';
+import {
+  AppBar,
+  Toolbar,
+  Typography,
+  IconButton,
+  Icon,
+} from '@material-ui/core';
 import Menu from './HeaderMenu';
 
 const drawerWidth = 240;
@@ -40,13 +46,15 @@ export class Header extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.location !== prevProps.location) {
+    const { location } = this.props;
+    if (location !== prevProps.location) {
       this.updateTitle();
     }
   }
 
   updateTitle() {
-    const title = this.props.location.pathname.substr(1) || 'works';
+    const { location } = this.props;
+    const title = location.pathname.substr(1) || 'works';
 
     this.setState(state => ({
       ...state,
@@ -57,19 +65,28 @@ export class Header extends Component {
   }
 
   render() {
+    const { classes, toggleDrawer } = this.props;
+    const { title } = this.state;
     return (
-      <AppBar position="fixed" color="primary" className={this.props.classes.appBar}>
+      <AppBar position="fixed" color="primary" className={classes.appBar}>
         <Toolbar>
           <IconButton
             color="inherit"
             aria-label="open drawer"
-            onClick={this.props.toggleDrawer}
-            className={this.props.classes.navIconHide}
+            onClick={toggleDrawer}
+            className={classes.navIconHide}
           >
             <Icon>menu</Icon>
           </IconButton>
-          <Typography variant="display1" component="h1" color="inherit" style={{ flex: 1 }}>
-            {this.state.title}
+          <Typography
+            variant="display1"
+            component="h1"
+            color="inherit"
+            style={{
+              flex: 1,
+            }}
+          >
+            {title}
           </Typography>
           <Menu />
         </Toolbar>

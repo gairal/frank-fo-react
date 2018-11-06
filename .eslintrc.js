@@ -17,10 +17,17 @@ module.exports = {
     DEBUG: true,
     LOG_LEVEL: true,
   },
-  plugins: ['jest', 'react'],
-  extends: 'airbnb',
+  plugins: ['jest', 'prettier'],
+  extends: ['airbnb', 'prettier'],
   parser: 'babel-eslint',
   rules: {
+    'prettier/prettier': [
+      'error',
+      {
+        singleQuote: true,
+        trailingComma: 'all',
+      },
+    ],
     'react/jsx-filename-extension': 0,
     'no-unused-vars': 1,
     curly: 2,

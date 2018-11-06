@@ -9,7 +9,7 @@ import LayoutWith from '../components/core/Layout';
 export default class AppContainer extends Component {
   static propTypes = {
     store: PropTypes.shape().isRequired,
-  }
+  };
 
   shouldComponentUpdate() {
     return false;

@@ -7,22 +7,20 @@ export default class Work extends Component {
   static propTypes = {
     load: PropTypes.func.isRequired,
     works: PropTypes.arrayOf(PropTypes.shape()).isRequired,
-  }
+  };
 
   componentDidMount() {
-    this.props.load();
+    const { load } = this.props;
+    load();
   }
 
   render() {
+    const { works } = this.props;
     return (
       <section>
         <Grid container>
-          {this.props.works.map(work => (
-            <Grid
-              item
-              xs={12}
-              key={work.date_in}
-            >
+          {works.map(work => (
+            <Grid item xs={12} key={work.date_in}>
               <XpCard
                 img={work.image.name}
                 name={work.name}

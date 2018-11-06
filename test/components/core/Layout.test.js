@@ -16,7 +16,8 @@ describe('components > core > Layout', () => {
       <Router>
         <LayoutWith store={store} routes={routes} />
       </Router>
-    </Provider>);
+    </Provider>,
+  );
 
   it('Renders correctly default', () => {
     const tree = component.toJSON();

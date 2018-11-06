@@ -13,7 +13,6 @@ exports[`components > core > XpCard Renders correctly default 1`] = `
 >
   <div
     className="MuiCardMedia-root-29 card-media"
-    src={undefined}
     style={
       Object {
         "backgroundImage": "url(\\"/img/test\\")",
@@ -33,12 +32,10 @@ exports[`components > core > XpCard Renders correctly default 1`] = `
     <h2
       className="MuiTypography-root-32 MuiTypography-title-38"
     >
-      test
-       | 
-      test
+      test | test
     </h2>
     <div
-      className="MuiGrid-container-56 card-chips"
+      className="MuiGrid-container-57 card-chips"
       style={
         Object {
           "textTransform": "uppercase",
@@ -46,7 +43,7 @@ exports[`components > core > XpCard Renders correctly default 1`] = `
       }
     >
       <div
-        className="MuiGrid-item-57 MuiGrid-grid-xs-12-95 MuiGrid-grid-md-true-111"
+        className="MuiGrid-item-58 MuiGrid-grid-xs-12-97 MuiGrid-grid-md-true-113"
         style={
           Object {
             "flexGrow": 0,
@@ -56,18 +53,17 @@ exports[`components > core > XpCard Renders correctly default 1`] = `
         }
       >
         <div
-          className="MuiChip-root-152"
-          onClick={undefined}
+          className="MuiChip-root-154"
           onKeyDown={[Function]}
           role="button"
           tabIndex={-1}
         >
           <div
-            className="MuiAvatar-root-159 MuiAvatar-colorDefault-160 MuiChip-avatar-155"
+            className="MuiAvatar-root-171 MuiAvatar-colorDefault-172 MuiChip-avatar-163"
           >
             <span
               aria-hidden="true"
-              className="material-icons MuiIcon-root-162 MuiChip-avatarChildren-156"
+              className="material-icons MuiIcon-root-174 MuiChip-avatarChildren-166"
               style={
                 Object {
                   "color": "#fff",
@@ -79,28 +75,27 @@ exports[`components > core > XpCard Renders correctly default 1`] = `
             </span>
           </div>
           <span
-            className="MuiChip-label-157"
+            className="MuiChip-label-167"
           >
             NaN undefined - present
           </span>
         </div>
       </div>
       <div
-        className="MuiGrid-item-57 MuiGrid-grid-xs-12-95 MuiGrid-grid-md-true-111"
+        className="MuiGrid-item-58 MuiGrid-grid-xs-12-97 MuiGrid-grid-md-true-113"
       >
         <div
-          className="MuiChip-root-152"
-          onClick={undefined}
+          className="MuiChip-root-154"
           onKeyDown={[Function]}
           role="button"
           tabIndex={-1}
         >
           <div
-            className="MuiAvatar-root-159 MuiAvatar-colorDefault-160 MuiChip-avatar-155"
+            className="MuiAvatar-root-171 MuiAvatar-colorDefault-172 MuiChip-avatar-163"
           >
             <span
               aria-hidden="true"
-              className="material-icons MuiIcon-root-162 MuiChip-avatarChildren-156"
+              className="material-icons MuiIcon-root-174 MuiChip-avatarChildren-166"
               style={
                 Object {
                   "color": "#fff",
@@ -112,7 +107,7 @@ exports[`components > core > XpCard Renders correctly default 1`] = `
             </span>
           </div>
           <span
-            className="MuiChip-label-157"
+            className="MuiChip-label-167"
           >
             test
           </span>

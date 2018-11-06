@@ -7,22 +7,20 @@ export default class Education extends Component {
   static propTypes = {
     load: PropTypes.func.isRequired,
     educations: PropTypes.arrayOf(PropTypes.shape()).isRequired,
-  }
+  };
 
   componentDidMount() {
-    this.props.load();
+    const { load } = this.props;
+    load();
   }
 
   render() {
+    const { educations } = this.props;
     return (
       <section>
         <Grid container>
-          {this.props.educations.map(edu => (
-            <Grid
-              item
-              xs={12}
-              key={edu.year_in}
-            >
+          {educations.map(edu => (
+            <Grid item xs={12} key={edu.year_in}>
               <XpCard
                 img={edu.image.name}
                 name={edu.name}

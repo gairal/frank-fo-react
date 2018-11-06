@@ -1,27 +1,19 @@
 {
   "presets": [
-    "react",
-    [ "env", {
+    ["@babel/preset-env", {
       "targets": {
         "browsers": "> 2%"
       }
     }],
-    "stage-0"
+    "@babel/preset-react"
   ],
   "plugins": [
     "react-hot-loader/babel",
+    "@babel/plugin-proposal-class-properties",
     "lodash",
     ["transform-imports", {
         "@material-ui/core": {
             "transform": "@material-ui/core/${member}",
-            "preventFullImport": true
-        },
-        "react-router-dom": {
-            "transform": "react-router-dom/es/${member}",
-            "preventFullImport": true
-        },
-        "redux": {
-            "transform": "redux/es/${member}",
             "preventFullImport": true
         },
         "react-google-maps/lib/components": {

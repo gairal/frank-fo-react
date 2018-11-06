@@ -30,7 +30,7 @@ exports[`components > core > Header > HeaderMenu Renders correctly default 1`] =
     </span>
   </span>
   <span
-    className="MuiTouchRipple-root-16"
+    className="MuiTouchRipple-root-17"
   />
 </button>
 `;

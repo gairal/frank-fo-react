@@ -6,16 +6,16 @@ exports[`components > Skill Renders correctly default 1`] = `
     className="MuiGrid-container-1"
   >
     <div
-      className="MuiGrid-item-2 MuiGrid-grid-xs-12-40"
+      className="MuiGrid-item-2 MuiGrid-grid-xs-12-41"
     >
       <div
-        className="MuiPaper-root-98 MuiPaper-elevation2-102 MuiPaper-rounded-99 MuiCard-root-97"
+        className="MuiPaper-root-99 MuiPaper-elevation1-102 MuiPaper-rounded-100 MuiCard-root-98"
       >
         <div
-          className="MuiCardContent-root-125"
+          className="MuiCardContent-root-126"
         >
           <h2
-            className="MuiTypography-root-126 MuiTypography-headline-131"
+            className="MuiTypography-root-127 MuiTypography-headline-132"
           >
             test
           </h2>
@@ -35,16 +35,16 @@ exports[`components > Skill Renders correctly with categories 1`] = `
     className="MuiGrid-container-1"
   >
     <div
-      className="MuiGrid-item-2 MuiGrid-grid-xs-12-40"
+      className="MuiGrid-item-2 MuiGrid-grid-xs-12-41"
     >
       <div
-        className="MuiPaper-root-98 MuiPaper-elevation2-102 MuiPaper-rounded-99 MuiCard-root-97"
+        className="MuiPaper-root-99 MuiPaper-elevation1-102 MuiPaper-rounded-100 MuiCard-root-98"
       >
         <div
-          className="MuiCardContent-root-125"
+          className="MuiCardContent-root-126"
         >
           <h2
-            className="MuiTypography-root-126 MuiTypography-headline-131"
+            className="MuiTypography-root-127 MuiTypography-headline-132"
           >
             test
           </h2>
@@ -52,15 +52,15 @@ exports[`components > Skill Renders correctly with categories 1`] = `
             className="MuiGrid-container-1"
           >
             <div
-              className="MuiGrid-item-2 MuiGrid-grid-xs-12-40 MuiGrid-grid-md-6-62 MuiGrid-grid-lg-4-74"
+              className="MuiGrid-item-2 MuiGrid-grid-xs-12-41 MuiGrid-grid-md-6-63 MuiGrid-grid-lg-4-75"
             >
               <li
-                className="MuiListItem-root-150 MuiListItem-default-153 MuiListItem-gutters-157"
+                className="MuiListItem-root-152 MuiListItem-default-155 MuiListItem-gutters-159"
                 disabled={false}
               >
                 <div
                   aria-valuenow={0}
-                  className="MuiCircularProgress-root-161 MuiCircularProgress-colorPrimary-164 MuiCircularProgress-static-162"
+                  className="MuiCircularProgress-root-163 MuiCircularProgress-colorPrimary-166 MuiCircularProgress-static-164"
                   role="progressbar"
                   style={
                     Object {
@@ -71,11 +71,11 @@ exports[`components > Skill Renders correctly with categories 1`] = `
                   }
                 >
                   <svg
-                    className="MuiCircularProgress-svg-166"
+                    className="MuiCircularProgress-svg-168"
                     viewBox="22 22 44 44"
                   >
                     <circle
-                      className="MuiCircularProgress-circle-167 MuiCircularProgress-circleStatic-168"
+                      className="MuiCircularProgress-circle-169 MuiCircularProgress-circleStatic-170"
                       cx={44}
                       cy={44}
                       fill="none"
@@ -91,7 +91,7 @@ exports[`components > Skill Renders correctly with categories 1`] = `
                   </svg>
                 </div>
                 <div
-                  className="MuiListItemText-root-170"
+                  className="MuiListItemText-root-172"
                   style={
                     Object {
                       "flex": "1 1 0",
@@ -99,7 +99,7 @@ exports[`components > Skill Renders correctly with categories 1`] = `
                   }
                 >
                   <span
-                    className="MuiTypography-root-126 MuiTypography-subheading-133 MuiListItemText-primary-173"
+                    className="MuiTypography-root-127 MuiTypography-subheading-134 MuiListItemText-primary-175"
                   >
                     test1 | test
                   </span>
@@ -107,15 +107,15 @@ exports[`components > Skill Renders correctly with categories 1`] = `
               </li>
             </div>
             <div
-              className="MuiGrid-item-2 MuiGrid-grid-xs-12-40 MuiGrid-grid-md-6-62 MuiGrid-grid-lg-4-74"
+              className="MuiGrid-item-2 MuiGrid-grid-xs-12-41 MuiGrid-grid-md-6-63 MuiGrid-grid-lg-4-75"
             >
               <li
-                className="MuiListItem-root-150 MuiListItem-default-153 MuiListItem-gutters-157"
+                className="MuiListItem-root-152 MuiListItem-default-155 MuiListItem-gutters-159"
                 disabled={false}
               >
                 <div
                   aria-valuenow={0}
-                  className="MuiCircularProgress-root-161 MuiCircularProgress-colorPrimary-164 MuiCircularProgress-static-162"
+                  className="MuiCircularProgress-root-163 MuiCircularProgress-colorPrimary-166 MuiCircularProgress-static-164"
                   role="progressbar"
                   style={
                     Object {
@@ -126,11 +126,11 @@ exports[`components > Skill Renders correctly with categories 1`] = `
                   }
                 >
                   <svg
-                    className="MuiCircularProgress-svg-166"
+                    className="MuiCircularProgress-svg-168"
                     viewBox="22 22 44 44"
                   >
                     <circle
-                      className="MuiCircularProgress-circle-167 MuiCircularProgress-circleStatic-168"
+                      className="MuiCircularProgress-circle-169 MuiCircularProgress-circleStatic-170"
                       cx={44}
                       cy={44}
                       fill="none"
@@ -146,7 +146,7 @@ exports[`components > Skill Renders correctly with categories 1`] = `
                   </svg>
                 </div>
                 <div
-                  className="MuiListItemText-root-170"
+                  className="MuiListItemText-root-172"
                   style={
                     Object {
                       "flex": "1 1 0",
@@ -154,7 +154,7 @@ exports[`components > Skill Renders correctly with categories 1`] = `
                   }
                 >
                   <span
-                    className="MuiTypography-root-126 MuiTypography-subheading-133 MuiListItemText-primary-173"
+                    className="MuiTypography-root-127 MuiTypography-subheading-134 MuiListItemText-primary-175"
                   >
                     test2
                   </span>

@@ -8,7 +8,7 @@ describe('routes > AbstractRoute', () => {
   const store = createStore();
   const route = new AbstractRoute(store, 'test', 'test', 'test');
 
-  route.component = () => (<div />);
+  route.component = () => <div />;
   route.ACTIONS = {
     FETCH_SUCCESS: 'TEST_FETCH_SUCCESS',
     FETCH_FAILURE: 'TEST_FETCH_FAILURE',
@@ -20,7 +20,11 @@ describe('routes > AbstractRoute', () => {
 
   const connectedRoute = route.route;
   const Connected = connectedRoute.component;
-  const component = renderer.create(<Provider store={store}><Connected /></Provider>);
+  const component = renderer.create(
+    <Provider store={store}>
+      <Connected />
+    </Provider>,
+  );
 
   it('Has default props', () => {
     expect(route.key).toEqual('test');
@@ -29,8 +33,12 @@ describe('routes > AbstractRoute', () => {
     expect(route.API_URL).toBeDefined();
     expect(route.API_URL).toEqual(`${route.API_URL_BASE}/test/test`);
     expect(route.mapDispatchToProps.load).toBeDefined();
-    expect(route.ACTION_HANDLERS.TEST_FETCH_SUCCESS).toEqual(AbstractRoute.fetchSuccess);
-    expect(route.ACTION_HANDLERS.TEST_FETCH_FAILURE).toEqual(AbstractRoute.fetchFail);
+    expect(route.ACTION_HANDLERS.TEST_FETCH_SUCCESS).toEqual(
+      AbstractRoute.fetchSuccess,
+    );
+    expect(route.ACTION_HANDLERS.TEST_FETCH_FAILURE).toEqual(
+      AbstractRoute.fetchFail,
+    );
   });
 
   it('Renders correctly', () => {

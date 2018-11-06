@@ -5,7 +5,7 @@ import { CircularProgress } from '@material-ui/core';
 export default class SkillLevel extends Component {
   static propTypes = {
     level: PropTypes.number.isRequired,
-  }
+  };
 
   constructor(props) {
     super(props);
@@ -26,9 +26,11 @@ export default class SkillLevel extends Component {
   }
 
   updateLevel(resolve) {
-    if (this.state.progress >= this.props.level) {
+    const { level } = this.props;
+    const { progress } = this.state;
+    if (progress >= level) {
       clearInterval(this.interval);
-      resolve(this.state.progress);
+      resolve(progress);
     } else {
       this.setState(prevState => ({
         progress: prevState.progress + 5,
@@ -37,14 +39,13 @@ export default class SkillLevel extends Component {
   }
 
   animateLevel() {
-    return new Promise((resolve) => {
+    return new Promise(resolve => {
       this.interval = setInterval(() => this.updateLevel(resolve), 5);
     });
   }
 
   render() {
-    return (
-      <CircularProgress variant="static" value={this.state.progress} thickness={5} />
-    );
+    const { progress } = this.state;
+    return <CircularProgress variant="static" value={progress} thickness={5} />;
   }
 }

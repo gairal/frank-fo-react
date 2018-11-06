@@ -6,10 +6,10 @@ exports[`components > Education Renders correctly default 1`] = `
     className="MuiGrid-container-1"
   >
     <div
-      className="MuiGrid-item-2 MuiGrid-grid-xs-12-40"
+      className="MuiGrid-item-2 MuiGrid-grid-xs-12-41"
     >
       <div
-        className="MuiPaper-root-98 MuiPaper-elevation4-104 MuiPaper-rounded-99 MuiCard-root-97"
+        className="MuiPaper-root-99 MuiPaper-elevation4-105 MuiPaper-rounded-100 MuiCard-root-98"
         style={
           Object {
             "display": "flex",
@@ -19,8 +19,7 @@ exports[`components > Education Renders correctly default 1`] = `
         }
       >
         <div
-          className="MuiCardMedia-root-125 card-media"
-          src={undefined}
+          className="MuiCardMedia-root-126 card-media"
           style={
             Object {
               "backgroundImage": "url(\\"/img/test\\")",
@@ -30,7 +29,7 @@ exports[`components > Education Renders correctly default 1`] = `
           title="test"
         />
         <div
-          className="MuiCardContent-root-127"
+          className="MuiCardContent-root-128"
           style={
             Object {
               "width": "100%",
@@ -38,11 +37,9 @@ exports[`components > Education Renders correctly default 1`] = `
           }
         >
           <h2
-            className="MuiTypography-root-128 MuiTypography-title-134"
+            className="MuiTypography-root-129 MuiTypography-title-135"
           >
-            test
-             | 
-            test
+            test | test
           </h2>
           <div
             className="MuiGrid-container-1 card-chips"
@@ -53,7 +50,7 @@ exports[`components > Education Renders correctly default 1`] = `
             }
           >
             <div
-              className="MuiGrid-item-2 MuiGrid-grid-xs-12-40 MuiGrid-grid-md-true-56"
+              className="MuiGrid-item-2 MuiGrid-grid-xs-12-41 MuiGrid-grid-md-true-57"
               style={
                 Object {
                   "flexGrow": 0,
@@ -63,18 +60,17 @@ exports[`components > Education Renders correctly default 1`] = `
               }
             >
               <div
-                className="MuiChip-root-152"
-                onClick={undefined}
+                className="MuiChip-root-154"
                 onKeyDown={[Function]}
                 role="button"
                 tabIndex={-1}
               >
                 <div
-                  className="MuiAvatar-root-159 MuiAvatar-colorDefault-160 MuiChip-avatar-155"
+                  className="MuiAvatar-root-171 MuiAvatar-colorDefault-172 MuiChip-avatar-163"
                 >
                   <span
                     aria-hidden="true"
-                    className="material-icons MuiIcon-root-162 MuiChip-avatarChildren-156"
+                    className="material-icons MuiIcon-root-174 MuiChip-avatarChildren-166"
                     style={
                       Object {
                         "color": "#fff",
@@ -86,28 +82,27 @@ exports[`components > Education Renders correctly default 1`] = `
                   </span>
                 </div>
                 <span
-                  className="MuiChip-label-157"
+                  className="MuiChip-label-167"
                 >
                   2017 December - present
                 </span>
               </div>
             </div>
             <div
-              className="MuiGrid-item-2 MuiGrid-grid-xs-12-40 MuiGrid-grid-md-true-56"
+              className="MuiGrid-item-2 MuiGrid-grid-xs-12-41 MuiGrid-grid-md-true-57"
             >
               <div
-                className="MuiChip-root-152"
-                onClick={undefined}
+                className="MuiChip-root-154"
                 onKeyDown={[Function]}
                 role="button"
                 tabIndex={-1}
               >
                 <div
-                  className="MuiAvatar-root-159 MuiAvatar-colorDefault-160 MuiChip-avatar-155"
+                  className="MuiAvatar-root-171 MuiAvatar-colorDefault-172 MuiChip-avatar-163"
                 >
                   <span
                     aria-hidden="true"
-                    className="material-icons MuiIcon-root-162 MuiChip-avatarChildren-156"
+                    className="material-icons MuiIcon-root-174 MuiChip-avatarChildren-166"
                     style={
                       Object {
                         "color": "#fff",
@@ -119,7 +114,7 @@ exports[`components > Education Renders correctly default 1`] = `
                   </span>
                 </div>
                 <span
-                  className="MuiChip-label-157"
+                  className="MuiChip-label-167"
                 >
                   test
                 </span>
@@ -127,7 +122,7 @@ exports[`components > Education Renders correctly default 1`] = `
             </div>
           </div>
           <p
-            className="MuiTypography-root-128 MuiTypography-caption-138"
+            className="MuiTypography-root-129 MuiTypography-caption-139"
             style={
               Object {
                 "marginTop": "0.5rem",

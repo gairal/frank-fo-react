@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { withStyles, MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import {
+  withStyles,
+  MuiThemeProvider,
+  createMuiTheme,
+} from '@material-ui/core/styles';
 import { blue, green, red } from '@material-ui/core/colors';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import Loader from '@/containers/Loader';
@@ -21,7 +25,7 @@ export class Layout extends Component {
     routes: PropTypes.arrayOf(PropTypes.shape()).isRequired,
     classes: PropTypes.shape().isRequired,
     store: PropTypes.shape().isRequired,
-  }
+  };
 
   constructor(props) {
     super(props);
@@ -43,29 +47,31 @@ export class Layout extends Component {
   }
 
   toggleDrawer = () => {
-    this.setState({ mobileOpen: !this.state.mobileOpen });
+    const { mobileOpen } = this.state;
+    this.setState({ mobileOpen: !mobileOpen });
   };
 
   render() {
-    const StoredLLoader = Loader(this.props.store);
-    // const StoredCLoader = Loader(this.props.store, 'circular');
+    const { store, routes, classes } = this.props;
+    const { mobileOpen } = this.state;
+    const StoredLLoader = Loader(store);
+    // const StoredCLoader = Loader(store, 'circular');
     return (
       <MuiThemeProvider theme={this.theme}>
         <SideNav
-          mobileOpen={this.state.mobileOpen}
-          routes={this.props.routes}
+          mobileOpen={mobileOpen}
+          routes={routes}
           toggleDrawer={this.toggleDrawer}
         />
-        <Header
-          toggleDrawer={this.toggleDrawer}
-        />
+        <Header toggleDrawer={this.toggleDrawer} />
         <StoredLLoader />
-        <main className={this.props.classes.content}>
+        <main className={classes.content}>
           <Switch>
-            {this.props.routes
-              .map(e => <Route path={e.path} component={e.component} key={e.path} />)
-              .concat(<Redirect to={this.props.routes[0].path} key="default" />)
-            }
+            {routes
+              .map(e => (
+                <Route path={e.path} component={e.component} key={e.path} />
+              ))
+              .concat(<Redirect to={routes[0].path} key="default" />)}
           </Switch>
         </main>
       </MuiThemeProvider>

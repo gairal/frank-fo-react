@@ -11,7 +11,7 @@ exports[`components > core > Loader Appears when request fetching 1`] = `
     style={Object {}}
   />
   <div
-    className="MuiLinearProgress-bar-9 MuiLinearProgress-barColorPrimary-10 MuiLinearProgress-bar2Indeterminate-13"
+    className="MuiLinearProgress-bar-9 MuiLinearProgress-barColorPrimary-10 MuiLinearProgress-bar2Indeterminate-15"
     style={Object {}}
   />
 </div>
@@ -27,7 +27,7 @@ exports[`components > core > Loader Renders correctly circular 1`] = `
   }
 >
   <div
-    className="MuiCircularProgress-root-17 MuiCircularProgress-colorPrimary-20 MuiCircularProgress-indeterminate-19"
+    className="MuiCircularProgress-root-18 MuiCircularProgress-colorPrimary-21 MuiCircularProgress-indeterminate-20"
     role="progressbar"
     style={
       Object {
@@ -37,11 +37,11 @@ exports[`components > core > Loader Renders correctly circular 1`] = `
     }
   >
     <svg
-      className="MuiCircularProgress-svg-22"
+      className="MuiCircularProgress-svg-23"
       viewBox="22 22 44 44"
     >
       <circle
-        className="MuiCircularProgress-circle-23 MuiCircularProgress-circleIndeterminate-25"
+        className="MuiCircularProgress-circle-24 MuiCircularProgress-circleIndeterminate-26"
         cx={44}
         cy={44}
         fill="none"
@@ -67,7 +67,7 @@ exports[`components > core > Loader Renders correctly linear 1`] = `
     style={Object {}}
   />
   <div
-    className="MuiLinearProgress-bar-9 MuiLinearProgress-barColorPrimary-10 MuiLinearProgress-bar2Indeterminate-13"
+    className="MuiLinearProgress-bar-9 MuiLinearProgress-barColorPrimary-10 MuiLinearProgress-bar2Indeterminate-15"
     style={Object {}}
   />
 </div>

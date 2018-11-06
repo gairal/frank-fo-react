@@ -14,7 +14,9 @@ module.exports = {
     filename: 'js/[name].js',
   },
   plugins: [
-    new CleanWebpackPlugin(['build', 'dist'], { root: path.join(__dirname, '../') }),
+    new CleanWebpackPlugin(['build', 'dist'], {
+      root: path.join(__dirname, '../'),
+    }),
     new HtmlWebpackPlugin({
       template: './src/index.pug',
       inject: true,
@@ -24,9 +26,7 @@ module.exports = {
       chunkFilename: 'css/[name].css',
     }),
     new StyleLintPlugin({
-      reporters: [
-        { formatter: 'string', console: true },
-      ],
+      reporters: [{ formatter: 'string', console: true }],
     }),
     new CopyWebpackPlugin([
       { from: './src/img', to: 'img' },
@@ -41,7 +41,12 @@ module.exports = {
         test: /.js?$/,
         use: [
           'babel-loader',
-          'eslint-loader',
+          {
+            loader: 'eslint-loader',
+            options: {
+              fix: true,
+            },
+          },
         ],
         include: path.join(__dirname, '../src'),
       },
@@ -52,17 +57,12 @@ module.exports = {
       },
       {
         test: /\.(sa|sc|c)ss$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-          'sass-loader',
-        ],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
         include: path.join(__dirname, '../src'),
       },
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
-        use:
-        {
+        use: {
           loader: 'file-loader',
           options: {
             name: 'fonts/[name].[ext]',

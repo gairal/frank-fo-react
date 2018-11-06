@@ -29,10 +29,13 @@ class SideNav extends Component {
     classes: PropTypes.shape().isRequired,
     mobileOpen: PropTypes.bool.isRequired,
     toggleDrawer: PropTypes.func.isRequired,
-  }
+  };
 
   constructor(props) {
     super(props);
+
+    const { routes, toggleDrawer } = this.props;
+
     this.drawer = (
       <div>
         <AppBar position="static" color="primary">
@@ -43,8 +46,13 @@ class SideNav extends Component {
           </Toolbar>
         </AppBar>
         <List>
-          {this.props.routes.map(e => (
-            <NavLink to={e.path} key={e.key} onClick={this.props.toggleDrawer} className="nav-link">
+          {routes.map(e => (
+            <NavLink
+              to={e.path}
+              key={e.key}
+              onClick={toggleDrawer}
+              className="nav-link"
+            >
               <ListItem button>
                 <ListItemIcon>
                   <Icon color="error">{e.icon}</Icon>
@@ -55,7 +63,7 @@ class SideNav extends Component {
           ))}
           <Divider />
           <ListItem button>
-            <ListItemText primary="version" secondary="4.1.0-react" />
+            <ListItemText primary="version" secondary="4.2.0-react" />
           </ListItem>
         </List>
       </div>
@@ -63,15 +71,15 @@ class SideNav extends Component {
   }
 
   render() {
-    const { classes } = this.props;
+    const { classes, mobileOpen, toggleDrawer } = this.props;
 
     return (
       <React.Fragment>
         <Hidden mdUp>
           <Drawer
             variant="temporary"
-            open={this.props.mobileOpen}
-            onClose={this.props.toggleDrawer}
+            open={mobileOpen}
+            onClose={toggleDrawer}
             ModalProps={{
               keepMounted: true, // Better open performance on mobile.
             }}

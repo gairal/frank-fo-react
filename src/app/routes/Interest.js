@@ -37,20 +37,17 @@ class Interest extends AbstractRoute {
   }
 
   static fetchSuccess(state, action) {
-    return ({
+    return {
       ...state,
       data: action.payload.json,
       travels: action.payload.travels,
-    });
+    };
   }
 
   loadFactory() {
-    const API_URLS = [
-      this.API_URL,
-      `${this.API_URL_BASE}/travels`,
-    ];
+    const API_URLS = [this.API_URL, `${this.API_URL_BASE}/travels`];
 
-    return () => (dispatch) => {
+    return () => dispatch => {
       dispatch(showLoader());
 
       const fetchOptions = {
@@ -59,19 +56,19 @@ class Interest extends AbstractRoute {
 
       return Promise.all(API_URLS.map(url => fetch(url, fetchOptions)))
         .then(responses =>
-          Promise.all(responses.map(res => res.json()))
-            .then((jsons) => {
-              const payload = jsons.reduce((acc, e) => {
-                if (e[0].name) {
-                  return { ...acc, json: e };
-                }
-                return { ...acc, travels: e };
-              }, {});
+          Promise.all(responses.map(res => res.json())).then(jsons => {
+            const payload = jsons.reduce((acc, e) => {
+              if (e[0].name) {
+                return { ...acc, json: e };
+              }
+              return { ...acc, travels: e };
+            }, {});
 
-              dispatch(Interest.success(payload));
-              return dispatch(hideLoader());
-            }))
-        .catch((err) => {
+            dispatch(Interest.success(payload));
+            return dispatch(hideLoader());
+          }),
+        )
+        .catch(err => {
           dispatch(Interest.fail(err));
           return dispatch(hideLoader());
         });

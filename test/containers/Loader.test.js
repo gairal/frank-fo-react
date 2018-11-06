@@ -11,7 +11,11 @@ describe('LoaderContainer', () => {
   let dumbComponent;
   beforeEach(() => {
     const Container = LoaderContainer(store);
-    component = renderer.create(<Provider store={store}><Container /></Provider>);
+    component = renderer.create(
+      <Provider store={store}>
+        <Container />
+      </Provider>,
+    );
     dumbComponent = component.root.findByType(LoaderComponent);
   });
 

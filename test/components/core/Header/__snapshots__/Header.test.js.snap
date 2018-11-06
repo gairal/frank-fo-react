@@ -5,11 +5,11 @@ exports[`components > core > Header Renders correctly default 1`] = `
   className="MuiPaper-root-11 MuiPaper-elevation4-17 MuiAppBar-root-3 MuiAppBar-positionFixed-4 MuiAppBar-colorPrimary-9 mui-fixed Header-appBar-1"
 >
   <div
-    className="MuiToolbar-root-38 MuiToolbar-gutters-39"
+    className="MuiToolbar-root-38 MuiToolbar-regular-40 MuiToolbar-gutters-39"
   >
     <button
       aria-label="open drawer"
-      className="MuiButtonBase-root-46 MuiIconButton-root-40 MuiIconButton-colorInherit-41 Header-navIconHide-2"
+      className="MuiButtonBase-root-48 MuiIconButton-root-42 MuiIconButton-colorInherit-43 Header-navIconHide-2"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
@@ -26,21 +26,21 @@ exports[`components > core > Header Renders correctly default 1`] = `
       type="button"
     >
       <span
-        className="MuiIconButton-label-45"
+        className="MuiIconButton-label-47"
       >
         <span
           aria-hidden="true"
-          className="material-icons MuiIcon-root-49"
+          className="material-icons MuiIcon-root-51"
         >
           menu
         </span>
       </span>
       <span
-        className="MuiTouchRipple-root-55"
+        className="MuiTouchRipple-root-58"
       />
     </button>
     <h1
-      className="MuiTypography-root-62 MuiTypography-display1-66 MuiTypography-colorInherit-81"
+      className="MuiTypography-root-65 MuiTypography-display1-69 MuiTypography-colorInherit-84"
       style={
         Object {
           "flex": 1,
@@ -51,7 +51,7 @@ exports[`components > core > Header Renders correctly default 1`] = `
     </h1>
     <button
       aria-label="options"
-      className="MuiButtonBase-root-46 MuiIconButton-root-40 MuiIconButton-colorInherit-41"
+      className="MuiButtonBase-root-48 MuiIconButton-root-42 MuiIconButton-colorInherit-43"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
@@ -68,33 +68,33 @@ exports[`components > core > Header Renders correctly default 1`] = `
       type="button"
     >
       <span
-        className="MuiIconButton-label-45"
+        className="MuiIconButton-label-47"
       >
         <span
           aria-hidden="true"
-          className="material-icons MuiIcon-root-49"
+          className="material-icons MuiIcon-root-51"
         >
           more_vert
         </span>
       </span>
       <span
-        className="MuiTouchRipple-root-55"
+        className="MuiTouchRipple-root-58"
       />
     </button>
   </div>
 </header>
 `;
 
-exports[`components > core > Header Updates it's title 1`] = `
+exports[`components > core > Header Updates it\`s title 1`] = `
 <header
   className="MuiPaper-root-11 MuiPaper-elevation4-17 MuiAppBar-root-3 MuiAppBar-positionFixed-4 MuiAppBar-colorPrimary-9 mui-fixed Header-appBar-1"
 >
   <div
-    className="MuiToolbar-root-38 MuiToolbar-gutters-39"
+    className="MuiToolbar-root-38 MuiToolbar-regular-40 MuiToolbar-gutters-39"
   >
     <button
       aria-label="open drawer"
-      className="MuiButtonBase-root-46 MuiIconButton-root-40 MuiIconButton-colorInherit-41 Header-navIconHide-2"
+      className="MuiButtonBase-root-48 MuiIconButton-root-42 MuiIconButton-colorInherit-43 Header-navIconHide-2"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
@@ -111,21 +111,21 @@ exports[`components > core > Header Updates it's title 1`] = `
       type="button"
     >
       <span
-        className="MuiIconButton-label-45"
+        className="MuiIconButton-label-47"
       >
         <span
           aria-hidden="true"
-          className="material-icons MuiIcon-root-49"
+          className="material-icons MuiIcon-root-51"
         >
           menu
         </span>
       </span>
       <span
-        className="MuiTouchRipple-root-55"
+        className="MuiTouchRipple-root-58"
       />
     </button>
     <h1
-      className="MuiTypography-root-62 MuiTypography-display1-66 MuiTypography-colorInherit-81"
+      className="MuiTypography-root-65 MuiTypography-display1-69 MuiTypography-colorInherit-84"
       style={
         Object {
           "flex": 1,
@@ -136,7 +136,7 @@ exports[`components > core > Header Updates it's title 1`] = `
     </h1>
     <button
       aria-label="options"
-      className="MuiButtonBase-root-46 MuiIconButton-root-40 MuiIconButton-colorInherit-41"
+      className="MuiButtonBase-root-48 MuiIconButton-root-42 MuiIconButton-colorInherit-43"
       disabled={false}
       onBlur={[Function]}
       onClick={[Function]}
@@ -153,17 +153,17 @@ exports[`components > core > Header Updates it's title 1`] = `
       type="button"
     >
       <span
-        className="MuiIconButton-label-45"
+        className="MuiIconButton-label-47"
       >
         <span
           aria-hidden="true"
-          className="material-icons MuiIcon-root-49"
+          className="material-icons MuiIcon-root-51"
         >
           more_vert
         </span>
       </span>
       <span
-        className="MuiTouchRipple-root-55"
+        className="MuiTouchRipple-root-58"
       />
     </button>
   </div>

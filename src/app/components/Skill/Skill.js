@@ -7,26 +7,24 @@ export default class Skill extends Component {
   static propTypes = {
     load: PropTypes.func.isRequired,
     skills: PropTypes.arrayOf(PropTypes.shape()),
-  }
+  };
 
   static defaultProps = {
     skills: [],
-  }
+  };
 
   componentDidMount() {
-    this.props.load();
+    const { load } = this.props;
+    load();
   }
 
   render() {
+    const { skills } = this.props;
     return (
       <section>
         <Grid container>
-          {this.props.skills.map(category => (
-            <Grid
-              item
-              xs={12}
-              key={category.name}
-            >
+          {skills.map(category => (
+            <Grid item xs={12} key={category.name}>
               <SkillCard category={category} />
             </Grid>
           ))}

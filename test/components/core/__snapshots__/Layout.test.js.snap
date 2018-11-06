@@ -16,17 +16,17 @@ Array [
             className="MuiPaper-root-29 MuiPaper-elevation4-35 MuiAppBar-root-56 MuiAppBar-positionStatic-60 MuiAppBar-colorPrimary-62"
           >
             <div
-              className="MuiToolbar-root-64 MuiToolbar-gutters-65"
+              className="MuiToolbar-root-64 MuiToolbar-regular-66 MuiToolbar-gutters-65"
             >
               <h1
-                className="MuiTypography-root-66 MuiTypography-title-72 MuiTypography-colorInherit-85"
+                className="MuiTypography-root-68 MuiTypography-title-74 MuiTypography-colorInherit-87"
               >
                 frank g.
               </h1>
             </div>
           </header>
           <ul
-            className="MuiList-root-90 MuiList-padding-91"
+            className="MuiList-root-93 MuiList-padding-94"
           >
             <a
               aria-current="page"
@@ -36,7 +36,7 @@ Array [
               style={Object {}}
             >
               <div
-                className="MuiButtonBase-root-104 MuiListItem-root-94 MuiListItem-default-97 MuiListItem-gutters-101 MuiListItem-button-102"
+                className="MuiButtonBase-root-107 MuiListItem-root-97 MuiListItem-default-100 MuiListItem-gutters-104 MuiListItem-button-105"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -52,21 +52,21 @@ Array [
               >
                 <span
                   aria-hidden="true"
-                  className="material-icons MuiIcon-root-108 MuiIcon-colorError-112 MuiListItemIcon-root-107"
+                  className="material-icons MuiIcon-root-111 MuiIcon-colorError-115 MuiListItemIcon-root-110"
                 >
                   work
                 </span>
                 <div
-                  className="MuiListItemText-root-114"
+                  className="MuiListItemText-root-118"
                 >
                   <span
-                    className="MuiTypography-root-66 MuiTypography-subheading-73 MuiListItemText-primary-117"
+                    className="MuiTypography-root-68 MuiTypography-subheading-75 MuiListItemText-primary-121"
                   >
                     works
                   </span>
                 </div>
                 <span
-                  className="MuiTouchRipple-root-120"
+                  className="MuiTouchRipple-root-124"
                 />
               </div>
             </a>
@@ -75,10 +75,9 @@ Array [
               className="nav-link"
               href="/educations"
               onClick={[Function]}
-              style={undefined}
             >
               <div
-                className="MuiButtonBase-root-104 MuiListItem-root-94 MuiListItem-default-97 MuiListItem-gutters-101 MuiListItem-button-102"
+                className="MuiButtonBase-root-107 MuiListItem-root-97 MuiListItem-default-100 MuiListItem-gutters-104 MuiListItem-button-105"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -94,21 +93,21 @@ Array [
               >
                 <span
                   aria-hidden="true"
-                  className="material-icons MuiIcon-root-108 MuiIcon-colorError-112 MuiListItemIcon-root-107"
+                  className="material-icons MuiIcon-root-111 MuiIcon-colorError-115 MuiListItemIcon-root-110"
                 >
                   account_balance
                 </span>
                 <div
-                  className="MuiListItemText-root-114"
+                  className="MuiListItemText-root-118"
                 >
                   <span
-                    className="MuiTypography-root-66 MuiTypography-subheading-73 MuiListItemText-primary-117"
+                    className="MuiTypography-root-68 MuiTypography-subheading-75 MuiListItemText-primary-121"
                   >
                     educations
                   </span>
                 </div>
                 <span
-                  className="MuiTouchRipple-root-120"
+                  className="MuiTouchRipple-root-124"
                 />
               </div>
             </a>
@@ -117,10 +116,9 @@ Array [
               className="nav-link"
               href="/skills"
               onClick={[Function]}
-              style={undefined}
             >
               <div
-                className="MuiButtonBase-root-104 MuiListItem-root-94 MuiListItem-default-97 MuiListItem-gutters-101 MuiListItem-button-102"
+                className="MuiButtonBase-root-107 MuiListItem-root-97 MuiListItem-default-100 MuiListItem-gutters-104 MuiListItem-button-105"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -136,21 +134,21 @@ Array [
               >
                 <span
                   aria-hidden="true"
-                  className="material-icons MuiIcon-root-108 MuiIcon-colorError-112 MuiListItemIcon-root-107"
+                  className="material-icons MuiIcon-root-111 MuiIcon-colorError-115 MuiListItemIcon-root-110"
                 >
                   build
                 </span>
                 <div
-                  className="MuiListItemText-root-114"
+                  className="MuiListItemText-root-118"
                 >
                   <span
-                    className="MuiTypography-root-66 MuiTypography-subheading-73 MuiListItemText-primary-117"
+                    className="MuiTypography-root-68 MuiTypography-subheading-75 MuiListItemText-primary-121"
                   >
                     skills
                   </span>
                 </div>
                 <span
-                  className="MuiTouchRipple-root-120"
+                  className="MuiTouchRipple-root-124"
                 />
               </div>
             </a>
@@ -159,10 +157,9 @@ Array [
               className="nav-link"
               href="/interests"
               onClick={[Function]}
-              style={undefined}
             >
               <div
-                className="MuiButtonBase-root-104 MuiListItem-root-94 MuiListItem-default-97 MuiListItem-gutters-101 MuiListItem-button-102"
+                className="MuiButtonBase-root-107 MuiListItem-root-97 MuiListItem-default-100 MuiListItem-gutters-104 MuiListItem-button-105"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -178,29 +175,29 @@ Array [
               >
                 <span
                   aria-hidden="true"
-                  className="material-icons MuiIcon-root-108 MuiIcon-colorError-112 MuiListItemIcon-root-107"
+                  className="material-icons MuiIcon-root-111 MuiIcon-colorError-115 MuiListItemIcon-root-110"
                 >
                   language
                 </span>
                 <div
-                  className="MuiListItemText-root-114"
+                  className="MuiListItemText-root-118"
                 >
                   <span
-                    className="MuiTypography-root-66 MuiTypography-subheading-73 MuiListItemText-primary-117"
+                    className="MuiTypography-root-68 MuiTypography-subheading-75 MuiListItemText-primary-121"
                   >
                     interests
                   </span>
                 </div>
                 <span
-                  className="MuiTouchRipple-root-120"
+                  className="MuiTouchRipple-root-124"
                 />
               </div>
             </a>
             <hr
-              className="MuiDivider-root-127"
+              className="MuiDivider-root-131"
             />
             <div
-              className="MuiButtonBase-root-104 MuiListItem-root-94 MuiListItem-default-97 MuiListItem-gutters-101 MuiListItem-button-102"
+              className="MuiButtonBase-root-107 MuiListItem-root-97 MuiListItem-default-100 MuiListItem-gutters-104 MuiListItem-button-105"
               onBlur={[Function]}
               onFocus={[Function]}
               onKeyDown={[Function]}
@@ -215,21 +212,21 @@ Array [
               tabIndex="0"
             >
               <div
-                className="MuiListItemText-root-114"
+                className="MuiListItemText-root-118"
               >
                 <span
-                  className="MuiTypography-root-66 MuiTypography-subheading-73 MuiListItemText-primary-117"
+                  className="MuiTypography-root-68 MuiTypography-subheading-75 MuiListItemText-primary-121"
                 >
                   version
                 </span>
                 <p
-                  className="MuiTypography-root-66 MuiTypography-body1-75 MuiTypography-colorTextSecondary-88 MuiListItemText-secondary-118"
+                  className="MuiTypography-root-68 MuiTypography-body1-77 MuiTypography-colorTextSecondary-91 MuiListItemText-secondary-122"
                 >
-                  4.1.0-react
+                  4.2.0-react
                 </p>
               </div>
               <span
-                className="MuiTouchRipple-root-120"
+                className="MuiTouchRipple-root-124"
               />
             </div>
           </ul>
@@ -238,14 +235,14 @@ Array [
     </div>
   </div>,
   <header
-    className="MuiPaper-root-29 MuiPaper-elevation4-35 MuiAppBar-root-56 MuiAppBar-positionFixed-57 MuiAppBar-colorPrimary-62 mui-fixed Header-appBar-131"
+    className="MuiPaper-root-29 MuiPaper-elevation4-35 MuiAppBar-root-56 MuiAppBar-positionFixed-57 MuiAppBar-colorPrimary-62 mui-fixed Header-appBar-135"
   >
     <div
-      className="MuiToolbar-root-64 MuiToolbar-gutters-65"
+      className="MuiToolbar-root-64 MuiToolbar-regular-66 MuiToolbar-gutters-65"
     >
       <button
         aria-label="open drawer"
-        className="MuiButtonBase-root-104 MuiIconButton-root-133 MuiIconButton-colorInherit-134 Header-navIconHide-132"
+        className="MuiButtonBase-root-107 MuiIconButton-root-137 MuiIconButton-colorInherit-138 Header-navIconHide-136"
         disabled={false}
         onBlur={[Function]}
         onClick={[Function]}
@@ -262,21 +259,21 @@ Array [
         type="button"
       >
         <span
-          className="MuiIconButton-label-138"
+          className="MuiIconButton-label-142"
         >
           <span
             aria-hidden="true"
-            className="material-icons MuiIcon-root-108"
+            className="material-icons MuiIcon-root-111"
           >
             menu
           </span>
         </span>
         <span
-          className="MuiTouchRipple-root-120"
+          className="MuiTouchRipple-root-124"
         />
       </button>
       <h1
-        className="MuiTypography-root-66 MuiTypography-display1-70 MuiTypography-colorInherit-85"
+        className="MuiTypography-root-68 MuiTypography-display1-72 MuiTypography-colorInherit-87"
         style={
           Object {
             "flex": 1,
@@ -287,7 +284,7 @@ Array [
       </h1>
       <button
         aria-label="options"
-        className="MuiButtonBase-root-104 MuiIconButton-root-133 MuiIconButton-colorInherit-134"
+        className="MuiButtonBase-root-107 MuiIconButton-root-137 MuiIconButton-colorInherit-138"
         disabled={false}
         onBlur={[Function]}
         onClick={[Function]}
@@ -304,32 +301,32 @@ Array [
         type="button"
       >
         <span
-          className="MuiIconButton-label-138"
+          className="MuiIconButton-label-142"
         >
           <span
             aria-hidden="true"
-            className="material-icons MuiIcon-root-108"
+            className="material-icons MuiIcon-root-111"
           >
             more_vert
           </span>
         </span>
         <span
-          className="MuiTouchRipple-root-120"
+          className="MuiTouchRipple-root-124"
         />
       </button>
     </div>
   </header>,
   <div
-    className="MuiLinearProgress-root-239 MuiLinearProgress-colorPrimary-240"
+    className="MuiLinearProgress-root-244 MuiLinearProgress-colorPrimary-245"
     mode="query"
     role="progressbar"
   >
     <div
-      className="MuiLinearProgress-bar-247 MuiLinearProgress-barColorPrimary-248 MuiLinearProgress-bar1Indeterminate-250"
+      className="MuiLinearProgress-bar-252 MuiLinearProgress-barColorPrimary-253 MuiLinearProgress-bar1Indeterminate-255"
       style={Object {}}
     />
     <div
-      className="MuiLinearProgress-bar-247 MuiLinearProgress-barColorPrimary-248 MuiLinearProgress-bar2Indeterminate-251"
+      className="MuiLinearProgress-bar-252 MuiLinearProgress-barColorPrimary-253 MuiLinearProgress-bar2Indeterminate-258"
       style={Object {}}
     />
   </div>,
@@ -338,7 +335,7 @@ Array [
   >
     <section>
       <div
-        className="MuiGrid-container-143"
+        className="MuiGrid-container-147"
       />
     </section>
   </main>,
@@ -361,17 +358,17 @@ Array [
             className="MuiPaper-root-29 MuiPaper-elevation4-35 MuiAppBar-root-56 MuiAppBar-positionStatic-60 MuiAppBar-colorPrimary-62"
           >
             <div
-              className="MuiToolbar-root-64 MuiToolbar-gutters-65"
+              className="MuiToolbar-root-64 MuiToolbar-regular-66 MuiToolbar-gutters-65"
             >
               <h1
-                className="MuiTypography-root-66 MuiTypography-title-72 MuiTypography-colorInherit-85"
+                className="MuiTypography-root-68 MuiTypography-title-74 MuiTypography-colorInherit-87"
               >
                 frank g.
               </h1>
             </div>
           </header>
           <ul
-            className="MuiList-root-90 MuiList-padding-91"
+            className="MuiList-root-93 MuiList-padding-94"
           >
             <a
               aria-current="page"
@@ -381,7 +378,7 @@ Array [
               style={Object {}}
             >
               <div
-                className="MuiButtonBase-root-104 MuiListItem-root-94 MuiListItem-default-97 MuiListItem-gutters-101 MuiListItem-button-102"
+                className="MuiButtonBase-root-107 MuiListItem-root-97 MuiListItem-default-100 MuiListItem-gutters-104 MuiListItem-button-105"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -397,21 +394,21 @@ Array [
               >
                 <span
                   aria-hidden="true"
-                  className="material-icons MuiIcon-root-108 MuiIcon-colorError-112 MuiListItemIcon-root-107"
+                  className="material-icons MuiIcon-root-111 MuiIcon-colorError-115 MuiListItemIcon-root-110"
                 >
                   work
                 </span>
                 <div
-                  className="MuiListItemText-root-114"
+                  className="MuiListItemText-root-118"
                 >
                   <span
-                    className="MuiTypography-root-66 MuiTypography-subheading-73 MuiListItemText-primary-117"
+                    className="MuiTypography-root-68 MuiTypography-subheading-75 MuiListItemText-primary-121"
                   >
                     works
                   </span>
                 </div>
                 <span
-                  className="MuiTouchRipple-root-120"
+                  className="MuiTouchRipple-root-124"
                 />
               </div>
             </a>
@@ -420,10 +417,9 @@ Array [
               className="nav-link"
               href="/educations"
               onClick={[Function]}
-              style={undefined}
             >
               <div
-                className="MuiButtonBase-root-104 MuiListItem-root-94 MuiListItem-default-97 MuiListItem-gutters-101 MuiListItem-button-102"
+                className="MuiButtonBase-root-107 MuiListItem-root-97 MuiListItem-default-100 MuiListItem-gutters-104 MuiListItem-button-105"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -439,21 +435,21 @@ Array [
               >
                 <span
                   aria-hidden="true"
-                  className="material-icons MuiIcon-root-108 MuiIcon-colorError-112 MuiListItemIcon-root-107"
+                  className="material-icons MuiIcon-root-111 MuiIcon-colorError-115 MuiListItemIcon-root-110"
                 >
                   account_balance
                 </span>
                 <div
-                  className="MuiListItemText-root-114"
+                  className="MuiListItemText-root-118"
                 >
                   <span
-                    className="MuiTypography-root-66 MuiTypography-subheading-73 MuiListItemText-primary-117"
+                    className="MuiTypography-root-68 MuiTypography-subheading-75 MuiListItemText-primary-121"
                   >
                     educations
                   </span>
                 </div>
                 <span
-                  className="MuiTouchRipple-root-120"
+                  className="MuiTouchRipple-root-124"
                 />
               </div>
             </a>
@@ -462,10 +458,9 @@ Array [
               className="nav-link"
               href="/skills"
               onClick={[Function]}
-              style={undefined}
             >
               <div
-                className="MuiButtonBase-root-104 MuiListItem-root-94 MuiListItem-default-97 MuiListItem-gutters-101 MuiListItem-button-102"
+                className="MuiButtonBase-root-107 MuiListItem-root-97 MuiListItem-default-100 MuiListItem-gutters-104 MuiListItem-button-105"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -481,21 +476,21 @@ Array [
               >
                 <span
                   aria-hidden="true"
-                  className="material-icons MuiIcon-root-108 MuiIcon-colorError-112 MuiListItemIcon-root-107"
+                  className="material-icons MuiIcon-root-111 MuiIcon-colorError-115 MuiListItemIcon-root-110"
                 >
                   build
                 </span>
                 <div
-                  className="MuiListItemText-root-114"
+                  className="MuiListItemText-root-118"
                 >
                   <span
-                    className="MuiTypography-root-66 MuiTypography-subheading-73 MuiListItemText-primary-117"
+                    className="MuiTypography-root-68 MuiTypography-subheading-75 MuiListItemText-primary-121"
                   >
                     skills
                   </span>
                 </div>
                 <span
-                  className="MuiTouchRipple-root-120"
+                  className="MuiTouchRipple-root-124"
                 />
               </div>
             </a>
@@ -504,10 +499,9 @@ Array [
               className="nav-link"
               href="/interests"
               onClick={[Function]}
-              style={undefined}
             >
               <div
-                className="MuiButtonBase-root-104 MuiListItem-root-94 MuiListItem-default-97 MuiListItem-gutters-101 MuiListItem-button-102"
+                className="MuiButtonBase-root-107 MuiListItem-root-97 MuiListItem-default-100 MuiListItem-gutters-104 MuiListItem-button-105"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -523,29 +517,29 @@ Array [
               >
                 <span
                   aria-hidden="true"
-                  className="material-icons MuiIcon-root-108 MuiIcon-colorError-112 MuiListItemIcon-root-107"
+                  className="material-icons MuiIcon-root-111 MuiIcon-colorError-115 MuiListItemIcon-root-110"
                 >
                   language
                 </span>
                 <div
-                  className="MuiListItemText-root-114"
+                  className="MuiListItemText-root-118"
                 >
                   <span
-                    className="MuiTypography-root-66 MuiTypography-subheading-73 MuiListItemText-primary-117"
+                    className="MuiTypography-root-68 MuiTypography-subheading-75 MuiListItemText-primary-121"
                   >
                     interests
                   </span>
                 </div>
                 <span
-                  className="MuiTouchRipple-root-120"
+                  className="MuiTouchRipple-root-124"
                 />
               </div>
             </a>
             <hr
-              className="MuiDivider-root-127"
+              className="MuiDivider-root-131"
             />
             <div
-              className="MuiButtonBase-root-104 MuiListItem-root-94 MuiListItem-default-97 MuiListItem-gutters-101 MuiListItem-button-102"
+              className="MuiButtonBase-root-107 MuiListItem-root-97 MuiListItem-default-100 MuiListItem-gutters-104 MuiListItem-button-105"
               onBlur={[Function]}
               onFocus={[Function]}
               onKeyDown={[Function]}
@@ -560,21 +554,21 @@ Array [
               tabIndex="0"
             >
               <div
-                className="MuiListItemText-root-114"
+                className="MuiListItemText-root-118"
               >
                 <span
-                  className="MuiTypography-root-66 MuiTypography-subheading-73 MuiListItemText-primary-117"
+                  className="MuiTypography-root-68 MuiTypography-subheading-75 MuiListItemText-primary-121"
                 >
                   version
                 </span>
                 <p
-                  className="MuiTypography-root-66 MuiTypography-body1-75 MuiTypography-colorTextSecondary-88 MuiListItemText-secondary-118"
+                  className="MuiTypography-root-68 MuiTypography-body1-77 MuiTypography-colorTextSecondary-91 MuiListItemText-secondary-122"
                 >
-                  4.1.0-react
+                  4.2.0-react
                 </p>
               </div>
               <span
-                className="MuiTouchRipple-root-120"
+                className="MuiTouchRipple-root-124"
               />
             </div>
           </ul>
@@ -583,14 +577,14 @@ Array [
     </div>
   </div>,
   <header
-    className="MuiPaper-root-29 MuiPaper-elevation4-35 MuiAppBar-root-56 MuiAppBar-positionFixed-57 MuiAppBar-colorPrimary-62 mui-fixed Header-appBar-131"
+    className="MuiPaper-root-29 MuiPaper-elevation4-35 MuiAppBar-root-56 MuiAppBar-positionFixed-57 MuiAppBar-colorPrimary-62 mui-fixed Header-appBar-135"
   >
     <div
-      className="MuiToolbar-root-64 MuiToolbar-gutters-65"
+      className="MuiToolbar-root-64 MuiToolbar-regular-66 MuiToolbar-gutters-65"
     >
       <button
         aria-label="open drawer"
-        className="MuiButtonBase-root-104 MuiIconButton-root-133 MuiIconButton-colorInherit-134 Header-navIconHide-132"
+        className="MuiButtonBase-root-107 MuiIconButton-root-137 MuiIconButton-colorInherit-138 Header-navIconHide-136"
         disabled={false}
         onBlur={[Function]}
         onClick={[Function]}
@@ -607,21 +601,21 @@ Array [
         type="button"
       >
         <span
-          className="MuiIconButton-label-138"
+          className="MuiIconButton-label-142"
         >
           <span
             aria-hidden="true"
-            className="material-icons MuiIcon-root-108"
+            className="material-icons MuiIcon-root-111"
           >
             menu
           </span>
         </span>
         <span
-          className="MuiTouchRipple-root-120"
+          className="MuiTouchRipple-root-124"
         />
       </button>
       <h1
-        className="MuiTypography-root-66 MuiTypography-display1-70 MuiTypography-colorInherit-85"
+        className="MuiTypography-root-68 MuiTypography-display1-72 MuiTypography-colorInherit-87"
         style={
           Object {
             "flex": 1,
@@ -632,7 +626,7 @@ Array [
       </h1>
       <button
         aria-label="options"
-        className="MuiButtonBase-root-104 MuiIconButton-root-133 MuiIconButton-colorInherit-134"
+        className="MuiButtonBase-root-107 MuiIconButton-root-137 MuiIconButton-colorInherit-138"
         disabled={false}
         onBlur={[Function]}
         onClick={[Function]}
@@ -649,32 +643,32 @@ Array [
         type="button"
       >
         <span
-          className="MuiIconButton-label-138"
+          className="MuiIconButton-label-142"
         >
           <span
             aria-hidden="true"
-            className="material-icons MuiIcon-root-108"
+            className="material-icons MuiIcon-root-111"
           >
             more_vert
           </span>
         </span>
         <span
-          className="MuiTouchRipple-root-120"
+          className="MuiTouchRipple-root-124"
         />
       </button>
     </div>
   </header>,
   <div
-    className="MuiLinearProgress-root-239 MuiLinearProgress-colorPrimary-240"
+    className="MuiLinearProgress-root-244 MuiLinearProgress-colorPrimary-245"
     mode="query"
     role="progressbar"
   >
     <div
-      className="MuiLinearProgress-bar-247 MuiLinearProgress-barColorPrimary-248 MuiLinearProgress-bar1Indeterminate-250"
+      className="MuiLinearProgress-bar-252 MuiLinearProgress-barColorPrimary-253 MuiLinearProgress-bar1Indeterminate-255"
       style={Object {}}
     />
     <div
-      className="MuiLinearProgress-bar-247 MuiLinearProgress-barColorPrimary-248 MuiLinearProgress-bar2Indeterminate-251"
+      className="MuiLinearProgress-bar-252 MuiLinearProgress-barColorPrimary-253 MuiLinearProgress-bar2Indeterminate-258"
       style={Object {}}
     />
   </div>,
@@ -683,7 +677,7 @@ Array [
   >
     <section>
       <div
-        className="MuiGrid-container-143"
+        className="MuiGrid-container-147"
       />
     </section>
   </main>,

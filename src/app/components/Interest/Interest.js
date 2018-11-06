@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Divider, List, ListItem, ListItemText, ListSubheader } from '@material-ui/core';
+import {
+  Divider,
+  List,
+  ListItem,
+  ListItemText,
+  ListSubheader,
+} from '@material-ui/core';
 import Map from './Map';
 
 export default class Interest extends Component {
@@ -8,31 +14,36 @@ export default class Interest extends Component {
     load: PropTypes.func.isRequired,
     interests: PropTypes.arrayOf(PropTypes.shape()),
     travels: PropTypes.arrayOf(PropTypes.shape()),
-  }
+  };
 
   static defaultProps = {
     interests: [],
     travels: [],
-  }
+  };
 
   componentDidMount() {
-    this.props.load();
+    const { load } = this.props;
+    load();
   }
 
   render() {
+    const { travels, interests } = this.props;
+
+    const listItem = interest => (
+      <ListItem key={interest.name}>
+        <ListItemText primary={interest.name} />
+      </ListItem>
+    );
+
     return (
       <section>
-        <Map travels={this.props.travels} />
+        <Map travels={travels} />
         <List>
-          {this.props.interests.map(category => (
+          {interests.map(category => (
             <li key={category.name}>
               <ul>
                 <ListSubheader>{category.name}</ListSubheader>
-                {category.interests ? category.interests.map(interest => (
-                  <ListItem key={interest.name}>
-                    <ListItemText primary={interest.name} />
-                  </ListItem>
-                )) : null}
+                {category.interests ? category.interests.map(listItem) : null}
               </ul>
               <Divider />
             </li>

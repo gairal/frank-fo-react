@@ -2,7 +2,7 @@
 
 exports[`components > Skill > SkillCard Renders correctly default 1`] = `
 <div
-  className="MuiPaper-root-2 MuiPaper-elevation2-6 MuiPaper-rounded-3 MuiCard-root-1"
+  className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
 >
   <div
     className="MuiCardContent-root-29"
@@ -13,7 +13,7 @@ exports[`components > Skill > SkillCard Renders correctly default 1`] = `
       test
     </h2>
     <div
-      className="MuiGrid-container-54"
+      className="MuiGrid-container-55"
     />
   </div>
 </div>
@@ -21,7 +21,7 @@ exports[`components > Skill > SkillCard Renders correctly default 1`] = `
 
 exports[`components > Skill > SkillCard Renders correctly with categories 1`] = `
 <div
-  className="MuiPaper-root-2 MuiPaper-elevation2-6 MuiPaper-rounded-3 MuiCard-root-1"
+  className="MuiPaper-root-2 MuiPaper-elevation1-5 MuiPaper-rounded-3 MuiCard-root-1"
 >
   <div
     className="MuiCardContent-root-29"
@@ -32,18 +32,18 @@ exports[`components > Skill > SkillCard Renders correctly with categories 1`] = 
       test
     </h2>
     <div
-      className="MuiGrid-container-54"
+      className="MuiGrid-container-55"
     >
       <div
-        className="MuiGrid-item-55 MuiGrid-grid-xs-12-93 MuiGrid-grid-md-6-115 MuiGrid-grid-lg-4-127"
+        className="MuiGrid-item-56 MuiGrid-grid-xs-12-95 MuiGrid-grid-md-6-117 MuiGrid-grid-lg-4-129"
       >
         <li
-          className="MuiListItem-root-150 MuiListItem-default-153 MuiListItem-gutters-157"
+          className="MuiListItem-root-152 MuiListItem-default-155 MuiListItem-gutters-159"
           disabled={false}
         >
           <div
             aria-valuenow={0}
-            className="MuiCircularProgress-root-161 MuiCircularProgress-colorPrimary-164 MuiCircularProgress-static-162"
+            className="MuiCircularProgress-root-163 MuiCircularProgress-colorPrimary-166 MuiCircularProgress-static-164"
             role="progressbar"
             style={
               Object {
@@ -54,11 +54,11 @@ exports[`components > Skill > SkillCard Renders correctly with categories 1`] = 
             }
           >
             <svg
-              className="MuiCircularProgress-svg-166"
+              className="MuiCircularProgress-svg-168"
               viewBox="22 22 44 44"
             >
               <circle
-                className="MuiCircularProgress-circle-167 MuiCircularProgress-circleStatic-168"
+                className="MuiCircularProgress-circle-169 MuiCircularProgress-circleStatic-170"
                 cx={44}
                 cy={44}
                 fill="none"
@@ -74,7 +74,7 @@ exports[`components > Skill > SkillCard Renders correctly with categories 1`] = 
             </svg>
           </div>
           <div
-            className="MuiListItemText-root-170"
+            className="MuiListItemText-root-172"
             style={
               Object {
                 "flex": "1 1 0",
@@ -82,7 +82,7 @@ exports[`components > Skill > SkillCard Renders correctly with categories 1`] = 
             }
           >
             <span
-              className="MuiTypography-root-30 MuiTypography-subheading-37 MuiListItemText-primary-173"
+              className="MuiTypography-root-30 MuiTypography-subheading-37 MuiListItemText-primary-175"
             >
               test1 | test
             </span>
@@ -90,15 +90,15 @@ exports[`components > Skill > SkillCard Renders correctly with categories 1`] = 
         </li>
       </div>
       <div
-        className="MuiGrid-item-55 MuiGrid-grid-xs-12-93 MuiGrid-grid-md-6-115 MuiGrid-grid-lg-4-127"
+        className="MuiGrid-item-56 MuiGrid-grid-xs-12-95 MuiGrid-grid-md-6-117 MuiGrid-grid-lg-4-129"
       >
         <li
-          className="MuiListItem-root-150 MuiListItem-default-153 MuiListItem-gutters-157"
+          className="MuiListItem-root-152 MuiListItem-default-155 MuiListItem-gutters-159"
           disabled={false}
         >
           <div
             aria-valuenow={0}
-            className="MuiCircularProgress-root-161 MuiCircularProgress-colorPrimary-164 MuiCircularProgress-static-162"
+            className="MuiCircularProgress-root-163 MuiCircularProgress-colorPrimary-166 MuiCircularProgress-static-164"
             role="progressbar"
             style={
               Object {
@@ -109,11 +109,11 @@ exports[`components > Skill > SkillCard Renders correctly with categories 1`] = 
             }
           >
             <svg
-              className="MuiCircularProgress-svg-166"
+              className="MuiCircularProgress-svg-168"
               viewBox="22 22 44 44"
             >
               <circle
-                className="MuiCircularProgress-circle-167 MuiCircularProgress-circleStatic-168"
+                className="MuiCircularProgress-circle-169 MuiCircularProgress-circleStatic-170"
                 cx={44}
                 cy={44}
                 fill="none"
@@ -129,7 +129,7 @@ exports[`components > Skill > SkillCard Renders correctly with categories 1`] = 
             </svg>
           </div>
           <div
-            className="MuiListItemText-root-170"
+            className="MuiListItemText-root-172"
             style={
               Object {
                 "flex": "1 1 0",
@@ -137,7 +137,7 @@ exports[`components > Skill > SkillCard Renders correctly with categories 1`] = 
             }
           >
             <span
-              className="MuiTypography-root-30 MuiTypography-subheading-37 MuiListItemText-primary-173"
+              className="MuiTypography-root-30 MuiTypography-subheading-37 MuiListItemText-primary-175"
             >
               test2
             </span>

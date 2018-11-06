@@ -11,17 +11,16 @@ describe('components > core > SideNav', () => {
         <SideNav
           mobileOpen
           toggleDrawer={jest.fn}
-          routes={
-            [
-              {
-                key: 'skills',
-                icon: 'build',
-                path: 'categories',
-              },
-            ]
-          }
+          routes={[
+            {
+              key: 'skills',
+              icon: 'build',
+              path: 'categories',
+            },
+          ]}
         />
-      </BrowserRouter>);
+      </BrowserRouter>,
+    );
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
