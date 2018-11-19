@@ -19,13 +19,13 @@ export default class Utils {
     const yIn = dIn.getFullYear();
     const mIn = monthNames[dIn.getMonth()];
 
-    if (dateOut) {
-      const dOut = new Date(dateOut);
-      const yOut = dOut.getFullYear();
-      const mOut = monthNames[dOut.getMonth()];
-      return `${yIn} ${mIn} - ${yOut} ${mOut}`;
+    if (!dateOut || dateOut === '0001-01-01T00:00:00Z') {
+      return `${yIn} ${mIn} - present`;
     }
 
-    return `${yIn} ${mIn} - present`;
+    const dOut = new Date(dateOut);
+    return `${yIn} ${mIn} - ${dOut.getFullYear()} ${
+      monthNames[dOut.getMonth()]
+    }`;
   }
 }

@@ -54,18 +54,6 @@ export default class HeaderMenu extends Component {
             </MenuItem>
           </a>
           <a
-            href="tel:+33695676587"
-            rel="noopener noreferrer"
-            title="+33 6 95 67 65 87"
-          >
-            <MenuItem onClick={this.handleRequestClose}>
-              <ListItemIcon>
-                <Icon>phone</Icon>
-              </ListItemIcon>
-              <ListItemText inset primary="+33 95 67 65 87" />
-            </MenuItem>
-          </a>
-          <a
             href="https://linkedin.com/in/gairal"
             target="_blank"
             rel="noopener noreferrer"
