@@ -27,7 +27,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm-run-all lint test",
+      "pre-commit": "npm run lint & npm test",
       "commit-msg": "commitlint -e $GIT_PARAMS"
     }
   },
@@ -67,7 +67,6 @@
     "jest-mock-console": "^0.4",
     "mini-css-extract-plugin": "^0.4",
     "node-sass": "^4.10",
-    "npm-run-all": "^4.1",
     "prettier": "^1.14",
     "pug": "^2.0",
     "pug-loader": "^2.4",
